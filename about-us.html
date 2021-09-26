@@ -1,0 +1,246 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="K Road Rabbits is where you can watch videos of bunnies, learn about bunnies, and purchase bunnies!">
+    <meta name="author" content="Azariah Easey">
+    <meta name="keywords" content="Rabbits, Bunnies, Facts, Products">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <style>
+        body {
+            background-color: #808080;
+            overflow-x: hidden;
+            background: url(happyDaysReplacement.png);
+            background-repeat: repeat;
+            background-position: -200px 200px;
+            background-size: auto;
+            color: black !important;
+        }
+
+        h1 {
+            font-size: 3em;
+            font-family: 'Ink Free', sans-serif;
+        }
+
+        p {
+            font-size: 2.5em;
+            font-family: 'Ink Free', sans-serif;
+            line-height: 50px;
+        }
+
+        #actLikeParagraphTag {
+            font-size: 2.5em;
+            font-family: 'Ink Free', sans-serif;
+        }
+
+        .hilightme {
+            background-color: #ffd800;
+        }
+
+        .indent {
+            padding-left: 50px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <canvas id="cv" width="1900" height="400"></canvas>
+
+            <a href="home.html"><img src="Images/home.jpg" style="margin: 0px 0px 10px 475px;" width="150" alt="Navigate to our home page."/></a>
+            <a href="about-us.html"><img src="Images/about us.jpg" style="margin: 0px 0px 10px 20px;" width="150" alt=""/></a>
+            <a href="contact-us.html"><img src="Images/contact us.jpg" style="margin: 0px 0px 10px 20px;" width="150" alt="Navigate to our contact information page"/></a>
+            <a href="store.html"><img src="Images/Store.jpg" style="margin: 0px 0px 10px 20px;" width="150" alt="Navigate to our online store to purchase items."/></a>
+            <a href="meet-our-bunnies.html"><img src="Images/meet our bunnies.jpg" style="margin: 0px 0px 10px 20px;" width="225" alt="Navigate to our bunny showroom to meet our furry friends."/></a>
+
+        </nav>
+        <p></p>
+        <h1>K Road Rabbits...</h1>
+    </header>
+
+    <main>
+        <article>
+            <section>
+                <p>
+                    is a rabbit breeding program that breeds rabbits of the English Spot, Himalayan, and Polish breeds. We also share
+                    rabbit facts, videos, and pictures.
+                </p>
+                <p>
+                    We are a rural Kansas based program that breeds and sells rabbits. We sell rabbits as pets and
+                    enjoy showing animals to local people and at rabbit shows.
+                </p>
+                <p>
+                    Our group consists of Azariah, our coder, Jeremiah, our editor, Eve, our rabbit breeder, caretaker and ceo, and Daphne, assistant rabbit breeder
+                    and caretaker. You can find us on social media, on Facebook and Instagram <a href="null" target="_blank">@K Rd Rabbits</a>.
+                </p>
+
+                <table>
+                    <tr>
+                        <td style="padding-left: 400px;">
+                            <figure>
+                                <img src="Azariah Coding.JPEG" width="250" alt="This is Azariah Easey ready to code." />
+                                <figcaption id="actLikeParagraphTag">
+                                    Azariah Easey
+                                </figcaption>
+                            </figure>
+                        </td>
+
+                        <td>
+                            <figure>
+                                <img style="margin-top: -35px;" src="Eve holding a Rabbit 2.jpeg" width="250" alt="This is Eve Rider holding a rabbit." /> <!--photos in here-->
+                                <figcaption id="actLikeParagraphTag"style="padding-left: 40px;">
+                                    Eve Rider
+                                </figcaption>
+                            </figure>
+                        </td>
+
+                        <td>
+                            <figure>
+                                <img src="DaphneHoldingRabbit.jpg" width="250" alt="This is Daphne Rider holding a rabbit." />
+                                <figcaption id="actLikeParagraphTag">
+                                    Daphne Rider
+                                </figcaption>
+                            </figure>
+                        </td>
+
+                        <td>
+                            <figure>
+                                <img src="JerCamera.JPEG" width="250" alt="This is Jeremiah Easey ready to film." />
+                                <figcaption id="actLikeParagraphTag">
+                                    Jeremiah Easey
+                                </figcaption>
+                            </figure>
+                        </td>
+                    </tr>
+                </table>
+
+            </section>
+        </article>
+    </main>
+
+    <footer>
+        <a href="facebookNotice.html" target="_blank">
+            <!--This section of code is for our Facebook page-->
+            <img src="https://facebookbrand.com/wp-content/uploads/2019/04/f_logo_RGB-Hex-Blue_512.png?w=512&h=512" width="19" alt="Navigate to our Facebook page."/>
+        </a>
+        <a href="youtubeNotice.html" target="_blank">
+            <!--This section of code is for our Youtube page-->
+            <img src="https://pngimg.com/uploads/youtube/youtube_PNG102355.png" width="20" alt="Navigate to our Youtube channel"/><!--All the code for this page was written by hand-->
+        </a>
+    </footer>
+
+    <script>
+        var canvas, canvasContext;
+
+        var rabbitPic = document.createElement('img');
+        var rabbitPicLoaded = false;
+
+        var pic2 = document.createElement('img');
+        var pic2Loaded = false;
+
+        var picForFade = document.createElement('img');
+        var picForFadeLoaded = false;
+
+        var X1 = 600;
+        var X2 = X1 + 450;
+        var Y1 = 30;
+        var X3 = X1 - 450;
+        var X4 = X2 + 450 + 10 + 10 + 10 + 10 + 10;
+        var X5 = X3 - 450;
+
+
+        function $(id) {
+            return document.getElementById(id);
+        }
+
+        function colorRect(a, b, c, d, e) {
+            canvasContext.fillStyle = e;
+            canvasContext.fillRect(a, b, c, d);
+        }
+
+        window.onload = function () {
+            canvas = $("cv");
+            canvasContext = canvas.getContext('2d');
+            colorRect(0, 0, canvas.width, canvas.height, 'aqua');
+            setInterval(updateAll, 0.01);
+
+            rabbitPic.onload = function () {
+                rabbitPicLoaded = true;
+            }
+            rabbitPic.src = "Rabbunny2.jpg"; // is it interacting with the server????? It's interacting with the server!
+
+            pic2.onload = function () {
+                pic2Loaded = true;
+            }
+            pic2.src = "Rabbuny.jpg"; // is it interacting with the server????? It's interacting with the server!
+
+            picForFade.onload = function () {
+                picForFadeLoaded = true;
+            }
+            picForFade.src = "https://www.pngkey.com/png/full/136-1361851_gradient-white-gradient-circle-png.png";
+        }
+        function updateAll() {
+            moveAll();
+            drawAll();
+        }
+
+        function moveAll() {
+            X1 += 0.5;
+            X2 += 0.5;
+            X3 += 0.5;
+            X4 += 0.5;
+            X5 += 0.5;
+            handleScreenWrap();
+        }
+
+        function handleScreenWrap(x) {
+            if (X1 > canvas.width) {
+                X1 = -420;
+            }
+            if (X2 > canvas.width) {
+                X2 = -420;
+            }
+            if (X3 > canvas.width) {
+                X3 = -420;
+            }
+            if (X4 > canvas.width) {
+                X4 = -420;
+            } if (X5 > canvas.width) {
+                X5 = -420;
+            }
+        }
+
+        function drawAll() {
+            colorRect(0, 0, canvas.width, canvas.height, 'aqua');
+            if (rabbitPicLoaded) {
+                //rabbitPic.width = 30;
+                //rabbitPic.height = 30;
+                canvasContext.drawImage(rabbitPic, X1, Y1);
+                canvasContext.drawImage(rabbitPic, X3, Y1);
+                canvasContext.drawImage(rabbitPic, X5, Y1);
+                canvasContext.fillStyle = 'black';
+                //       canvasContext.fillText('Picture provided by www.rabbitcaretips.com', X1, 330);
+                //     canvasContext.fillText('Picture provided by www.rabbitcaretips.com', X3, 330);
+                //  canvasContext.fillText('Picture provided by www.rabbitcaretips.com', X5 + 40, 330);
+            }
+            if (pic2Loaded) {
+                canvasContext.drawImage(pic2, X2, Y1);
+
+                canvasContext.drawImage(pic2, X4, Y1);
+
+                //canvasContext.drawImage(pic2, X2, 0);
+                canvasContext.fillStyle = 'black';
+                //  canvasContext.fillText('Picture provided by www.rabbitcaretips.com', X1, 330);
+                //    canvasContext.fillText('Picture provided by i.pinimg.com', X2, 20);
+                //  canvasContext.fillText('Picture provided by i.pinimg.com', X4, 20);
+
+            }
+
+            if (picForFadeLoaded) {
+                canvasContext.drawImage(picForFade, 0, 0 - 1);
+            }
+        }
+    </script>
+</body>
+</html>
