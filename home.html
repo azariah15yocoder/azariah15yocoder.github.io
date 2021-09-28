@@ -38,9 +38,28 @@
             padding-left: 50px; /*used for videos*/
         }
         
-        @media (max-height: 800px) {
+        @media only screen and (max-device-width: 480px) {
             img {
                 max-width: 50% !important;
+            }
+            
+            h1 {
+                font-size: 2em;
+                font-family: 'Ink Free', sans-serif;
+            }
+            
+            p {
+                font-size: 1.5em;
+                font-family: 'Ink Free', sans-serif;
+                line-height: 25px;
+            }
+            
+            .hilightme {
+                background-color: #ffd800;
+            }
+            
+            .indent {
+                padding-left: 25px; /*used for videos*/
             }
         }
     </style>
