@@ -36,28 +36,88 @@
             padding-left: 50px;
         }
         
+        #homeButton {
+            width: 150px;
+            height: auto;
+            margin: 0px 0px 10px 475px;
+        }
+        
+        #aboutUsButton {
+            width: 150px;
+            height: auto;
+            margin: 0px 0px 10px 20px;
+        }
+        
+        #contactUsButton {
+            width: 150px;
+            height: auto;
+            margin: 0px 0px 10px 20px;
+        }
+        
+        #storeButton {
+            width: 150px;
+            height: auto;
+            margin: 0px 0px 10px 20px;
+        }
+        
+        #meetOurBunniesButton {
+            width: 225px;
+            height: auto;
+            margin: 0px 0px 10px 20px;
+        }
+
         @media only screen and (max-device-width: 480px) {
             img {
                 max-width: 50% !important;
             }
-            
+
             h1 {
                 font-size: 2em;
                 font-family: 'Ink Free', sans-serif;
             }
-            
+
             p {
                 font-size: 1.5em;
                 font-family: 'Ink Free', sans-serif;
                 line-height: 25px;
             }
-            
+
             .hilightme {
                 background-color: #ffd800;
             }
-            
+
             .indent {
-                padding-left: 25px; /*I'll be using these for the videos I'll be embedding*/
+                padding-left: 25px; /*used for videos*/
+            }
+            
+            #homeButton {
+                width: 75px;
+                height: auto;
+                margin: 0px 0px 20px 100px;
+            }
+            
+            #aboutUsButton {
+                width: 75px;
+                height: auto;
+                margin: 0px 0px 20px 10px;
+            }
+            
+            #contactUsButton {
+                width: 75px;
+                height: auto;
+                margin: 0px 0px 20px 10px;
+            }
+            
+            #storeButton {
+                width: 75px;
+                height: auto;
+                margin: 0px 0px 20px 10px;
+            }
+            
+            #meetOurBunniesButton {
+                width: 112.5px;
+                height: auto;
+                margin: 0px 0px 20px 10px;
             }
         }
     </style>
@@ -68,11 +128,11 @@
             <br>
             <canvas id="cv" width="1900" height="400"></canvas>
 
-            <a href="home.html"><img src="Images/home.jpg" style="margin: 0px 0px 10px 475px" width="150" alt="Navigate to our home page."/></a>
-            <a href="about-us.html"><img src="Images/about us.jpg" style="margin: 0px 0px 10px 20px" width="150" alt="Navigate to our about us page to learn about this company."/></a>
-            <a href="contact-us.html"><img src="Images/contact us.jpg" style="margin: 0px 0px 10px 20px" width="150" alt="Navigate to our contact information page."/></a>
-            <a href="store.html"><img src="Images/Store.jpg" style="margin: 0px 0px 10px 20px" width="150" alt=""/></a>
-            <a href="meet-our-bunnies.html"><img src="Images/meet our bunnies.jpg" style="margin: 0px 0px 10px 20px" width="225" alt="Navigate to our bunny showroom to meet our furry friends."/></a>
+            <a href="home.html"><img src="Images/home.jpg" id="homeButton" alt="Navigate to our home page."/></a>
+            <a href="about-us.html"><img src="Images/about us.jpg" id="aboutUsButton" alt="Navigate to our about us page to learn about this company."/></a>
+            <a href="contact-us.html"><img src="Images/contact us.jpg" id="contactUsButton" alt="Navigate to our contact information page."/></a>
+            <a href="store.html"><img src="Images/Store.jpg" id="storeButton" alt=""/></a>
+            <a href="meet-our-bunnies.html"><img src="Images/meet our bunnies.jpg" id="meetOurBunniesButton" alt="Navigate to our bunny showroom to meet our furry friends."/></a>
 
         </nav>   
     <p></p>
