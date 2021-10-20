@@ -69,8 +69,16 @@
         }
 
         @media only screen and (max-device-width: 480px) {
-            /* originally the body tag was here, but I removed it because it wasn't doing anything*/
-            /*to see whether the web page will update or not*/
+            body {
+                background-color: #808080;
+                overflow-x: hidden;
+                background: url(happyDaysReplacement.png);
+                background-repeat: repeat;
+                background-position: -200px 200px;
+                background-size: auto;
+                border: 480px; /*used for mobile device output*/
+                color: black !important;
+            }
             
             img {
                 max-width: 50% !important;
