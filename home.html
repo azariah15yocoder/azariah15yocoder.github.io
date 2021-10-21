@@ -69,20 +69,20 @@
         }
 
         @media only screen and (max-device-width: 6.20in) { /*edited for mobile devices, in this case the LG G7*/
+            html, body {
+                overflow-x: hidden; /*should prevent user from scrolling back and forth (aka side to side)*/
+            }
             body {
-                /*width: 6.20in; /*this might be the answer for what I'm working on*/
+                position: relative; /*I hope the code still works, even though I put the attribue up here!
                 background-color: #808080;
                 overflow-x: hidden;
                 background: url(happyDaysReplacement.png);
                 background-repeat: repeat;
                 background-position: -200px 200px;
                 background-size: auto;
-                overflow-x: hidden; /*should prevent user from scrolling back and forth*/
-                /*border-style: solid;*/
-                /*border-width: thin;/*used for mobile device output*//*just to see how this will do*/
                 color: black !important;
-            } /* extra note added to see whether the web page will update or not*//*more updates will be done on this...*/
-            /*extra note added to see whether the web page will update or not*/
+                /*I trunkated some of the comments I wrote in the code, since the comments are unecessary*/
+            }
             
             img {
                 max-width: 50% !important;
