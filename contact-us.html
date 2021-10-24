@@ -1,4 +1,5 @@
-﻿<!DOCTYPE html>
+﻿
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -7,7 +8,7 @@
     <meta name="keywords" content="Rabbits, Bunnies, Facts, Products">
     <meta name="HandheldFriendly" content="true">
     <meta name="viewport" content="width-device-width">
-    <title>Contact Us</title>
+    <title>K-Road Rabbits</title>
     <style>
         body {
             background-color: #808080;
@@ -35,8 +36,8 @@
         }
 
         .indent {
-            padding-left: 50px;
-        }        
+            padding-left: 50px; /*used for videos*/
+        }
         
         #homeButton {
             width: 150px;
@@ -65,10 +66,27 @@
         #meetOurBunniesButton {
             width: 225px;
             height: auto;
-            margin: 0px 0px 10px 20px;
+            margin: 0px 0px 10px 20px; /* change made here */
         }
 
- /*@media only screen and (max-device-width: 480px) {
+        /*@media only screen and (max-device-width: 6.20in) { /*edited for mobile devices, in this case the LG G7*/
+            html, body {
+                overflow-x: hidden; /*should prevent user from scrolling back and forth (aka side to side)*/
+            }
+            body {
+                /*position: relative; /*I hope the code still works, even though I put the attribue up here!*//*the code didn't work, so I commented it out for later*/
+                /*background-color: #808080;
+                overflow-x: hidden;
+                background: url(happyDaysReplacement.png);
+                background-repeat: repeat;
+                background-position: -200px 200px;
+                background-size: auto;
+                color: black !important;*/
+                /*I trunkated some of the comments I wrote in the code, since the comments are unecessary*/
+                /*This note was added to see whether the web page will update or not*/
+                /*This note was added to see whether the web page will update or not*//*
+            }
+            
             img {
                 max-width: 50% !important;
             }
@@ -121,7 +139,7 @@
                 height: auto;
                 margin: 0px 0px 20px 10px;
             }
-        }*//*commented out since the HTML code in the <meta> tags should be able to do what I'm trying to do with media queries*/
+        }*//*code has been commented out to test some HTML code*/
     </style>
 </head>
 <body>
