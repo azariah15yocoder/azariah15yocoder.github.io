@@ -76,7 +76,10 @@
             color: black; /*this was the change that was made*/
             width: 230px;
             height: 50px;
-            position: center;
+        }
+        
+        .emailHashtagFriends {
+            text-align: center;
         }
 
         /*@media only screen and (max-device-width: 6.20in) { /*edited for mobile devices, in this case the LG G7*/
@@ -182,10 +185,12 @@
                 </p>
                 <p>Also, you can call us at 785-798-5511, or, if searching for us on Facebook, search for <a href="null" target="_blank">@K Rd Rabbits</a>, and you'll find us.</p>
                 <p>Or, you can just send your questions here!</p>
-                <input type="text" name="email" id="email" placeholder="Place Your Email Address Here">
-                <br>
-                <textarea id="myText" placeholder="Write Your Question Here"></textarea>
-                <button onclick="sendMail();">Send</button>
+                <form class="emailHashtagFriends">
+                    <input type="text" name="email" id="email" placeholder="Place Your Email Address Here">
+                    <br>
+                    <textarea id="myText" placeholder="Write Your Question Here"></textarea>
+                    <button onclick="sendMail();">Send</button>
+                </form>
             </section>
 
         </article>
