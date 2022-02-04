@@ -81,6 +81,10 @@
         .emailHashtagFriends {
             text-align: center;
         }
+        
+        .indentABitMore{
+            text-indent: 24px;
+        }
 
         /*@media only screen and (max-device-width: 6.20in) { /*edited for mobile devices, in this case the LG G7*/
             html, body {
@@ -189,7 +193,7 @@
                     <input type="text" name="email" id="email" placeholder="Place Your Email Address Here">
                     <br>
                     <br>
-                    <textarea id="myText" placeholder="Write Your Question Here" cols="80" rows="40"></textarea>
+                    <div class="indentABitMore"><textarea id="myText" placeholder="Write Your Question Here" cols="80" rows="40"></textarea></div>
                     <button onclick="sendMail();">Send</button>
                 </form>
             </section>
