@@ -260,6 +260,7 @@
             canvas = $("cv");
             canvasContext = canvas.getContext('2d');
             colorRect(0, 0, canvas.width, canvas.height, 'aqua');
+            checkWidth();
             setInterval(updateAll, 0.01);
 
             rabbitPic.onload = function () {
@@ -336,6 +337,14 @@
 
             if (picForFadeLoaded) {
                 canvasContext.drawImage(picForFade, 0, 0 - 1);
+            }
+        }
+        
+        function checkWidth() {
+            if(window.innerWidth > 1330) {
+                console.log("Everything is being left the way it is");
+            }else{
+                $('homeButton').style.margin = "0px 0px 10px 20px"; // should put home button in the right spot
             }
         }
     </script>
