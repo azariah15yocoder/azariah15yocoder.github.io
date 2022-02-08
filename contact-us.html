@@ -70,7 +70,7 @@
             margin: 0px 0px 10px 20px; /* change made here */
         }
         
-        #email, #myText {
+        #email, #myText, #subject {
             font-family: Arial;
             font-size: medium;
             color: black; /*this was the change that was made*/
@@ -191,6 +191,9 @@
                 <p>Or, you can just send your questions here!</p>
                 <div class="emailHashtagFriends">
                     <input type="text" name="email" id="email" placeholder="Place Your Email Address Here">
+                    <br>
+                    <br>
+                    <input type="text" name="subject" id="subject" placeholder="Place Subject Here">
                     <br>
                     <br>
                     <div class="indentABitMore"><textarea id="myText" placeholder="Write Your Question Here" cols="80" rows="40"></textarea></div>
@@ -330,7 +333,7 @@
            var email = $("email").value;
            var link = "mailto:eveerider@yahoo.com" +
                "?cc=" + email +
-               "&subject=" + encodeURIComponent("Subject from User") +
+               "&subject=" + encodeURIComponent($('subject').value) +
                "&body=" + encodeURIComponent($('myText').value);
            window.location.href = link;
        }
