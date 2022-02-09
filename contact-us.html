@@ -235,6 +235,8 @@
         var X3 = X1 - 450;
         var X4 = X2 + 450 + 10 + 10 + 10 + 10 + 10;
         var X5 = X3 - 450;
+       
+        positionHome();
 
 
         function $(id) {
@@ -336,6 +338,14 @@
                "&subject=" + encodeURIComponent($('subject').value) +
                "&body=" + encodeURIComponent($('myText').value);
            window.location.href = link;
+       }
+       
+       function positionHome() {
+           if(window.innerWidth >= 1330) {
+                console.log("Everything is left the same.");
+           }else if(window.innerWidth <= 480) {
+                $('homeButton').style.margine = "0px 0px 10px 20px";
+           }
        }
     </script>
 </body>
