@@ -198,6 +198,8 @@
         var X3 = X1 - 450;
         var X4 = X2 + 450 + 10 + 10 + 10 + 10 + 10;
         var X5 = X3 - 450;
+        
+        positionHome();
 
 
         function $(id) {
@@ -290,6 +292,14 @@
 
             if (picForFadeLoaded) {
                 canvasContext.drawImage(picForFade, 0, 0 - 1);
+            }
+        }
+        
+        function positionHome() {
+            if(window.innerWidth >= 1330) {
+                console.log("Everything is left the way it was.");
+            }else if(window.innerWidth <= 480) {
+                $('homeButton').style.margin = "0px 0px 10px 20px";
             }
         }
     </script>
