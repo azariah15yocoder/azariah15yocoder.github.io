@@ -245,6 +245,8 @@
         var X3 = X1 - 450;
         var X4 = X2 + 450 + 10 + 10 + 10 + 10 + 10;
         var X5 = X3 - 450;
+        
+        positionHome();
 
 
         function $(id) {
@@ -260,7 +262,6 @@
             canvas = $("cv");
             canvasContext = canvas.getContext('2d');
             colorRect(0, 0, canvas.width, canvas.height, 'aqua');
-            checkWidth();
             setInterval(updateAll, 0.01);
 
             rabbitPic.onload = function () {
@@ -340,8 +341,8 @@
             }
         }
         
-        function checkWidth() {
-            if(window.innerWidth > 1330) {
+        function positionHome() {
+            if(window.innerWidth >= 1330) {
                 console.log("Everything is being left the way it is");
             }else if (window.innerWidth <= 480) {
                 $('homeButton').style.margin = "0px 0px 10px 20px"; // should put home button in the right spot
