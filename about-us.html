@@ -359,6 +359,46 @@
                 console.log("Everything is left the way it is.");
             }else if(window.innerWidth <= 480) {
                 $('homeButton').style.margin = "0px 0px 10px 20px";
+                $('photoTable').innerHTML = `<tr>
+<td id="eveData">
+    <figure id="eveRider">
+        <img id="evePhoto" style="margin-top: -35px;" src="Eve holding a Rabbit 2.jpeg" width="150" alt="This is Eve Rider holding a rabbit." /> <!--photos in here-->
+        <figcaption id="actLikeParagraphTag" style="font-family: Arial;">
+            Eve Rider
+        </figcaption>
+    </figure>
+</td>
+</tr>
+<tr>
+<td id="daphneData">
+    <figure id="daphneRider">
+        <img id="daphnePhoto" src="DaphneHoldingRabbit.jpg" width="150" alt="This is Daphne Rider holding a rabbit." />
+        <figcaption id="actLikeParagraphTag" style="font-family: Arial;">
+            Daphne Rider
+        </figcaption>
+    </figure>
+</td>
+</tr>
+<tr>
+<td id="azariahData" style="padding-left: 500px">
+    <figure id="azariahEasey">
+        <img id="azariahPhoto" src="Azariah Coding.JPEG" width="150" alt="This is Azariah Easey ready to code." />
+        <figcaption id="actLikeParagraphTag" style="font-family: Arial;">
+            Azariah Easey
+        </figcaption>
+    </figure>
+</td>
+</tr>
+<tr>
+<td id="jeremiahData">
+    <figure id="jeremiahEasey">
+        <img id="jeremiahPhoto" src="JerCamera.JPEG" width="150" alt="This is Jeremiah Easey ready to film." />
+        <figcaption id="actLikeParagraphTag" style="font-family: Arial;">
+            Jeremiah Easey
+        </figcaption>
+    </figure>
+</td>
+</tr>`;
             }
         }
     </script>
