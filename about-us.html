@@ -357,12 +357,95 @@
         }
         
         function positionHome() {
-            if(window.innerWidth >= 1330) {
-                console.log("Everything is left the way it is.");
-            }else if(window.innerWidth <= 480) {
-                $('homeButton').style.margin = "0px 0px 10px 20px";
-                if(window.innerWidth == 800) {
-                    $('photoTable').innerHTML = `<tr>
+    if (window.innerWidth >= 1330) {
+        console.log("Everything is left the way it is.");
+    } else if (window.innerWidth <= 480) {
+        $('homeButton').style.margin = "0px 0px 10px 20px";
+        $('photoTable').innerHTML = `<tr>
+    <td id="eveData">
+        <figure id="eveRider">
+            <img id="evePhoto" style="margin-top: -35px;" src="Eve holding a Rabbit 2.jpeg" width="150" alt="This is Eve Rider holding a rabbit." />
+            <figcaption style="font-family: Arial;">
+                Eve Rider
+            </figcaption>
+        </figure>
+    </td>
+</tr>
+<tr>
+    <td id="daphneData">
+        <figure id="daphneRider">
+            <img id="daphnePhoto" src="DaphneHoldingRabbit.jpg" width="150" alt="This is Daphne Rider holding a rabbit." />
+            <figcaption style="font-family: Arial;">
+                Daphne Rider
+            </figcaption>
+        </figure>
+    </td>
+</tr>
+<tr>
+    <td id="azariahData">
+        <figure id="azariahEasey" style="padding-left: 0px;">
+            <img id="azariahPhoto" src="Azariah Coding.JPEG" width="150" alt="This is Azariah Easey ready to code." />
+            <figcaption style="font-family: Arial;">
+                Azariah Easey
+            </figcaption>
+        </figure>
+    </td>
+</tr>
+<tr>
+    <td id="jeremiahData">
+        <figure id="jeremiahEasey">
+            <img id="jeremiahPhoto" src="JerCamera.JPEG" width="150" alt="This is Jeremiah Easey ready to film." />
+            <figcaption style="font-family: Arial;">
+                Jeremiah Easey
+            </figcaption>
+        </figure>
+    </td>
+</tr>`;
+    } else if (window.innerWidth >= 800) {
+        $('homeButton').style.margin = "0px 0px 10px 20px"; // looks good that way
+        $('photoTable').innerHTML = `<tr style="text-align: center;">
+    <td id="eveData">
+        <figure id="eveRider">
+            <img id="evePhoto" style="margin-top: -35px;" src="Eve holding a Rabbit 2.jpeg" width="200" alt="This is Eve Rider holding a rabbit." />
+            <figcaption style="font-family: Arial;">
+                Eve Rider
+            </figcaption>
+        </figure>
+    </td>
+</tr>
+<tr>
+    <td id="daphneData">
+        <figure id="daphneRider">
+            <img id="daphnePhoto" src="DaphneHoldingRabbit.jpg" width="200" alt="This is Daphne Rider holding a rabbit." />
+            <figcaption style="font-family: Arial;">
+                Daphne Rider
+            </figcaption>
+        </figure>
+    </td>
+</tr>
+<tr>
+    <td id="azariahData">
+        <figure id="azariahEasey" style="padding-left: 0px;">
+            <img id="azariahPhoto" src="Azariah Coding.JPEG" width="200" alt="This is Azariah Easey ready to code." />
+            <figcaption style="font-family: Arial;">
+                Azariah Easey
+            </figcaption>
+        </figure>
+    </td>
+</tr>
+<tr>
+    <td id="jeremiahData">
+        <figure id="jeremiahEasey">
+            <img id="jeremiahPhoto" src="JerCamera.JPEG" width="200" alt="This is Jeremiah Easey ready to film." />
+            <figcaption style="font-family: Arial;">
+                Jeremiah Easey
+            </figcaption>
+        </figure>
+    </td>
+</tr>`;
+    } else if (window.innerWidth >= 1280) {
+        $('homeButton').style.margin = "0px 0px 10px 20px"; // might be edited if doesn't work
+        $('photoTable').innerHTML = `<tr>
     <td id="eveData">
         <figure id="eveRider">
             <img id="evePhoto" style="margin-top: -35px;" src="Eve holding a Rabbit 2.jpeg" width="250" alt="This is Eve Rider holding a rabbit." />
@@ -400,50 +483,9 @@
         </figure>
     </td>
 </tr>`;
-                }else{
-                $('photoTable').innerHTML = `<tr>
-<td id="eveData">
-    <figure id="eveRider">
-        <img id="evePhoto" style="margin-top: -35px;" src="Eve holding a Rabbit 2.jpeg" width="150" alt="This is Eve Rider holding a rabbit." /> <!--photos in here-->
-        <figcaption style="font-family: Arial;">
-            Eve Rider
-        </figcaption>
-    </figure>
-</td>
-</tr>
-<tr>
-<td id="daphneData">
-    <figure id="daphneRider">
-        <img id="daphnePhoto" src="DaphneHoldingRabbit.jpg" width="150" alt="This is Daphne Rider holding a rabbit." />
-        <figcaption style="font-family: Arial;">
-            Daphne Rider
-        </figcaption>
-    </figure>
-</td>
-</tr>
-<tr>
-<td id="azariahData">
-    <figure id="azariahEasey" style="padding-left: 0px;">
-        <img id="azariahPhoto" src="Azariah Coding.JPEG" width="150" alt="This is Azariah Easey ready to code." />
-        <figcaption style="font-family: Arial;">
-            Azariah Easey
-        </figcaption>
-    </figure>
-</td>
-</tr>
-<tr>
-<td id="jeremiahData">
-    <figure id="jeremiahEasey">
-        <img id="jeremiahPhoto" src="JerCamera.JPEG" width="150" alt="This is Jeremiah Easey ready to film." />
-        <figcaption style="font-family: Arial;">
-            Jeremiah Easey
-        </figcaption>
-    </figure>
-</td>
-</tr>`;
-                }
-            }
-        }
+    }
+}
+
     </script>
 </body>
 </html>
