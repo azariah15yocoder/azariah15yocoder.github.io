@@ -236,6 +236,7 @@
         function updateAll() {
             moveAll();
             drawAll();
+            positionHome();
         }
 
         function moveAll() {
@@ -296,12 +297,23 @@
         }
         
         function positionHome() {
-            if(window.innerWidth >= 1330) {
-                console.log("Everything is left the way it was.");
-            }else if(window.innerWidth <= 480) {
-                $('homeButton').style.margin = "0px 0px 10px 20px";
-            }
-        }
+    if (window.innerWidth >= 1330) {
+        console.log("Everything is left the way it is.");
+    } else if (window.innerWidth >= 1280 && window.innerHeight >= 680) {
+        $('homeButton').style.margin = "0px 0px 10px 120px";
+    } else if (window.innerWidth >= 1280) {
+        $('homeButton').style.margin = "0px 0px 10px 120px"; // might be edited if doesn't work
+    } else if (window.innerWidth <= 480) {
+        $('homeButton').style.margin = "0px 0px 10px 20px";
+    } else if (window.innerWidth >= 817 && window.innerHeight >= 329) { // based off of LG phone
+        $('homeButton').style.margin = "0px 0px 10px 20px";
+    } else if (window.innerWidth >= 800 && window.innerHeight >= 1160) {
+        $('homeButton').style.margin = "0px 0px 10px 20px"; // looks good that way
+    } else if (window.innerWidth >= 800) { // when not sure what to do with width of tablet
+        $('homeButton').style.margin = "0px 0px 10px 30px";
+
+    }
+}
     </script>
 </body>
 </html>
