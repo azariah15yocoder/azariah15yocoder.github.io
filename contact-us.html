@@ -200,7 +200,7 @@
                       enctype="text/plain" 
                       action="https://docs.google.com/forms/d/e/1FAIpQLSfn1dtFNS2m1O001Eaw6K0eEsfYofgdmJW6aGfem4fck6A3CA/formResponse?"
                       target="hidden_iframe"
-                      onsubmit="submitted = true;">
+                      onsubmit="submitted = true; alert('Message Sent');">
                     <input type="text" 
                            name="entry.1843912332" 
                            id="entry.1843912332" 
@@ -223,7 +223,7 @@
                     <br>
                     <br>
                     
-                    <input type="submit" value="Submit" onclick="$('entry.1843912332').value = null; $('entry.513306115').value = null; $('entry.745821572').value = null;">
+                    <input type="submit" value="Submit">
                 </form>
 
                 <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if (submitted) {  }"></iframe>
