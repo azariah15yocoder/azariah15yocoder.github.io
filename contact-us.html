@@ -31,6 +31,10 @@
             font-family: 'Ink Free', sans-serif;
             line-height: 50px;
         }
+        
+        textarea {
+            resize: none;
+        }
 
         .hilightme {
             background-color: #ffd800;
@@ -222,7 +226,7 @@
                     <input type="submit" value="Submit">
                 </form>
 
-                <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if (submitted) { $('gform').innerHTML = "<p>Message Sent<p>"; }"></iframe>
+                <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if (submitted) { alert("Message Sent."); }"></iframe>
 
             </section>
 
