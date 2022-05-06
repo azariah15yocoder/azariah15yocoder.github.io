@@ -189,20 +189,6 @@
                 </p>
                 <p>Also, you can call us at 785-798-5511, or, if searching for us on Facebook, search for <a href="null" target="_blank">@K Rd Rabbits</a>, and you'll find us.</p>
                 <p>Or, you can just send your questions here!</p>
-                <div class="emailHashtagFriends">
-                    <input type="text" name="email" id="email" placeholder="Place Your Email Address Here">
-                    <br>
-                    <br>
-                    <input type="text" name="subject" id="subject" placeholder="Place Subject Here">
-                    <br>
-                    <br>
-                    <div class="indentABitMore"><textarea id="myText" placeholder="Write Your Question Here" cols="80" rows="40"></textarea></div>
-                    <br>
-                    <br>
-                    <button onclick="sendMail(); return false;">Send</button>
-                </div>
-                
-                <p> This is the beta form for emailing. This is still an experiment. </p>
                 
                 <form name="gform" 
                       id="gform" 
@@ -397,7 +383,7 @@
     }
            
            function alertUser() {
-               // add something else in here later
+               $('gform').innerHTML = "<p>Message Sent<p>"; // a test to see if this works
            }
 }
     </script>
