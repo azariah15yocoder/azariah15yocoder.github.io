@@ -201,6 +201,35 @@
                     <br>
                     <button onclick="sendMail(); return false;">Send</button>
                 </div>
+                
+                <p> This is the beta form for emailing. This is still an experiment. </p>
+                
+                <form name="gform" 
+                      id="gform" 
+                      enctype="text/plain" 
+                      action="https://docs.google.com/forms/d/e/1FAIpQLSfn1dtFNS2m1O001Eaw6K0eEsfYofgdmJW6aGfem4fck6A3CA/formResponse?"
+                      target="hidden_iframe"
+                      onsubmit="submitted = true;">
+                    <input type="text" 
+                           name="entry.1843912332" 
+                           id="entry.1843912332" 
+                           placeholder="Place Your Email Address Here"> <!--for inserting email-->
+                    <br>
+                    <br>
+                    <input type="text" 
+                           name="entry.513306115"
+                           id="entry.513306115"
+                           placeholder="Place Subject Here"> <!--for placing subject in form-->
+                    <br>
+                    <br>
+                    <textarea 
+                              name="entry.745821572" 
+                              id="entry.745821572"
+                              placeholder="Write Your Question Here"></textarea>
+                </form>
+
+                <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if (submitted) { }"></iframe>
+
             </section>
 
         </article>
