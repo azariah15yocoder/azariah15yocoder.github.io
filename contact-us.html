@@ -222,7 +222,7 @@
                     <input type="submit" value="Submit">
                 </form>
 
-                <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if (submitted) { alertUser(); }"></iframe>
+                <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if (submitted) { $('gform').innerHTML = "<p>Message Sent<p>"; }"></iframe>
 
             </section>
 
@@ -381,10 +381,6 @@
         $('homeButton').style.margin = "0px 0px 10px 30px";
 
     }
-           
-           function alertUser() {
-               $('gform').innerHTML = "<p>Message Sent<p>"; // a test to see if this works
-           }
 }
     </script>
 </body>
