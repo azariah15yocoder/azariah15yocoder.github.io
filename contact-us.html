@@ -230,11 +230,13 @@
                               id="entry.745821572"
                               style="font-family: Arial; font-size: medium; color: black; width: 230px; height: 50px;"
                                                           placeholder="Write Your Question Here"></textarea></div>
+                    <br>
+                    <br>
                     
                     <input type="submit" value="Submit">
                 </form>
 
-                <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if (submitted) { }"></iframe>
+                <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if (submitted) { alertUser(); }"></iframe>
 
             </section>
 
@@ -393,6 +395,13 @@
         $('homeButton').style.margin = "0px 0px 10px 30px";
 
     }
+           
+           function alertUser() {
+               $("gform").style.fontFamily = "Arial";
+               $("gform").style.fontSize = "medium";
+               $("gform").style.color = "black"; // updates information in form after user sends message
+               $("gform").value = "Message Sent."
+           }
 }
     </script>
 </body>
