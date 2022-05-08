@@ -392,7 +392,9 @@
        
        function twoSecondCount() {
            var number = 0;
-           setInterval(counter, 1000, number);
+           for(var i=0;i<100;i++) {
+               setInterval(counter, 1000, number);
+           }
        }
        
        function counter(a) {
