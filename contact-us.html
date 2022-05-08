@@ -391,13 +391,13 @@
 }
        
        function twoSecondCount() {
-           setInterval(counter(2), 1000);
+           setInterval(counter, 1000);
        }
        
-       function counter(a) {
+       function counter() {
            var number = 0;
            number += 1;
-           if(number === a) {
+           if(number === 2) {
                parent.location = 'messageSent.html';
            }else{
                console.log("Nothing to do here.");
