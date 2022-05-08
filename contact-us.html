@@ -303,6 +303,9 @@
             moveAll();
             drawAll();
             positionHome();
+            if(submitted === true) {
+                console.log("The page is submitted.");
+            }
         }
 
         function moveAll() {
@@ -389,13 +392,6 @@
 
     }
 }
-       
-       function switchPages() {
-           for(var i=0; i<200; i++) {
-               console.log("Looped", i, "times.");
-           }
-           parent.location = "message-sent.html";
-       }
     </script>
 </body>
 </html>
