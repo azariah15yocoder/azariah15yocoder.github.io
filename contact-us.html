@@ -391,18 +391,18 @@
 }
        
        function twoSecondCount() {
-           setInterval(counter, 1000);
+           var number = 0;
+           setInterval(counter, 1000, number);
        }
        
-       function counter() {
-           var number = 0;
-           number += 1;
-           if(number === 2) {
-               console.log(number);
+       function counter(a) {
+           a += 1;
+           if(a === 2) {
+               console.log(a);
                parent.location = 'messageSent.html';
            }else{
                console.log("Nothing to do here.");
-               console.log(number);
+               console.log(a);
            }
        }
     </script>
