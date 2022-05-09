@@ -59,7 +59,7 @@ div {
     position: absolute;
     left: 70px;
     /*bottom: 75px;*/
-    bottom: 45px; /* a test of position*/
+    bottom: 40px; /* a test of position*/
 }
 
 .inner-container {
