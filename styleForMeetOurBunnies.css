@@ -82,3 +82,9 @@ header {
 .indent {
     padding-left: 50px;
 }
+
+@media screen and (max-width: 480) {
+    /* other stuff written here */
+}
+
+/* more media queries may or may not be written; depends on situation */
