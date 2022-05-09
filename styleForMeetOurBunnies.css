@@ -57,7 +57,8 @@ div {
     font-family: Arial;
     background-color: rgba(192,192,192,0.5);
     position: absolute;
-    left: 70px;
+    /*left: 70px;*/
+    left: 100px; /*a test of position*/
     bottom: 75px;
 }
 
