@@ -64,7 +64,7 @@ div {
 .inner-container {
     overflow-x: hidden;
     overflow-y: scroll;
-    padding-top: 100px; /* added in */
+    padding-top: 800px; /* added in */
 }
 
 .inner-container::-webkit-scrollbar {
