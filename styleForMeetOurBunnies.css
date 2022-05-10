@@ -221,7 +221,7 @@ header {
     img {
         margin-right: 20px;
         float: right;
-        bottom: 100px; /*a test for normal computers*/
+        bottom: 200px; /*a test for normal computers*/
     }
 
     div {
