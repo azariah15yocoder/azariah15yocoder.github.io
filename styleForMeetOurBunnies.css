@@ -1,4 +1,4 @@
-body {
+/*body {
     background-color: #808080;
     overflow-x: hidden;
     background-image: url(happyDaysReplacement.png);
@@ -81,7 +81,7 @@ header {
 
 .indent {
     padding-left: 50px;
-}
+}*/
 
 @media screen and (min-width: 1330px) { /*edit 1*/
     body {
