@@ -219,8 +219,11 @@ header {
     }
 
     img {
-        margin-right: 20px;
-        float: right;
+        /*margin-right: 20px;
+        float: right;*/
+        position: absolute;
+        left: 1234px; /*new position test for normal computers*/
+        bottom: 100px;
     }
 
     div {
