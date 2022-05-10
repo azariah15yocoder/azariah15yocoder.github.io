@@ -223,7 +223,7 @@ header {
         float: right;*/
         position: absolute;
         left: 1234px; /*new position test for normal computers*/
-        bottom: 100px;
+        bottom: 500px;
     }
 
     div {
