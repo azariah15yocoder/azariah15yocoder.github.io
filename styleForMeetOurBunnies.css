@@ -137,8 +137,8 @@ header {
         
         /*float: right;*/
         position: absolute;
-        left: 1300px; /*the update to the CSS*/
-        bottom: 200px;
+        left: 1300px; /*the update to the CSS file*/
+        bottom: 200px; /*the other update to CSS file*/
     }
 
     div {
