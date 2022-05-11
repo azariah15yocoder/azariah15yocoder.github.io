@@ -133,6 +133,7 @@ header {
 
     img {
         margin-right: 20px;
+        margin-bottom: 20px; /*does this even work?*/
         float: right;
     }
 
