@@ -132,9 +132,13 @@ header {
     }
 
     img {
-        margin-right: 20px;
-        margin-bottom: 200px;
-        float: right;
+        /*margin-right: 20px;&/
+        /*margin-bottom: 200px;*/
+        
+        /*float: right;*/
+        position: absolute;
+        left: 900px;
+        bottom: 600px;
     }
 
     div {
