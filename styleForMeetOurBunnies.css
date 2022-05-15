@@ -132,13 +132,9 @@ header {
     }
 
     img {
-        /*margin-right: 20px;&/
-        /*margin-bottom: 200px;*/
-        
-        /*float: right;*/
         position: absolute;
-        left: 1340px; /*the update to the CSS file*/
-        bottom: 55px; /*the other update to CSS file*/
+        left: 1340px;
+        bottom: 55px; 
     }
 
     div {
@@ -201,7 +197,7 @@ header {
     h2 {
         font-size: 2.0em;
         font-family: 'Ink Free', sans-serif;
-
+    }
 
     h3 {
         font-size: 1.5em;
@@ -224,11 +220,9 @@ header {
     }
 
     img {
-        /*margin-right: 20px;
-        float: right;*/
         position: absolute;
-        left: 1234px; /*new position test for normal computers*/
-        bottom: 500px;
+        left: 1340px;
+        bottom: 55px; 
     }
 
     div {
@@ -314,8 +308,9 @@ header {
     }
 
     img {
-        margin-right: 20px;
-        float: right;
+        position: absolute;
+        left: 1340px;
+        bottom: 55px; 
     }
 
     div {
