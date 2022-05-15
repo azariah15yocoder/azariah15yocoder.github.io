@@ -435,7 +435,7 @@ header {
 }
 
 @media screen and (min-width: 817px) and (min-height: 329px) { /*based off of LG phone*/ /*edit 5*/
-      body {
+    body {
         background-color: #808080;
         overflow-x: hidden;
         background-image: url(happyDaysReplacement.png);
@@ -483,8 +483,9 @@ header {
     }
 
     img {
-        margin-right: 20px;
-        float: right;
+        position: absolute;
+        left: 1340px;
+        bottom: 55px; 
     }
 
     div {
