@@ -523,7 +523,7 @@ header {
 }
 
 @media screen and (min-width: 800px) and (min-height: 1160px) { /*edit 6*/ /*I think this is the tablet?????*/
-      body {
+    body {
         background-color: #808080;
         overflow-x: hidden;
         background-image: url(happyDaysReplacement.png);
@@ -571,8 +571,9 @@ header {
     }
 
     img {
-        margin-right: 20px;
-        float: right;
+        position: absolute;
+        left: 1340px;
+        bottom: 55px; 
     }
 
     div {
@@ -583,8 +584,7 @@ header {
         background-color: rgba(192,192,192,0.5);
         position: absolute;
         left: 70px;
-        /*bottom: 75px;*/
-        bottom: 30px; /* a test of position*/
+        bottom: 30px;
     }
 
     .inner-container {
