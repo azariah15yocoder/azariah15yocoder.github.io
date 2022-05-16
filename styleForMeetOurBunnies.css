@@ -583,7 +583,7 @@ header {
         background-color: rgba(192,192,192,0.5);
         position: absolute;
         left: 60px; /*changes are for position of text area*/
-        bottom: 90px;
+        bottom: 300px;
     }
 
     .inner-container {
