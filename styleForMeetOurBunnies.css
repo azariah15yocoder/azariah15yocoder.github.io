@@ -582,8 +582,8 @@ header {
         font-family: Arial;
         background-color: rgba(192,192,192,0.5);
         position: absolute;
-        left: 70px;
-        bottom: 30px;
+        left: 60px; /*changes are for position of text area*/
+        bottom: 90px;
     }
 
     .inner-container {
