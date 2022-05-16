@@ -347,7 +347,7 @@ header {
     }
 }
 
-@media screen and (max-width 480px) { /*edit 4*/
+@media screen and (max-width 480px) or screen and (min-width: 480px) { /*edit 4*//*added a bit of a conditional to it*/
       body {
         background-color: #808080;
         overflow-x: hidden;
