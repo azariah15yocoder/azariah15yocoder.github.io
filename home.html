@@ -41,8 +41,12 @@
             padding-left: 50px; /*used for videos*/
         }
         
-        #indent {
+        #indent { /*this is experimental*/
             padding-left: 100px; /*used for paragraph (aka <p>) tag*/
+        }
+        
+        .announcment { /*this is also an experiment*/
+            max-width: 120px; /*supposed to limit what is in the <p> tags; height is still normal*/
         }
         
         #homeButton {
@@ -179,11 +183,13 @@
                 <iframe width="560" height="315" src="https://www.youtube.com/embed/rXjCtThiwpI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 <p> Episode 1 </p>
                 <iframe width="560" height="315" src="https://www.youtube.com/embed/1DnEKN0YCYo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                                -->
-                <p id="indent"> <i>We don't have any videos yet to show. We're working on it!</i> Dorem ipsum dorem ipsum
-                this is a test to see what happens to this element when indented. Does it stay that way? Or does it do something else? 
-                Testing testing 1 2 3. Testing testing 1 2 3. This is the K Road Rabbits web page test. This is a test for the K Road Rabbits 
-                page. That's all it is.</p>
+                               -->
+                <div class="announcment"> <!--this is an experiment-->
+                    <p id="indent"> <i>We don't have any videos yet to show. We're working on it!</i> Dorem ipsum dorem ipsum
+                    this is a test to see what happens to this element when indented. Does it stay that way? Or does it do something else? 
+                    Testing testing 1 2 3. Testing testing 1 2 3. This is the K Road Rabbits web page test. This is a test for the K Road Rabbits 
+                    page. That's all it is.</p>
+                </div>
                 <!--       <p>The K Road Rabbit Mission</p>
                        <iframe width="560"
                                height="315" src="https://www.youtube.com/embed/rXjCtThiwpI"
