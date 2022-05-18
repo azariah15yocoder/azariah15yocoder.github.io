@@ -84,6 +84,29 @@
             background-color: black; /*this will fill in the division in black*/
         }
         
+        /*
+        function positionHome() {
+            if (window.innerWidth >= 1330) {
+                console.log("Everything is left the way it is.");
+            } else if (window.innerWidth >= 1280 && window.innerHeight >= 680) {
+                $('homeButton').style.margin = "0px 0px 10px 120px";
+            } else if (window.innerWidth >= 1280) {
+                $('homeButton').style.margin = "0px 0px 10px 120px"; // might be edited if doesn't work
+            } else if (window.innerWidth <= 480) {
+                $('homeButton').style.margin = "0px 0px 10px 20px";
+            } else if (window.innerWidth >= 817 && window.innerHeight >= 329) { // based off of LG phone
+                $('homeButton').style.margin = "0px 0px 10px 20px";
+            } else if (window.innerWidth >= 800 && window.innerHeight >= 1160) {
+                $('homeButton').style.margin = "0px 0px 10px 20px"; // looks good that way
+            } else if (window.innerWidth >= 800) { // when not sure what to do with width of tablet
+                $('homeButton').style.margin = "0px 0px 10px 30px";
+
+            }
+        }
+        
+        USE THE CODE ABOVE TO BUILD THE MEDIA QUERIES THAT ARE TO REPLACE THE FUNCTION
+        */
+        
         @media screen and (min-width: 817px) and (min-height: 329px) {
             body {
                 background-color: #808080;
@@ -121,7 +144,7 @@
             }
 
             .announcment { /*this is also an experiment*/
-                max-width: none; /*supposed to limit what is in the <p> tags; height is still normal*/
+                max-width: 1690px; /*supposed to limit what is in the <p> tags; height is still normal*/
             }
 
             #homeButton {
@@ -434,23 +457,23 @@
 
         
         function positionHome() {
-    if (window.innerWidth >= 1330) {
-        console.log("Everything is left the way it is.");
-    } else if (window.innerWidth >= 1280 && window.innerHeight >= 680) {
-        $('homeButton').style.margin = "0px 0px 10px 120px";
-    } else if (window.innerWidth >= 1280) {
-        $('homeButton').style.margin = "0px 0px 10px 120px"; // might be edited if doesn't work
-    } else if (window.innerWidth <= 480) {
-        $('homeButton').style.margin = "0px 0px 10px 20px";
-    } else if (window.innerWidth >= 817 && window.innerHeight >= 329) { // based off of LG phone
-        $('homeButton').style.margin = "0px 0px 10px 20px";
-    } else if (window.innerWidth >= 800 && window.innerHeight >= 1160) {
-        $('homeButton').style.margin = "0px 0px 10px 20px"; // looks good that way
-    } else if (window.innerWidth >= 800) { // when not sure what to do with width of tablet
-        $('homeButton').style.margin = "0px 0px 10px 30px";
+            if (window.innerWidth >= 1330) {
+                console.log("Everything is left the way it is.");
+            } else if (window.innerWidth >= 1280 && window.innerHeight >= 680) {
+                $('homeButton').style.margin = "0px 0px 10px 120px";
+            } else if (window.innerWidth >= 1280) {
+                $('homeButton').style.margin = "0px 0px 10px 120px"; // might be edited if doesn't work
+            } else if (window.innerWidth <= 480) {
+                $('homeButton').style.margin = "0px 0px 10px 20px";
+            } else if (window.innerWidth >= 817 && window.innerHeight >= 329) { // based off of LG phone
+                $('homeButton').style.margin = "0px 0px 10px 20px";
+            } else if (window.innerWidth >= 800 && window.innerHeight >= 1160) {
+                $('homeButton').style.margin = "0px 0px 10px 20px"; // looks good that way
+            } else if (window.innerWidth >= 800) { // when not sure what to do with width of tablet
+                $('homeButton').style.margin = "0px 0px 10px 30px";
 
-    }
-}
+            }
+        }
     </script>
 
 </body>
