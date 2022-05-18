@@ -17,9 +17,9 @@
             background-repeat: repeat;
             background-position: -200px 200px;
             background-size: auto;
-            background-attachment: fixed; /*this might be the solution to the problem with the background*/
-            color: black !important; /*note added to see whether the web page updates or not*/
-        }
+            background-attachment: fixed; /*this might be the solution to the problem with the background*//*
+            color: black !important; /*note added to see whether the web page updates or not*//*
+        }/*
 
         h1 {
             font-size: 3em;
@@ -38,15 +38,15 @@
         }
 
         .indent {
-            padding-left: 50px; /*used for videos*/
+            padding-left: 50px; /*used for videos*//*
         }
         
-        #indent { /*this is experimental*/
-            padding-left: 100px; /*used for paragraph (aka <p>) tag*/
+        #indent { /*this is experimental*//*
+            padding-left: 100px; /*used for paragraph (aka <p>) tag*//*
         }
         
-        .announcment { /*this is also an experiment*/
-            max-width: 1690px; /*supposed to limit what is in the <p> tags; height is still normal*/
+        .announcment { /*this is also an experiment*//*
+            max-width: 1690px; /*supposed to limit what is in the <p> tags; height is still normal*//*
         }
         
         #homeButton {
@@ -76,12 +76,12 @@
         #meetOurBunniesButton {
             width: 225px;
             height: auto;
-            margin: 0px 0px 10px 20px; /* change made here */
+            margin: 0px 0px 10px 20px; /* change made here *//*
         }
         
         hr {
-            color: black; /*this will change the tags to black*/
-            background-color: black; /*this will fill in the division in black*/
+            color: black; /*this will change the tags to black*//*
+            background-color: black; /*this will fill in the division in black*//*
         }*/
         
         /*
@@ -818,7 +818,7 @@
         var X4 = X2 + 450 + 10 + 10 + 10 + 10 + 10;
         var X5 = X3 - 450;
         
-        positionHome();
+        //positionHome();
 
 
         function $(id) {
@@ -854,8 +854,10 @@
         function updateAll() {
             moveAll();
             drawAll();
-            positionHome();
+            //positionHome();
         }
+        
+        // If the CSS replacement doesn't work well, I'll stick with the original algorithm.
 
         function moveAll() {
             X1 += 0.5;
