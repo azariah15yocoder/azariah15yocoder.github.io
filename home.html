@@ -1,4 +1,3 @@
-﻿﻿
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,7 +6,7 @@
     <meta name="author" content="Azariah Easey">
     <meta name="keywords" content="Rabbits, Bunnies, Facts, Products">
     <meta name="HandheldFriendly" content="true">
-    <meta name="viewport" content="width=device-width">
+    <meta name="viewport" content="width=device-width"> <!--what I changed-->
     <title>K-Road Rabbits</title>
     <style>
         body {
@@ -39,627 +38,65 @@
         .indent {
             padding-left: 50px; /*used for videos*/
         }
-        
+
         #homeButton {
             width: 150px;
             height: auto;
             margin: 0px 0px 10px 475px;
         }
-        
+
         #aboutUsButton {
             width: 150px;
             height: auto;
             margin: 0px 0px 10px 20px;
         }
-        
+
         #contactUsButton {
             width: 150px;
             height: auto;
             margin: 0px 0px 10px 20px;
         }
-        
+
         #storeButton {
             width: 150px;
             height: auto;
             margin: 0px 0px 10px 20px;
         }
-        
+
         #meetOurBunniesButton {
             width: 225px;
             height: auto;
             margin: 0px 0px 10px 20px; /* change made here */
         }
-        
+
         #actLikeParagraphTag {
             text-align: center;
         }
-        
-        #centerRow{
+
+        #centerRow {
             text-align: center;
             position: center;
         }
-        
-        hr {
-            color: black; /*this will change the tags to black*/
-            background-color: black; /*this will fill in the division in black*/
-        }
-        
-        /*
-        function positionHome() {
-            if (window.innerWidth >= 1330) {
-                console.log("Everything is left the way it is.");
-            } else if (window.innerWidth >= 1280 && window.innerHeight >= 680) {
-                $('homeButton').style.margin = "0px 0px 10px 120px";
-            } else if (window.innerWidth >= 1280) {
-                $('homeButton').style.margin = "0px 0px 10px 120px"; // might be edited if doesn't work
-            } else if (window.innerWidth <= 480) {
-                $('homeButton').style.margin = "0px 0px 10px 20px";
-            } else if (window.innerWidth >= 817 && window.innerHeight >= 329) { // based off of LG phone
-                $('homeButton').style.margin = "0px 0px 10px 20px";
-            } else if (window.innerWidth >= 800 && window.innerHeight >= 1160) {
-                $('homeButton').style.margin = "0px 0px 10px 20px"; // looks good that way
-            } else if (window.innerWidth >= 800) { // when not sure what to do with width of tablet
-                $('homeButton').style.margin = "0px 0px 10px 30px";
 
-            }
-        }
-        
-        USE THE CODE ABOVE TO BUILD THE MEDIA QUERIES THAT ARE TO REPLACE THE FUNCTION
-        */
-        /*@media screen and (min-width: 1330px) { /*based off of normal laptops and desktop computers*//*
-            /*like previous CSS; everything is left the way it is*//*
-            body {
-                background-color: #808080;
-                overflow-x: hidden;
-                background-image: url(happyDaysReplacement.png);
-                background-repeat: repeat;
-                background-position: -200px 200px;
-                background-size: auto;
-                background-attachment: fixed; /*this might be the solution to the problem with the background*//*
-                color: black !important; /*note added to see whether the web page updates or not*//*
-            }
-
-            h1 {
-                font-size: 3em;
-                font-family: 'Ink Free', sans-serif;
-                text-align: center;
-            }
-
-            p {
-                font-size: 2.5em;
-                font-family: 'Ink Free', sans-serif;
-                line-height: 50px;
-            }
-
-            .hilightme {
-                background-color: #ffd800;
-            }
-
-            .indent {
-                padding-left: 50px; /*used for videos*//*
-            }
-
-            #indent { /*this is experimental*//*
-                padding-left: 100px; /*used for paragraph (aka <p>) tag*//*
-            }
-
-            .announcment { /*this is also an experiment*//*
-                max-width: 1690px; /*supposed to limit what is in the <p> tags; height is still normal*//*
-            }
-
-            #homeButton {
-                width: 150px;
-                height: auto;
-                margin: 0px 0px 10px 475px;
-            }
-
-            #aboutUsButton {
-                width: 150px;
-                height: auto;
-                margin: 0px 0px 10px 20px;
-            }
-
-            #contactUsButton {
-                width: 150px;
-                height: auto;
-                margin: 0px 0px 10px 20px;
-            }
-
-            #storeButton {
-                width: 150px;
-                height: auto;
-                margin: 0px 0px 10px 20px;
-            }
-
-            #meetOurBunniesButton {
-                width: 225px;
-                height: auto;
-                margin: 0px 0px 10px 20px; /* change made here *//*
-            }
-
-            hr {
-                color: black; /*this will change the tags to black*//*
-                background-color: black; /*this will fill in the division in black*//*
-            }
-
-        }
-        
-        @media screen and (min-width: 1280px) and (min-height: 680px) { /*also for laptops*//*
-            body {
-                background-color: #808080;
-                overflow-x: hidden;
-                background-image: url(happyDaysReplacement.png);
-                background-repeat: repeat;
-                background-position: -200px 200px;
-                background-size: auto;
-                background-attachment: fixed; /*this might be the solution to the problem with the background*//*
-                color: black !important; /*note added to see whether the web page updates or not*//*
-            }
-
-            h1 {
-                font-size: 3em;
-                font-family: 'Ink Free', sans-serif;
-                text-align: center;
-            }
-
-            p {
-                font-size: 2.5em;
-                font-family: 'Ink Free', sans-serif;
-                line-height: 50px;
-            }
-
-            .hilightme {
-                background-color: #ffd800;
-            }
-
-            .indent {
-                padding-left: 50px; /*used for videos*//*
-            }
-
-            #indent { /*this is experimental*//*
-                padding-left: 100px; /*used for paragraph (aka <p>) tag*//*
-            }
-
-            .announcment { /*this is also an experiment*//*
-                max-width: 1690px; /*supposed to limit what is in the <p> tags; height is still normal*//*
-            }
-
-            #homeButton {
-                width: 150px;
-                height: auto;
-                margin: 0px 0px 10px 120px;
-            }
-
-            #aboutUsButton {
-                width: 150px;
-                height: auto;
-                margin: 0px 0px 10px 20px;
-            }
-
-            #contactUsButton {
-                width: 150px;
-                height: auto;
-                margin: 0px 0px 10px 20px;
-            }
-
-            #storeButton {
-                width: 150px;
-                height: auto;
-                margin: 0px 0px 10px 20px;
-            }
-
-            #meetOurBunniesButton {
-                width: 225px;
-                height: auto;
-                margin: 0px 0px 10px 20px; /* change made here *//*
-            }
-
-            hr {
-                color: black; /*this will change the tags to black*//*
-                background-color: black; /*this will fill in the division in black*//*
-            }
-
-        }
-        
-        @media screen and (min-width: 1280px) { /*same as before, but just the width*//*
-            body {
-                background-color: #808080;
-                overflow-x: hidden;
-                background-image: url(happyDaysReplacement.png);
-                background-repeat: repeat;
-                background-position: -200px 200px;
-                background-size: auto;
-                background-attachment: fixed; /*this might be the solution to the problem with the background*//*
-                color: black !important; /*note added to see whether the web page updates or not*//*
-            }
-
-            h1 {
-                font-size: 3em;
-                font-family: 'Ink Free', sans-serif;
-                text-align: center;
-            }
-
-            p {
-                font-size: 2.5em;
-                font-family: 'Ink Free', sans-serif;
-                line-height: 50px;
-            }
-
-            .hilightme {
-                background-color: #ffd800;
-            }
-
-            .indent {
-                padding-left: 50px; /*used for videos*//*
-            }
-
-            #indent { /*this is experimental*//*
-                padding-left: 100px; /*used for paragraph (aka <p>) tag*//*
-            }
-
-            .announcment { /*this is also an experiment*//*
-                max-width: 1690px; /*supposed to limit what is in the <p> tags; height is still normal*//*
-            }
-
-            #homeButton {
-                width: 150px;
-                height: auto;
-                margin: 0px 0px 10px 120px;
-            }
-
-            #aboutUsButton {
-                width: 150px;
-                height: auto;
-                margin: 0px 0px 10px 20px;
-            }
-
-            #contactUsButton {
-                width: 150px;
-                height: auto;
-                margin: 0px 0px 10px 20px;
-            }
-
-            #storeButton {
-                width: 150px;
-                height: auto;
-                margin: 0px 0px 10px 20px;
-            }
-
-            #meetOurBunniesButton {
-                width: 225px;
-                height: auto;
-                margin: 0px 0px 10px 20px; /* change made here *//*
-            }
-
-            hr {
-                color: black; /*this will change the tags to black*//*
-                background-color: black; /*this will fill in the division in black*//*
-            }
-
-        }
-        
-        @media screen and (max-width: 480px) or screen and (min-width: 480px) { /*built for tiny phones / mobile devices*//*
-            body {
-                background-color: #808080;
-                overflow-x: hidden;
-                background-image: url(happyDaysReplacement.png);
-                background-repeat: repeat;
-                background-position: -200px 200px;
-                background-size: auto;
-                background-attachment: fixed; /*this might be the solution to the problem with the background*//*
-                color: black !important; /*note added to see whether the web page updates or not*//*
-            }
-
-            h1 {
-                font-size: 3em;
-                font-family: 'Ink Free', sans-serif;
-                text-align: center;
-            }
-
-            p {
-                font-size: 2.5em;
-                font-family: 'Ink Free', sans-serif;
-                line-height: 50px;
-            }
-
-            .hilightme {
-                background-color: #ffd800;
-            }
-
-            .indent {
-                padding-left: 50px; /*used for videos*//*
-            }
-
-            #indent { /*this is experimental*//*
-                padding-left: 100px; /*used for paragraph (aka <p>) tag*//*
-            }
-
-            .announcment { /*this is also an experiment*//*
-                max-width: 1690px; /*supposed to limit what is in the <p> tags; height is still normal*//*
-            }
-
-            #homeButton {
-                width: 150px;
-                height: auto;
-                margin: 0px 0px 10px 20px;
-            }
-
-            #aboutUsButton {
-                width: 150px;
-                height: auto;
-                margin: 0px 0px 10px 20px;
-            }
-
-            #contactUsButton {
-                width: 150px;
-                height: auto;
-                margin: 0px 0px 10px 20px;
-            }
-
-            #storeButton {
-                width: 150px;
-                height: auto;
-                margin: 0px 0px 10px 20px;
-            }
-
-            #meetOurBunniesButton {
-                width: 225px;
-                height: auto;
-                margin: 0px 0px 10px 20px; /* change made here *//*
-            }
-
-            hr {
-                color: black; /*this will change the tags to black*//*
-                background-color: black; /*this will fill in the division in black*//*
-            }
-
-        }
-        
-        @media screen and (min-width: 800px) and (min-height: 1160) { /*for SAMSUNG Tab E tablets*//*
-            body {
-                background-color: #808080;
-                overflow-x: hidden;
-                background-image: url(happyDaysReplacement.png);
-                background-repeat: repeat;
-                background-position: -200px 200px;
-                background-size: auto;
-                background-attachment: fixed; /*this might be the solution to the problem with the background*//*
-                color: black !important; /*note added to see whether the web page updates or not*//*
-            }
-
-            h1 {
-                font-size: 3em;
-                font-family: 'Ink Free', sans-serif;
-                text-align: center;
-            }
-
-            p {
-                font-size: 2.5em;
-                font-family: 'Ink Free', sans-serif;
-                line-height: 50px;
-            }
-
-            .hilightme {
-                background-color: #ffd800;
-            }
-
-            .indent {
-                padding-left: 50px; /*used for videos*//*
-            }
-
-            #indent { /*this is experimental*//*
-                padding-left: 100px; /*used for paragraph (aka <p>) tag*//*
-            }
-
-            .announcment { /*this is also an experiment*//*
-                max-width: 1690px; /*supposed to limit what is in the <p> tags; height is still normal*//*
-            }
-
-            #homeButton {
-                width: 150px;
-                height: auto;
-                margin: 0px 0px 10px 20px;
-            }
-
-            #aboutUsButton {
-                width: 150px;
-                height: auto;
-                margin: 0px 0px 10px 20px;
-            }
-
-            #contactUsButton {
-                width: 150px;
-                height: auto;
-                margin: 0px 0px 10px 20px;
-            }
-
-            #storeButton {
-                width: 150px;
-                height: auto;
-                margin: 0px 0px 10px 20px;
-            }
-
-            #meetOurBunniesButton {
-                width: 225px;
-                height: auto;
-                margin: 0px 0px 10px 20px; /* change made here *//*
-            }
-
-            hr {
-                color: black; /*this will change the tags to black*//*
-                background-color: black; /*this will fill in the division in black*//*
-            }
-        }
-        
-        @media screen and (min-width: 800px) { /*for tablets that don't have the previous height*//*
-            body {
-                background-color: #808080;
-                overflow-x: hidden;
-                background-image: url(happyDaysReplacement.png);
-                background-repeat: repeat;
-                background-position: -200px 200px;
-                background-size: auto;
-                background-attachment: fixed; /*this might be the solution to the problem with the background*//*
-                color: black !important; /*note added to see whether the web page updates or not*//*
-            }
-
-            h1 {
-                font-size: 3em;
-                font-family: 'Ink Free', sans-serif;
-                text-align: center;
-            }
-
-            p {
-                font-size: 2.5em;
-                font-family: 'Ink Free', sans-serif;
-                line-height: 50px;
-            }
-
-            .hilightme {
-                background-color: #ffd800;
-            }
-
-            .indent {
-                padding-left: 50px; /*used for videos*//*
-            }
-
-            #indent { /*this is experimental*//*
-                padding-left: 100px; /*used for paragraph (aka <p>) tag*//*
-            }
-
-            .announcment { /*this is also an experiment*//*
-                max-width: 1690px; /*supposed to limit what is in the <p> tags; height is still normal*//*
-            }
-
-            #homeButton {
-                width: 150px;
-                height: auto;
-                margin: 0px 0px 10px 20px;
-            }
-
-            #aboutUsButton {
-                width: 150px;
-                height: auto;
-                margin: 0px 0px 10px 20px;
-            }
-
-            #contactUsButton {
-                width: 150px;
-                height: auto;
-                margin: 0px 0px 10px 20px;
-            }
-
-            #storeButton {
-                width: 150px;
-                height: auto;
-                margin: 0px 0px 10px 20px;
-            }
-
-            #meetOurBunniesButton {
-                width: 225px;
-                height: auto;
-                margin: 0px 0px 10px 20px; /* change made here *//*
-            }
-
-            hr {
-                color: black; /*this will change the tags to black*//*
-                background-color: black; /*this will fill in the division in black*//*
-            }
-        }
-        @media screen and (min-width: 817px) and (min-height: 329px) { /*the one based off of LG phone*//*
-            body {
-                background-color: #808080;
-                overflow-x: hidden;
-                background-image: url(happyDaysReplacement.png);
-                background-repeat: repeat;
-                background-position: -200px 200px;
-                background-size: auto;
-                background-attachment: fixed; /*this might be the solution to the problem with the background*//*
-                color: black !important; /*note added to see whether the web page updates or not*//*
-            }
-
-            h1 {
-                font-size: 3em;
-                font-family: 'Ink Free', sans-serif;
-                text-align: center;
-            }
-
-            p {
-                font-size: 2.5em;
-                font-family: 'Ink Free', sans-serif;
-                line-height: 50px;
-            }
-
-            .hilightme {
-                background-color: #ffd800;
-            }
-
-            .indent {
-                /*empty*//*
-            }
-
-            #indent { /*this is experimental*//*
-                /*also empty*//*
-            }
-
-            .announcment { /*this is also an experiment*//*
-                /*also empty*//*
-            }
-
-            #homeButton {
-                width: 150px;
-                height: auto;
-                margin: 0px 0px 10px 20px;
-            }
-
-            #aboutUsButton {
-                width: 150px;
-                height: auto;
-                margin: 0px 0px 10px 20px;
-            }
-
-            #contactUsButton {
-                width: 150px;
-                height: auto;
-                margin: 0px 0px 10px 20px;
-            }
-
-            #storeButton {
-                width: 150px;
-                height: auto;
-                margin: 0px 0px 10px 20px;
-            }
-
-            #meetOurBunniesButton {
-                width: 225px;
-                height: auto;
-                margin: 0px 0px 10px 20px; /* change made here *//*
-            }
-
-            hr {
-                color: black; /*this will change the tags to black*//*
-                background-color: black; /*this will fill in the division in black*//*
-            }
+        /*@media only screen and (max-device-width: 6.20in) { /*edited for mobile devices, in this case the LG G7*/
+        html, body {
+            overflow-x: hidden; /*should prevent user from scrolling back and forth (aka side to side)*/
         }
 
-        /*@media only screen and (max-device-width: 6.20in) { /*edited for mobile devices, in this case the LG G7*//*
-            html, body {
-                overflow-x: hidden; /*should prevent user from scrolling back and forth (aka side to side)*//*
-            }
-            body {
-                /*position: relative; /*I hope the code still works, even though I put the attribue up here!*//*the code didn't work, so I commented it out for later*/
-                /*background-color: #808080;
+        body {
+            /*position: relative; /*I hope the code still works, even though I put the attribue up here!*/ /*the code didn't work, so I commented it out for later*/
+            /*background-color: #808080;
                 overflow-x: hidden;
                 background: url(happyDaysReplacement.png);
                 background-repeat: repeat;
                 background-position: -200px 200px;
                 background-size: auto;
                 color: black !important;*/
-                /*I trunkated some of the comments I wrote in the code, since the comments are unecessary*/
-                /*This note was added to see whether the web page will update or not*/
-                /*This note was added to see whether the web page will update or not*//*
+            /*I trunkated some of the comments I wrote in the code, since the comments are unecessary*/
+            /*This note was added to see whether the web page will update or not*/
+            /*This note was added to see whether the web page will update or not*/ /*
             }
-            
+
             img {
                 max-width: 50% !important;
             }
@@ -680,112 +117,73 @@
             }
 
             .indent {
-                padding-left: 25px; /*used for videos*//*
+                padding-left: 25px; /*used for videos*/ /*
             }
-            
+
             #homeButton {
                 width: 75px;
                 height: auto;
                 margin: 0px 0px 20px 10px;
             }
-            
+
             #aboutUsButton {
                 width: 75px;
                 height: auto;
                 margin: 0px 0px 20px 10px;
             }
-            
+
             #contactUsButton {
                 width: 75px;
                 height: auto;
                 margin: 0px 0px 20px 10px;
             }
-            
+
             #storeButton {
                 width: 75px;
                 height: auto;
                 margin: 0px 0px 20px 10px;
             }
-            
+
             #meetOurBunniesButton {
                 width: 112.5px;
                 height: auto;
                 margin: 0px 0px 20px 10px;
             }
-        }*//*code has been commented out to test some HTML code*/
+        }*/ /*code has been commented out to test some HTML code*/
     </style>
 </head>
 <body>
     <header>
-        <canvas id="cv" width="1900" height="400"></canvas> <!--the canvas has been moved in order to move the canvas upward just a tad-->
-        <nav>       
-            
-            <a href="home.html" accesskey="a"><img src="Images/home.jpg" id="homeButton" alt="" /></a>
-            <a href="about-us.html" accesskey="b"><img src="Images/about us.jpg" id="aboutUsButton" alt="Navigate to our about us page to learn about this company." /></a>
-            <a href="contact-us.html" accesskey="c"><img src="Images/contact us.jpg" id="contactUsButton" alt="Navigate to our contact information page." /></a>
+        <nav>
+            <canvas id="cv" width="1900" height="400"></canvas>
+
+            <a href="home.html" accesskey="a"><img src="Images/home.jpg" id="homeButton" alt="Navigate to our home page." /></a>
+            <a href="about-us.html" accesskey="b"><img src="Images/about us.jpg" id="aboutUsButton" alt="" /></a>
+            <a href="contact-us.html" accesskey="c"><img src="Images/contact us.jpg" id="contactUsButton" alt="Navigate to our contact information page" /></a>
             <a href="store.html" accesskey="d"><img src="Images/Store.jpg" id="storeButton" alt="Navigate to our online store to purchase items." /></a>
             <a href="meet-our-bunnies.html" accesskey="e"><img src="Images/meet our bunnies.jpg" id="meetOurBunniesButton" alt="Navigate to our bunny showroom to meet our furry friends." /></a>
-
-            <!--<h1 style="color: red; background-color: blue;" id="titlePage"></h1>-->
-            
-            <!--The reason why I put the about.us.html button back in is because I was given advice for what to do with the web site, so that's what I did.-->
 
         </nav>
         <p></p>
         <h1>K Road Rabbits</h1>
     </header>
+
     <main>
         <article>
             <section class="indent">
                 <!--   <p> Episode 2 </p>
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/rXjCtThiwpI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                <p> Episode 1 </p>
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/1DnEKN0YCYo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                               -->
-                <div class="announcment"> <!--this is an experiment-->
-                    <p id="indent"> <i>We don't have any videos yet to show. We're working on it!</i> Dorem ipsum dorem ipsum
-                    this is a test to see what happens to this element when indented. Does it stay that way? Or does it do something else? 
-                    Testing testing 1 2 3. Testing testing 1 2 3. This is the K Road Rabbits web page test. This is a test for the K Road Rabbits 
-                    page. That's all it is.</p>
-                </div>
-                <!--       <p>The K Road Rabbit Mission</p>
-                       <iframe width="560"
-                               height="315" src="https://www.youtube.com/embed/rXjCtThiwpI"
-                               title="YouTube video player"
-                               frameborder="0"
-                               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                               allowfullscreen>
-                       </iframe>-->
-                <!--will be used as the advertisment section later-->
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/rXjCtThiwpI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <p> Episode 1 </p>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/1DnEKN0YCYo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                   -->
+
+                <p><i>We don't have any videos yet to show. We're working on it!</i></p>
 
             </section>
-            <!--<hr>
-            <p style="text-align: center;">About K Road Rabbits</p>
-            <hr>
-            <section>
-                <p>
-                    K Road Rabbits is a rabbit breeding program that breeds rabbits of the English Spot, Himalayan, and Polish breeds. We also share
-                    rabbit facts, videos, and pictures.
-                </p>
-                <p>
-                    We are a rural Kansas based program that breeds and sells rabbits. We sell rabbits as pets and
-                    enjoy showing animals to local people and at rabbit shows.
-                </p>
-                <p>
-                    Our group consists of Eve, our rabbit breeder, caretaker and ceo, Daphne, assistant rabbit breeder and caretaker, Jeremiah, our editor, and Azariah, our coder.
-                    You can find us on social media, on Facebook and Instagram <a href="null" target="_blank">@K Rd Rabbits</a>.
-                </p>
-            </section>--> <!--The reason why I got this commented out is because I'm using the About Us page.-->
         </article>
     </main>
-    <footer>
-        <!--   <p><i>(special thanks to these websites for giving me the resources necessary for the pictures and the fade:</i></p>
-        <p><i>www.rabbitcaretips.com</i></p>
-        <p><i>i.pinimg.com</i></p>                                                                                                          <!--notice will be replaced with social media chat-->
-        <!--
-        <p><i>www.pngkey.com</i></p>
-        <p><i>)</i></p> -->
 
+    <footer>
         <a href="facebookNotice.html" target="_blank">
             <!--This section of code is for our Facebook page-->
             <img src="https://facebookbrand.com/wp-content/uploads/2019/04/f_logo_RGB-Hex-Blue_512.png?w=512&h=512" width="19" alt="Navigate to our Facebook page." />
@@ -796,10 +194,7 @@
         </a>
     </footer>
 
-
     <script>
-        var d = document;
-
         var canvas, canvasContext;
 
         var rabbitPic = document.createElement('img');
@@ -817,9 +212,8 @@
         var X3 = X1 - 450;
         var X4 = X2 + 450 + 10 + 10 + 10 + 10 + 10;
         var X5 = X3 - 450;
-        
-        positionHome();
 
+        positionHome(); // used to reposition the home button
 
         function $(id) {
             return document.getElementById(id);
@@ -856,8 +250,6 @@
             drawAll();
             positionHome();
         }
-        
-        // If the CSS replacement doesn't work well, I'll stick with the original algorithm.
 
         function moveAll() {
             X1 += 0.5;
@@ -894,9 +286,9 @@
                 canvasContext.drawImage(rabbitPic, X3, Y1);
                 canvasContext.drawImage(rabbitPic, X5, Y1);
                 canvasContext.fillStyle = 'black';
-                /*canvasContext.fillText('Picture provided by www.rabbitcaretips.com', X1, 330);
-                canvasContext.fillText('Picture provided by www.rabbitcaretips.com', X3, 330);
-                canvasContext.fillText('Picture provided by www.rabbitcaretips.com', X5 + 40, 330);*/
+                //       canvasContext.fillText('Picture provided by www.rabbitcaretips.com', X1, 330);
+                //     canvasContext.fillText('Picture provided by www.rabbitcaretips.com', X3, 330);
+                //  canvasContext.fillText('Picture provided by www.rabbitcaretips.com', X5 + 40, 330);
             }
             if (pic2Loaded) {
                 canvasContext.drawImage(pic2, X2, Y1);
@@ -906,8 +298,8 @@
                 //canvasContext.drawImage(pic2, X2, 0);
                 canvasContext.fillStyle = 'black';
                 //  canvasContext.fillText('Picture provided by www.rabbitcaretips.com', X1, 330);
-                //     canvasContext.fillText('Picture provided by i.pinimg.com', X2, 20);
-                //   canvasContext.fillText('Picture provided by i.pinimg.com', X4, 20);
+                //    canvasContext.fillText('Picture provided by i.pinimg.com', X2, 20);
+                //  canvasContext.fillText('Picture provided by i.pinimg.com', X4, 20);
 
             }
 
@@ -916,26 +308,23 @@
             }
         }
 
-        
         function positionHome() {
-            if (window.innerWidth >= 1330) {
-                console.log("Everything is left the way it is.");
-            } else if (window.innerWidth >= 1280 && window.innerHeight >= 680) {
-                $('homeButton').style.margin = "0px 0px 10px 120px";
-            } else if (window.innerWidth >= 1280) {
-                $('homeButton').style.margin = "0px 0px 10px 120px"; // might be edited if doesn't work
-            } else if (window.innerWidth <= 480) {
-                $('homeButton').style.margin = "0px 0px 10px 20px";
-            } else if (window.innerWidth >= 817 && window.innerHeight >= 329) { // based off of LG phone
-                $('homeButton').style.margin = "0px 0px 10px 20px";
-            } else if (window.innerWidth >= 800 && window.innerHeight >= 1160) {
-                $('homeButton').style.margin = "0px 0px 10px 20px"; // looks good that way
-            } else if (window.innerWidth >= 800) { // when not sure what to do with width of tablet
-                $('homeButton').style.margin = "0px 0px 10px 30px";
-
-            }
-        }
+    if (window.innerWidth >= 1330) {
+        console.log("Everything is left the way it is.");
+    } else if (window.innerWidth >= 1280 && window.innerHeight >= 680) {
+        $('homeButton').style.margin = "0px 0px 10px 120px";;
+    } else if (window.innerWidth >= 1280) {
+        $('homeButton').style.margin = "0px 0px 10px 120px"; // might be edited if doesn't work
+    } else if (window.innerWidth <= 480) { // start over here
+        $('homeButton').style.margin = "0px 0px 10px 20px";
+    } else if (window.innerWidth >= 817 && window.innerHeight >= 329) { // based off of LG phone
+        $('homeButton').style.margin = "0px 0px 10px 20px";
+    } else if (window.innerWidth >= 800 && window.innerHeight >= 1160) {
+        $('homeButton').style.margin = "0px 0px 10px 20px"; // looks good that way
+    } else if (window.innerWidth >= 800) { // when not sure what to do with width of tablet
+        $('homeButton').style.margin = "0px 0px 10px 30px";
+    }
+}
     </script>
-
 </body>
 </html>
