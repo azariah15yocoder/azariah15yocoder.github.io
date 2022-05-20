@@ -44,7 +44,8 @@
         }
         
         .div_for_indent {
-            max-width: 1500px; /*should squeeze figures in space*/
+            /*max-width: 1500px; /*should squeeze figures in space*/
+            max-width: calc(100% - 420px);
         }
 
         #homeButton {
@@ -333,15 +334,19 @@
     } else if (window.innerWidth <= 480) { // start over here
         $('homeButton').style.margin = "0px 0px 10px 20px";
         $('indent_part').style.paddingLeft = "50px";
+        document.getElementByClassName('div_for_indent').style.maxWidth = "100%"; // if not work, use calc()
     } else if (window.innerWidth >= 817 && window.innerHeight >= 329) { // based off of LG phone
         $('homeButton').style.margin = "0px 0px 10px 20px";
         $('indent_part').style.paddingLeft = "50px";
+        document.getElementByClassName('div_for_indent').style.maxWidth = "100%";
     } else if (window.innerWidth >= 800 && window.innerHeight >= 1160) {
         $('homeButton').style.margin = "0px 0px 10px 20px"; // looks good that way
         $('indent_part').style.paddingLeft = "50px";
+        document.getElementByClassName('div_for_indent').style.maxWidth = "calc(100% - 100px)";
     } else if (window.innerWidth >= 800) { // when not sure what to do with width of tablet
         $('homeButton').style.margin = "0px 0px 10px 30px";
         $('indent_part').style.paddingLeft = "50px";
+        document.getElementByClassName('div_for_indent').style.maxWidth = "calc(100% - 100px)";
     }
 }
     </script>
