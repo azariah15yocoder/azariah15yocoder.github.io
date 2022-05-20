@@ -44,8 +44,10 @@
         }
         
         .div_for_indent {
-            /*max-width: 1500px; /*should squeeze figures in space*/
-            max-width: calc(100% - 200px);
+            max-width: 1500px; /*should squeeze figures in space*/
+            /*max-width: calc(100% - 200px);*/
+            /*The next time this project is worked on, work on this little section for a bit.
+            This particular section of code could really use some improvement.*/
         }
 
         #homeButton {
@@ -334,19 +336,19 @@
     } else if (window.innerWidth <= 480) { // start over here
         $('homeButton').style.margin = "0px 0px 10px 20px";
         $('indent_part').style.paddingLeft = "50px";
-        document.getElementsByClassName('div_for_indent').style.maxWidth = "calc(100% - 0px)"; // if not work, use calc()
+        //document.getElementsByClassName('div_for_indent').style.maxWidth = "calc(100% - 0px)"; // if not work, use calc()
     } else if (window.innerWidth >= 817 && window.innerHeight >= 329) { // based off of LG phone
         $('homeButton').style.margin = "0px 0px 10px 20px";
         $('indent_part').style.paddingLeft = "50px";
-        document.getElementsByClassName('div_for_indent').style.maxWidth = "calc(100% - 0px)"; // this one is for tablet
+        //document.getElementsByClassName('div_for_indent').style.maxWidth = "calc(100% - 0px)"; // this one is for tablet
     } else if (window.innerWidth >= 800 && window.innerHeight >= 1160) {
         $('homeButton').style.margin = "0px 0px 10px 20px"; // looks good that way
         $('indent_part').style.paddingLeft = "50px";
-        document.getElementsByClassName('div_for_indent').style.maxWidth = "calc(100% - 100px)"; // for tablets
+        //document.getElementsByClassName('div_for_indent').style.maxWidth = "calc(100% - 100px)"; // for tablets
     } else if (window.innerWidth >= 800) { // when not sure what to do with width of tablet
         $('homeButton').style.margin = "0px 0px 10px 30px";
         $('indent_part').style.paddingLeft = "50px";
-        document.getElementsByClassName('div_for_indent').style.maxWidth = "calc(100% - 100px)"; // for tablets
+        //document.getElementsByClassName('div_for_indent').style.maxWidth = "calc(100% - 100px)"; // for tablets
     }
 }
     </script>
