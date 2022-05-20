@@ -325,8 +325,10 @@
         console.log("Everything is left the way it is.");
     } else if (window.innerWidth >= 1280 && window.innerHeight >= 680) {
         $('homeButton').style.margin = "0px 0px 10px 120px";;
+        $('indent_part').style.paddingLeft = "100px";
     } else if (window.innerWidth >= 1280) {
         $('homeButton').style.margin = "0px 0px 10px 120px"; // might be edited if doesn't work
+        $('indent_part').style.paddingLeft = "100px"; // start here next time
     } else if (window.innerWidth <= 480) { // start over here
         $('homeButton').style.margin = "0px 0px 10px 20px";
     } else if (window.innerWidth >= 817 && window.innerHeight >= 329) { // based off of LG phone
