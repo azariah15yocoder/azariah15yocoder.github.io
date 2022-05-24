@@ -357,31 +357,33 @@
         function positionHome() {
     if (window.innerWidth >= 1330) {
         console.log("Everything is left the way it is.");
-        $('indent_part').style.paddingLeft = "150px";
+        //$('indent_part').style.paddingLeft = "150px";
     } else if (window.innerWidth >= 1280 && window.innerHeight >= 680) { //SAMSUNG TAB E when tilted
         $('homeButton').style.margin = "0px 0px 10px 130px";//"0px 0px 10px 120px";;
-        $('indent_part').style.paddingLeft = "50px"; // just to see what happens to the page; originally 150px
+        //$('indent_part').style.paddingLeft = "50px"; // just to see what happens to the page; originally 150px
     } else if (window.innerWidth >= 1280) {
         $('homeButton').style.margin = "0px 0px 10px 120px"; // might be edited if doesn't work
-        $('indent_part').style.paddingLeft = "150px";
+        //$('indent_part').style.paddingLeft = "150px";
     } else if (window.innerWidth <= 480) { // start over here
         $('homeButton').style.margin = "0px 0px 10px 20px";
-        $('indent_part').style.paddingLeft = "50px"; // mostly for phones when they are upright
+        //$('indent_part').style.paddingLeft = "50px"; // mostly for phones when they are upright
         //document.getElementsByClassName('div_for_indent').style.maxWidth = "calc(100% - 0px)"; // if not work, use calc()
     } else if (window.innerWidth >= 817 && window.innerHeight >= 329) { // based off of LG phone
         $('homeButton').style.margin = "0px 0px 10px 20px";
-        $('indent_part').style.paddingLeft = "30px"; // for phones when they are tilted to side; originally  50px
+        //$('indent_part').style.paddingLeft = "30px"; // for phones when they are tilted to side; originally  50px
         //document.getElementsByClassName('div_for_indent').style.maxWidth = "calc(100% - 0px)"; // this one is for tablet
     } else if (window.innerWidth >= 800 && window.innerHeight >= 1160) { // based off of SAMSUNG Tab E
         $('homeButton').style.margin = "0px 0px 10px 20px"; // looks good that way
-        $('indent_part').style.paddingLeft = "50px";
+        //$('indent_part').style.paddingLeft = "50px";
         //document.getElementsByClassName('div_for_indent').style.maxWidth = "calc(100% - 100px)"; // for tablets
     } else if (window.innerWidth >= 800) { // when not sure what to do with width of tablet
         $('homeButton').style.margin = "0px 0px 10px 30px";
-        $('indent_part').style.paddingLeft = "50px";
+        //$('indent_part').style.paddingLeft = "50px";
         //document.getElementsByClassName('div_for_indent').style.maxWidth = "calc(100% - 100px)"; // for tablets
     }
 }
+        
+        /* functions are commented out for experimental purposes*/
     </script>
 </body>
 </html>
