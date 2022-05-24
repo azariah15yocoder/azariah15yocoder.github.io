@@ -40,15 +40,23 @@
             padding-left: 100px; /*used for videos*/
         }
         
-        #indent_part {
+        /*#indent_part {
             padding-left: 50px;
+        }*/
+        
+        #indent_part {
+            padding-left: calc(100% - 10%); /*just to see what happens*/
         }
         
-        .div_for_indent {
+        /*.div_for_indent {
             max-width: 1500px; /*should squeeze figures in space*/
             /*max-width: calc(100% - 200px);*/
             /*The next time this project is worked on, work on this little section for a bit.
             This particular section of code could really use some improvement.*/
+        }*/
+        
+        .div_for_indent {
+            max-width: calc(100% - 10%); /*test of flexibility*/
         }
 
         #homeButton {
@@ -358,7 +366,7 @@
         $('indent_part').style.paddingLeft = "150px";
     } else if (window.innerWidth <= 480) { // start over here
         $('homeButton').style.margin = "0px 0px 10px 20px";
-        $('indent_part').style.paddingLeft = "0px"; // mostly for phones when they are upright
+        $('indent_part').style.paddingLeft = "50px"; // mostly for phones when they are upright
         //document.getElementsByClassName('div_for_indent').style.maxWidth = "calc(100% - 0px)"; // if not work, use calc()
     } else if (window.innerWidth >= 817 && window.innerHeight >= 329) { // based off of LG phone
         $('homeButton').style.margin = "0px 0px 10px 20px";
