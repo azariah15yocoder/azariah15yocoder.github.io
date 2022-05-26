@@ -41,7 +41,12 @@
         }
 
         .indent {
-            padding-left: 50px; /*used for videos*/
+            padding-left: 100px; /*used for videos*/
+        }
+        
+        #indent_part {
+            padding-left: calc(100% - 80%);
+            width: 60%;
         }
         
         #homeButton {
@@ -180,12 +185,12 @@
 
         </nav>
         <p></p>
-        <h1>Contact Us</h1>
+        <h1 style="text-align: center;">Contact Us</h1>
     </header>
 
     <main>
         <article>
-            <section>
+            <section class="indent" id="indent_part">
                 <p>
                     If you have any questions concerning rabbits, or are trying to report a failiure of this
                     webpage, or if you want to buy one of our bunnies,
@@ -384,6 +389,8 @@
         $('homeButton').style.margin = "0px 0px 10px 120px"; // might be edited if doesn't work
     } else if (window.innerWidth <= 480) {
         $('homeButton').style.margin = "0px 0px 10px 20px";
+        $('indent_part').style.paddingLeft = "calc(100% - 90%)";
+        $('indent_part').style.width = "80%";
     } else if (window.innerWidth >= 817 && window.innerHeight >= 329) { // based off of LG phone
         $('homeButton').style.margin = "0px 0px 10px 20px";
     } else if (window.innerWidth >= 800 && window.innerHeight >= 1160) {
