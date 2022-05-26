@@ -35,7 +35,12 @@
         }
 
         .indent {
-            padding-left: 50px; /*used for videos*/
+            padding-left: 100px; /*used for videos*/
+        }
+        
+        #indent_part {
+            padding-left: calc(100% - 80%);
+            width: 60%;
         }
         
         #homeButton {
@@ -155,16 +160,20 @@
 
         </nav>   
     <p></p>
-    <h1>Store</h1>
+    <h1 style="text-align: center;">Store</h1>
     </header>
     
     <main>
         <!----<p><i>This page is still in development!</i></p>-->
         <!--store items placed in main-->
+        <article>
+            <section class="indent" id="indent_part">
+                <p><i>We don't have anything to sell yet. We're working on it!</i></p>
+            </section>
+        </article>
     </main>
     <footer>
-        <p><i>We don't have anything to sell yet. We're working on it!</i></p>
-        <p><i id="i"></i></p>
+        <!--<p><i id="i"></i></p>-->
         <a href="facebookNotice.html" target="_blank">
             <!--This section of code is for our Facebook page-->
             <img src="https://facebookbrand.com/wp-content/uploads/2019/04/f_logo_RGB-Hex-Blue_512.png?w=512&h=512" 
@@ -305,6 +314,8 @@
         $('homeButton').style.margin = "0px 0px 10px 120px"; // might be edited if doesn't work
     } else if (window.innerWidth <= 480) {
         $('homeButton').style.margin = "0px 0px 10px 20px";
+        $('indent_part').style.paddingLeft = "calc(100% - 90%)";
+        $('indent_part').style.width = "80%";
     } else if (window.innerWidth >= 817 && window.innerHeight >= 329) { // based off of LG phone
         $('homeButton').style.margin = "0px 0px 10px 20px";
     } else if (window.innerWidth >= 800 && window.innerHeight >= 1160) {
