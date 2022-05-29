@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -23,7 +24,6 @@
         h1 {
             font-size: 3em;
             font-family: /*'Ink Free',*/ sans-serif;
-            text-align: center; /*for the top header; all headers are in center*/
         }
 
         p {
@@ -39,17 +39,12 @@
         .indent {
             padding-left: 100px; /*used for videos*/
         }
-        
-        /*#indent_part {
-            padding-left: 50px;
-        }*/
-        
+
         #indent_part {
-            padding-left: calc(100% - 80%); /*just to see what happens*/
-            width: 60%; /*Would it work if I put it here?*/
-            /*padding-left: calc(100% - 90%);*/ /*in case other one doesn't work*/
+            padding-left: calc(100% - 80%);
+            width: 60%;
         }
-        
+
         #homeButton {
             width: 150px;
             height: auto;
@@ -166,11 +161,10 @@
 <body>
     <header>
         <nav>
-            <br> <!--supposed to move canvas downward-->
-            <!--if the top line doesn't work, will find an alternative-->
+            <br> <!--to replace tiny space-->
             <canvas id="cv" width="1900" height="400"></canvas>
 
-            <a href="home.html" accesskey="a"><img src="Images/home.jpg" id="homeButton" style="width: 150px;" alt="Navigate to our home page." /></a>
+            <a href="home.html" accesskey="a"><img src="Images/home.jpg" id="homeButton" alt="Navigate to our home page." /></a>
             <a href="about-us.html" accesskey="b"><img src="Images/about us.jpg" id="aboutUsButton" alt="" /></a>
             <a href="contact-us.html" accesskey="c"><img src="Images/contact us.jpg" id="contactUsButton" alt="Navigate to our contact information page" /></a>
             <a href="store.html" accesskey="d"><img src="Images/Store.jpg" id="storeButton" alt="Navigate to our online store to purchase items." /></a>
@@ -178,41 +172,23 @@
 
         </nav>
         <p></p>
-        <h1>K Road Rabbits</h1>
+        <h1 style="text-align: center;">K Road Rabbits</h1>
     </header>
 
     <main>
         <article>
-            <section class="indent" id="indent_part">
-                <!--<p> Episode 10 </p>
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/rXjCtThiwpI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                <p> Episode 9 </p>
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/1DnEKN0YCYo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>                   
-                <p> Episode 8 </p>
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/rXjCtThiwpI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                <p> Episode 7 </p>
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/1DnEKN0YCYo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>                   
-                <p> Episode 6 </p>
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/rXjCtThiwpI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                <p> Episode 5 </p>
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/1DnEKN0YCYo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>                   
-                <p> Episode 4 </p>
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/rXjCtThiwpI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                <p> Episode 3 </p>
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/1DnEKN0YCYo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>                   
-                <p> Episode 2 </p>
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/rXjCtThiwpI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                <p> Episode 1 </p>
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/1DnEKN0YCYo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>                   
-                -->
-                <div> <!--originally in a class; was removed after id worked better-->
-                    <p><i>We don't have any videos yet to show. We're working on it!</i> Currently using an exagerated test. This is a test for indentation. I'm trying to get 
-                    the page to look a bit more modern and a bit more professional. So, that's what I'm currently working on.</p>
-                    <!--As for the paragraph tag, it may be helpful to use a text-align: center; as one of the styles for the element.
-                        It's just an idea.
-                    -->
+            <section>
+                <div class="indent" id="indent_part">
+                    <!--in div tag as so not to affect the other photos-->
+                    <p>
+                        <i>We have no videos to show yet. We're working on it!</i> This is a test to see if this thing is working. 
+                        The original Home page stopped working, so I had to fix the entire web page. That's what I had to do. 
+                        The page should be working the way it was before. This is literally the same code for the About Us page, 
+                        just without the photos and the information concerning the K Road Rabbits business. That's the only difference 
+                        with this page. Mostly, this alert is a test to see if this works.
+                    </p>
                 </div>
-                    <!--if don't work, will be replaced-->
+
             </section>
         </article>
     </main>
@@ -246,11 +222,12 @@
         var X3 = X1 - 450;
         var X4 = X2 + 450 + 10 + 10 + 10 + 10 + 10;
         var X5 = X3 - 450;
-        
-        /*window.alert("width: " + window.innerWidth + "\n" + 
-                     "height: " + window.innerHeight);*/
+
+        //alert("width: " + window.innerWidth + "\n height: " + window.innerHeight);
+        // This was used for testing to see what would be the best function that would resize images for this page
 
         positionHome(); // used to reposition the home button
+
 
         function $(id) {
             return document.getElementById(id);
@@ -348,35 +325,24 @@
         function positionHome() {
     if (window.innerWidth >= 1330) {
         console.log("Everything is left the way it is.");
-        //$('indent_part').style.paddingLeft = "150px";
-    } else if (window.innerWidth >= 1280 && window.innerHeight >= 680) { //SAMSUNG TAB E when tilted
-        $('homeButton').style.margin = "0px 0px 10px 130px";//"0px 0px 10px 120px";;
-        //$('indent_part').style.paddingLeft = "50px"; // just to see what happens to the page; originally 150px
+    } else if (window.innerWidth >= 1280 && window.innerHeight >= 680) {
+        $('homeButton').style.margin = "0px 0px 10px 120px";
     } else if (window.innerWidth >= 1280) {
         $('homeButton').style.margin = "0px 0px 10px 120px"; // might be edited if doesn't work
-        //$('indent_part').style.paddingLeft = "150px";
-    } else if (window.innerWidth <= 480) { // start over here
+        
+    } else if (window.innerWidth <= 480) {
         $('homeButton').style.margin = "0px 0px 10px 20px";
-        //$('indent_part').style.paddingLeft = "50px"; // mostly for phones when they are upright
-        //document.getElementsByClassName('div_for_indent').style.maxWidth = "calc(100% - 0px)"; // if not work, use calc()
         $('indent_part').style.paddingLeft = "calc(100% - 90%)";
         $('indent_part').style.width = "80%";
-    } else if (window.innerWidth >= 817 && window.innerHeight >= 329) { // based off of LG phone
+    } else if (window.innerWidth >= 817 &&
+        window.innerHeight >= 329) { // based off of LG phone
         $('homeButton').style.margin = "0px 0px 10px 20px";
-        //$('indent_part').style.paddingLeft = "30px"; // for phones when they are tilted to side; originally  50px
-        //document.getElementsByClassName('div_for_indent').style.maxWidth = "calc(100% - 0px)"; // this one is for tablet
-    } else if (window.innerWidth >= 800 && window.innerHeight >= 1160) { // based off of SAMSUNG Tab E
+    } else if (window.innerWidth >= 800 && window.innerHeight >= 1160) {
         $('homeButton').style.margin = "0px 0px 10px 20px"; // looks good that way
-        //$('indent_part').style.paddingLeft = "50px";
-        //document.getElementsByClassName('div_for_indent').style.maxWidth = "calc(100% - 100px)"; // for tablets
     } else if (window.innerWidth >= 800) { // when not sure what to do with width of tablet
         $('homeButton').style.margin = "0px 0px 10px 30px";
-        //$('indent_part').style.paddingLeft = "50px";
-        //document.getElementsByClassName('div_for_indent').style.maxWidth = "calc(100% - 100px)"; // for tablets
     }
 }
-        
-        /* functions are commented out for experimental purposes*/
     </script>
 </body>
 </html>
