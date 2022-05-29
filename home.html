@@ -212,6 +212,12 @@
 
         var pic2 = document.createElement('img');
         var pic2Loaded = false;
+        
+        var pic3 = document.createElement('img');
+        var pic3Loaded = false;
+        
+        var pic4 = document.createElement('img');
+        var pic4Loaded = false;
 
         var picForFade = document.createElement('img');
         var picForFadeLoaded = false;
@@ -247,12 +253,22 @@
             rabbitPic.onload = function () {
                 rabbitPicLoaded = true;
             }
-            rabbitPic.src = "Rabbunny2.jpg"; // is it interacting with the server????? It's interacting with the server!
+            rabbitPic.src = "Rabbunny2.jpg";
 
             pic2.onload = function () {
                 pic2Loaded = true;
             }
-            pic2.src = "Rabbuny.jpg"; // is it interacting with the server????? It's interacting with the server!
+            pic2.src = "Rabbuny.jpg";
+            
+            pic3.onload = function() {
+                pic3Loaded = true;
+            }
+            pic3.src = 'rabbit_holding.jpg';
+            
+            pic4.onload = function() {
+                pic4Loaded = true;
+            }
+            pic4.src = 'eveBabyRabbitPhoto.jpg';
 
             picForFade.onload = function () {
                 picForFadeLoaded = true;
@@ -297,9 +313,9 @@
                 //rabbitPic.width = 30;
                 //rabbitPic.height = 30;
                 canvasContext.drawImage(rabbitPic, X1, Y1);
-                canvasContext.drawImage(rabbitPic, X3, Y1);
-                canvasContext.drawImage(rabbitPic, X5, Y1);
-                canvasContext.fillStyle = 'black';
+                //canvasContext.drawImage(rabbitPic, X3, Y1);
+                //canvasContext.drawImage(rabbitPic, X5, Y1);
+                canvasContext.fillStyle = 'black'; // was for the credits
                 //       canvasContext.fillText('Picture provided by www.rabbitcaretips.com', X1, 330);
                 //     canvasContext.fillText('Picture provided by www.rabbitcaretips.com', X3, 330);
                 //  canvasContext.fillText('Picture provided by www.rabbitcaretips.com', X5 + 40, 330);
@@ -315,6 +331,12 @@
                 //    canvasContext.fillText('Picture provided by i.pinimg.com', X2, 20);
                 //  canvasContext.fillText('Picture provided by i.pinimg.com', X4, 20);
 
+            }
+            if(pic3Loaded) {
+                canvasContext.drawImage(pic3, X3, Y1);
+            }
+            if(pic4Loaded) {
+                canvasContext.drawImage(pic4, X5, Y1);
             }
 
             if (picForFadeLoaded) {
