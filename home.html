@@ -264,13 +264,13 @@
                 pic3Loaded = true;
             }
             pic3.src = 'rabbit_holding.jpg';
-            pic3.width = "100px";
+            //pic3.width = "100px";
             
             pic4.onload = function() {
                 pic4Loaded = true;
             }
             pic4.src = 'eveBabyRabbitPhoto.jpg';
-            pic4.width = "100px";
+            //pic4.width = "100px";
 
             picForFade.onload = function () {
                 picForFadeLoaded = true;
@@ -335,10 +335,10 @@
 
             }
             if(pic3Loaded) {
-                canvasContext.drawImage(pic3, X3, Y1);
+                canvasContext.drawImage(pic3, X3, Y1, 300);
             }
             if(pic4Loaded) {
-                canvasContext.drawImage(pic4, X5, Y1);
+                canvasContext.drawImage(pic4, X5, Y1, 300);
             }
 
             if (picForFadeLoaded) {
