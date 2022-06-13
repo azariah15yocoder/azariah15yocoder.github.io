@@ -231,6 +231,11 @@
         var X4 = 1109 + 450 + 50 + 40 - 50 + 20 + 14 + 1; // for pic2
         var X5 = 466 - 640 + 50 - 50 + 68; // for pic4
         
+        var rabbitPicInstanceX = 600 + 510 - 60 + 50 + 8 + 1 + 68; // instance of rabbitPic
+        var pic2InstanceX = 1109 + 450 + 50 + 40 - 50 + 20 + 14 + 1; // instance of pic2
+        var pic3InstanceX = 600 - 450 + 295 - 30 + 50 + 1 + 68; // instance of pic3
+        var pic4InstanceX = 466 - 640 + 50 - 50 + 68; // instance of pic4
+        
         /*After code test is over, keep the 1109. That's necessary.*/
         
         /*if the 50s above don't work, remove them*/
@@ -298,6 +303,10 @@
             X3 += 0.5;
             X4 += 0.5;
             X5 += 0.5;
+            rabbitPicInstanceX += 0.5;
+            pic2InstanceX += 0.5;
+            pic3InstanceX += 0.5;
+            pic4InstanceX += 0.5;
             handleScreenWrap();
         }
 
@@ -335,6 +344,9 @@
                 //  canvasContext.fillText('Picture provided by www.rabbitcaretips.com', X5 + 40, 330);
                 canvasContext.drawImage(rabbitPic, X2, Y1);
                 canvasContext.fillText("rabbitPic", X2, 20);
+                
+                canvasContext.drawImage(rabbitPic, rabbitPicInstance, Y1);
+                canvasContext.fillText("rabbitPicInstance", rabbitPicInstance, 20);
             }
             if (pic2Loaded) {
                 //canvasContext.drawImage(pic2, X2, Y1);
@@ -344,6 +356,9 @@
 
                 canvasContext.drawImage(pic2, X4, Y1);
                 canvasContext.fillText("pic2", X4, 20);
+                
+                canvasContext.drawImage(pic2, pic2Instance, Y1);
+                canvasContext.fillText("pic2Instance", pic2Instance, 20);
 
                 //canvasContext.drawImage(pic2, X2, 0);
                 canvasContext.fillStyle = 'black';
@@ -355,11 +370,15 @@
             if(pic3Loaded) {
                 canvasContext.drawImage(pic3, X3, Y1, 600, 400);
                 canvasContext.fillText("pic3", X3, 20);
+                canvasContext.drawImage(pic3, pic3Instance, 600, 400);
+                canvasContext.fillText("pic3Instance", pic3Instance, 20);
                 canvasContext.fillStyle = "black"; // for text
             }
             if(pic4Loaded) {
                 canvasContext.drawImage(pic4, X5, Y1, 600, 400);
                 canvasContext.fillText("pic4", X5, 20);
+                canvasContext.drawImage(pic4, pic4Instance, 600, 400);
+                canvasContext.fillText("pic4Instance", pic4Instance, 20);
                 canvasContext.fillStyle = "black"; // for text
             }
 
