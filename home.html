@@ -258,7 +258,8 @@
         window.onload = function () {
             canvas = $("cv");
             canvasContext = canvas.getContext('2d');
-            colorRect(0, 0, canvas.width, canvas.height, 'aqua');
+            //colorRect(0, 0, canvas.width, canvas.height, 'aqua');
+            colorRect(0, 0, canvas.width, canvas.height, 'white');
             setInterval(updateAll, 0.01);
 
             rabbitPic.onload = function () {
