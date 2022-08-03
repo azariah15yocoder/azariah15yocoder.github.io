@@ -160,9 +160,10 @@
 <body>
     <header>
         <nav>
-            <br> <!--to replace tiny space-->
-            <canvas id="cv" width="1900" height="400"></canvas>
-
+            <!--<br> <!--to replace tiny space-->
+            <!--<canvas id="cv" width="1900" height="400"></canvas>-->
+            
+            <img src="happyDaysReplacement.png" id="mainPhoto" alt="Welcome to K Road Rabbits!"><br>
             <a href="home.html" accesskey="a"><img src="Images/home.jpg" id="homeButton" alt="Navigate to our home page." /></a>
             <a href="about-us.html" accesskey="b"><img src="Images/about us.jpg" id="aboutUsButton" alt="" /></a>
             <a href="contact-us.html" accesskey="c"><img src="Images/contact us.jpg" id="contactUsButton" alt="Navigate to our contact information page" /></a>
@@ -205,24 +206,24 @@
 
     <script>
         console.log("Hello World!");
-        var canvas, canvasContext;
+        //var canvas, canvasContext;
 
-        var rabbitPic = document.createElement('img');
-        var rabbitPicLoaded = false;
+        //var rabbitPic = document.createElement('img');
+        //var rabbitPicLoaded = false;
 
-        var pic2 = document.createElement('img');
-        var pic2Loaded = false;
+        //var pic2 = document.createElement('img');
+        //var pic2Loaded = false;
         
-        var pic3 = document.createElement('img');
-        var pic3Loaded = false;
+        //var pic3 = document.createElement('img');
+        //var pic3Loaded = false;
         
-        var pic4 = document.createElement('img');
+        /*var pic4 = document.createElement('img');
         var pic4Loaded = false;
 
         var picForFade = document.createElement('img');
-        var picForFadeLoaded = false;
+        var picForFadeLoaded = false;*/
 
-        var X1 = 600;
+        /*var X1 = 600;
         //var X2 = X1 + 510 - 60 + 50 + 8 + 1; // for rabbitPic
         var X2 = 600 + 510 - 60 + 50 + 8 + 1 + 68 + 35; // for rabbitPic
         var Y1 = 30;
@@ -250,19 +251,19 @@
             return document.getElementById(id);
         }
 
-        function colorRect(a, b, c, d, e) {
+        /*function colorRect(a, b, c, d, e) {
             canvasContext.fillStyle = e;
             canvasContext.fillRect(a, b, c, d);
-        }
+        }*/
 
         window.onload = function () {
-            canvas = $("cv");
-            canvasContext = canvas.getContext('2d');
+            //canvas = $("cv");
+            //canvasContext = canvas.getContext('2d');
             //colorRect(0, 0, canvas.width, canvas.height, 'aqua');
-            colorRect(0, 0, canvas.width, canvas.height, 'white');
+            //colorRect(0, 0, canvas.width, canvas.height, 'white');
             setInterval(updateAll, 0.01);
 
-            rabbitPic.onload = function () {
+            /*rabbitPic.onload = function () {
                 rabbitPicLoaded = true;
             }
             rabbitPic.src = "Rabbunny2.jpg";
@@ -289,11 +290,11 @@
             picForFade.onload = function () {
                 picForFadeLoaded = true;
             }
-            picForFade.src = "https://www.pngkey.com/png/full/136-1361851_gradient-white-gradient-circle-png.png";
+            picForFade.src = "https://www.pngkey.com/png/full/136-1361851_gradient-white-gradient-circle-png.png";*/
         }
         function updateAll() {
-            moveAll();
-            drawAll();
+            //moveAll();
+            //drawAll();
             positionHome();
         }
 
