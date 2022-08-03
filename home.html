@@ -289,7 +289,9 @@
             picForFade.onload = function () {
                 picForFadeLoaded = true;
             }
-            picForFade.src = "https://www.pngkey.com/png/full/136-1361851_gradient-white-gradient-circle-png.png";
+            //picForFade.src = "https://www.pngkey.com/png/full/136-1361851_gradient-white-gradient-circle-png.png";
+            // Original code commented out for experimentation.
+            picForFade.src = "canvasFade.jpg";
         }
         function updateAll() {
             moveAll();
@@ -384,8 +386,7 @@
             }
 
             if (picForFadeLoaded) {
-                //canvasContext.drawImage(picForFade, 0, 0 - 1);
-                /* This piece of code has been commented out for experimentation. */
+                canvasContext.drawImage(picForFade, 0, 0 - 1);
             }
         }
 
