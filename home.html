@@ -164,7 +164,7 @@
         gtag('config', 'G-JM35F2M4GK');
     </script>
 </head>
-<body>
+<body id="webBody">
     <header>
         <nav>
             <!--<br> <!--to replace tiny space-->
@@ -276,7 +276,6 @@ Duis ultricies lacus sed turpis tincidunt id aliquet. Mauris cursus mattis moles
 
         positionHome(); // used to reposition the home button
 
-
         function $(id) {
             return document.getElementById(id);
         }
@@ -321,6 +320,19 @@ Duis ultricies lacus sed turpis tincidunt id aliquet. Mauris cursus mattis moles
                 picForFadeLoaded = true;
             }
             picForFade.src = "https://www.pngkey.com/png/full/136-1361851_gradient-white-gradient-circle-png.png";*/
+            
+            var imageSrc = $("webBody");
+            imageSrc.style.backgroundImage.replace(/url\(['"]?(.*)['"]?\)/gi, '$1').split(',')[0];
+            // that looks a bit like gibberish; that might not work
+            
+            var image = new Image();
+            image.src = imageSrc;
+            
+            image.onload = function() {
+                var width = image.width,
+                    height = image.height;
+                alert('width =' + width + ', height = ' + height;
+            }
         }
         function updateAll() {
             //moveAll();
