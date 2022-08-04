@@ -90,6 +90,37 @@
             position: center;
             opacity: 0;
         }
+        
+        .container {
+            position: relative;
+            text-align: center;
+            color: white;
+        }
+        
+        .bottom-left {
+            position: absolute;
+            bottom: 8px;
+            left: 16px;
+        }
+        
+        .top-left {
+            position: absolute;
+            top: 8px;
+            left: 16px;
+        }
+        
+        .bottom-right {
+            position: absolute;
+            bottom: 8px;
+            right: 16px;
+        }
+        
+        .center {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
 
         /*@media only screen and (max-device-width: 6.20in) { /*edited for mobile devices, in this case the LG G7*/
         html, body {
@@ -170,6 +201,15 @@
         <nav>
             <!--<br> <!--to replace tiny space-->
             <!--<canvas id="cv" width="1900" height="400"></canvas>-->
+            
+            <div class="container">
+                <img src="happyDaysReplacement.png" id="mainPhoto" alt="Welcome to K Road Rabbits!"><br>
+                <div class="bottom-left">Bottom Left</div>
+                <div class="bottom-right">Bottom Right</div>
+                <div class="top-left">Top Left</div>
+                <div class="top-right">Top Right</div>
+                <div class="center">Center</div>
+            </div>
             
             <img src="happyDaysReplacement.png" id="mainPhoto" alt="Welcome to K Road Rabbits!"><br>
             <a href="home.html" accesskey="a"><img src="Images/home.jpg" id="homeButton" alt="Navigate to our home page." /></a>
