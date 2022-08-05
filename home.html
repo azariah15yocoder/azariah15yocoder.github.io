@@ -249,6 +249,18 @@
         function $(id) {
             return document.getElementById(id);
         }
+        
+        function fitText(divID) {
+            divShrink = $(divID);
+            intDivH = divShrink.clientHeight;
+            s=1;
+            intWinH = window.innerHeight != null ? window.innerHeight: document.body != null ? document.body.clientHeight: null;
+            while (intDivH>intWinH&&s>0) {
+                s = s-0.01;
+                divShrink.style.fontSize = s+'em';
+                intDivH = divShrink.clientHeight;
+            }
+        }
 
         function colorRect(a, b, c, d, e) {
             canvasContext.fillStyle = e;
@@ -260,6 +272,8 @@
             canvasContext = canvas.getContext('2d');
             colorRect(0, 0, canvas.width, canvas.height, 'grey');
             setInterval(updateAll, 0.01);
+            
+            fitText("indent_part"); // autt-fit text
 
             rabbitPic.onload = function () {
                 rabbitPicLoaded = true;
