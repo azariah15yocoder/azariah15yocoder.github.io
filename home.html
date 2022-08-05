@@ -235,6 +235,8 @@
         var pic3InstanceX = 600 - 450 + 295 - 30 + 50 + 1 + 68; // instance of pic3
         var pic4InstanceX = 466 - 640 + 50 - 50 + 68; // instance of pic4
         
+        var numberOfChanges = 0;
+        
         /*After code test is over, keep the 1109. That's necessary.*/
         
         /*if the 50s above don't work, remove them*/
@@ -402,6 +404,10 @@
         }
 
         function positionHome() {
+            if (numberOfChanges === 0) {
+                alert("clientHeight: " + $("indent_part").style.clientHeight);
+                numberOfChanges++;
+            }
             fitText("indent_part");
     if (window.innerWidth >= 1330) {
         console.log("Everything is left the way it is.");
