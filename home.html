@@ -270,6 +270,7 @@
         }
 
         window.onload = function () {
+            console.log($("indent_part").style.fontSize);
             canvas = $("cv");
             canvasContext = canvas.getContext('2d');
             colorRect(0, 0, canvas.width, canvas.height, 'grey');
