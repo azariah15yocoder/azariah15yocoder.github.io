@@ -240,7 +240,7 @@
         /*if the 50s above don't work, remove them*/
         /*if the 68s don'g work, remove them*/
 
-        alert("width: " + window.innerWidth + "\n height: " + window.innerHeight);
+        //alert("width: " + window.innerWidth + "\n height: " + window.innerHeight);
         // This was used for testing to see what would be the best function that would resize images for this page
 
         positionHome(); // used to reposition the home button
@@ -251,7 +251,6 @@
         }
         
         function fitText(divID) {
-            console.log("Running fitText()");
             divShrink = $(divID);
             intDivH = divShrink.clientHeight;
             s=1;
@@ -403,7 +402,6 @@
         }
 
         function positionHome() {
-            console.log($("indent_part").style.paddingLeft);
     if (window.innerWidth >= 1330) {
         console.log("Everything is left the way it is.");
     } else if (window.innerWidth >= 1280 && window.innerHeight >= 680) {
