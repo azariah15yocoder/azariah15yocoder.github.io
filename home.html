@@ -273,7 +273,7 @@
             colorRect(0, 0, canvas.width, canvas.height, 'grey');
             setInterval(updateAll, 0.01);
             
-            fitText("indent_part"); // autt-fit text
+            fitText("indent_part"); // auto-fit text
 
             rabbitPic.onload = function () {
                 rabbitPicLoaded = true;
@@ -308,6 +308,7 @@
             moveAll();
             drawAll();
             positionHome();
+            fitText("indent_part");
         }
 
         function moveAll() {
