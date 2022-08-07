@@ -187,7 +187,20 @@
                         with this page. Mostly, this alert is a test to see if this works.
                     </p>
                 </div>
-
+                
+                <input type="submit" 
+                       name="dimensions" 
+                       id="dimensions"
+                       onclick="printDimensions();"
+                       value="Show Dimensions"
+                       >
+                
+                <input type="submit"
+                       name="leftPadding"
+                       id="leftPadding"
+                       onclick="printPaddingLeft();"
+                       value="Show Padding Left Value"
+                       >
             </section>
         </article>
     </main>
@@ -268,7 +281,15 @@
             canvasContext.fillStyle = e;
             canvasContext.fillRect(a, b, c, d);
         }
-
+        
+        function printDimensions() {
+            window.alert("width: " + window.innerWidth + "\n height: " + window.innerHeight);
+        }
+        
+        function printPaddingLeft() {
+            window.alert("padding-left: " + $("indent_part").style.paddingLeft);
+        }
+        
         window.onload = function () {
             console.log($("indent_part").style.fontSize);
             canvas = $("cv");
@@ -406,7 +427,7 @@
 
         function positionHome() {
             if (numberOfChanges === 0) {
-                alert("clientHeight: " + $("indent_part").style.clientHeight);
+                //alert("clientHeight: " + $("indent_part").style.clientHeight);
                 numberOfChanges++;
             }
             //fitText("indent_part");
