@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -367,62 +366,65 @@
 
         function drawAll() {
             colorRect(0, 0, canvas.width, canvas.height, 'grey');
-            if (rabbitPicLoaded) {
-                //rabbitPic.width = 30;
-                //rabbitPic.height = 30;
+            if (rabbitPicLoaded && pic2Loaded && pic3Loaded && pic4Loaded && picForFadeLoaded) { // wait till all photos are loaded
+                if (rabbitPicLoaded) {
+                    //rabbitPic.width = 30;
+                    //rabbitPic.height = 30;
 
-                //canvasContext.drawImage(rabbitPic, X1, Y1);
-                //canvasContext.fillText("rabbitPic", X1, 20);
+                    //canvasContext.drawImage(rabbitPic, X1, Y1);
+                    //canvasContext.fillText("rabbitPic", X1, 20);
 
-                //canvasContext.drawImage(rabbitPic, X3, Y1);
-                //canvasContext.drawImage(rabbitPic, X5, Y1);
-                canvasContext.fillStyle = 'black'; // was for the credits
-                //       canvasContext.fillText('Picture provided by www.rabbitcaretips.com', X1, 330);
-                //     canvasContext.fillText('Picture provided by www.rabbitcaretips.com', X3, 330);
-                //  canvasContext.fillText('Picture provided by www.rabbitcaretips.com', X5 + 40, 330);
-                canvasContext.drawImage(rabbitPic, X2, Y1);
-                //canvasContext.fillText("rabbitPic", X2, 20);
+                    //canvasContext.drawImage(rabbitPic, X3, Y1);
+                    //canvasContext.drawImage(rabbitPic, X5, Y1);
+                    canvasContext.fillStyle = 'black'; // was for the credits
+                    //       canvasContext.fillText('Picture provided by www.rabbitcaretips.com', X1, 330);
+                    //     canvasContext.fillText('Picture provided by www.rabbitcaretips.com', X3, 330);
+                    //  canvasContext.fillText('Picture provided by www.rabbitcaretips.com', X5 + 40, 330);
+                    canvasContext.drawImage(rabbitPic, X2, Y1);
+                    //canvasContext.fillText("rabbitPic", X2, 20);
 
-                //canvasContext.drawImage(rabbitPic, rabbitPicInstanceX, Y1);
-                //canvasContext.fillText("rabbitPicInstanceX", rabbitPicInstanceX, 20);
+                    //canvasContext.drawImage(rabbitPic, rabbitPicInstanceX, Y1);
+                    //canvasContext.fillText("rabbitPicInstanceX", rabbitPicInstanceX, 20);
+                }
+                if (pic2Loaded) {
+                    //canvasContext.drawImage(pic2, X2, Y1);
+                    //canvasContext.fillText("pic2", X2, 20);
+
+                    // previous replaced with different photo
+
+                    canvasContext.drawImage(pic2, X4, Y1);
+                    //canvasContext.fillText("pic2", X4, 20);
+
+                    //canvasContext.drawImage(pic2, pic2InstanceX, Y1);
+                    //canvasContext.fillText("pic2InstanceX", pic2InstanceX, 20);
+
+                    //canvasContext.drawImage(pic2, X2, 0);
+                    canvasContext.fillStyle = 'black';
+                    //  canvasContext.fillText('Picture provided by www.rabbitcaretips.com', X1, 330);
+                    //    canvasContext.fillText('Picture provided by i.pinimg.com', X2, 20);
+                    //  canvasContext.fillText('Picture provided by i.pinimg.com', X4, 20);
+
+                }
+                if (pic3Loaded) {
+                    canvasContext.drawImage(pic3, X3, Y1, 600, 400);
+                    //canvasContext.fillText("pic3", X3, 20);
+                    //canvasContext.drawImage(pic3, pic3InstanceX, 600, 400);
+                    //canvasContext.fillText("pic3InstanceX", pic3InstanceX, 20);
+                    canvasContext.fillStyle = "black"; // for text
+                }
+                if (pic4Loaded) {
+                    canvasContext.drawImage(pic4, X5, Y1, 600, 400);
+                    //canvasContext.fillText("pic4", X5, 20);
+                    //canvasContext.drawImage(pic4, pic4InstanceX, 600, 400);
+                    //canvasContext.fillText("pic4InstanceX", pic4InstanceX, 20);
+                    canvasContext.fillStyle = "black"; // for text
+                }
+
+                if (picForFadeLoaded) {
+                    canvasContext.drawImage(picForFade, 0, 0 - 1);
+                }
             }
-            if (pic2Loaded) {
-                //canvasContext.drawImage(pic2, X2, Y1);
-                //canvasContext.fillText("pic2", X2, 20);
-
-                // previous replaced with different photo
-
-                canvasContext.drawImage(pic2, X4, Y1);
-                //canvasContext.fillText("pic2", X4, 20);
-
-                //canvasContext.drawImage(pic2, pic2InstanceX, Y1);
-                //canvasContext.fillText("pic2InstanceX", pic2InstanceX, 20);
-
-                //canvasContext.drawImage(pic2, X2, 0);
-                canvasContext.fillStyle = 'black';
-                //  canvasContext.fillText('Picture provided by www.rabbitcaretips.com', X1, 330);
-                //    canvasContext.fillText('Picture provided by i.pinimg.com', X2, 20);
-                //  canvasContext.fillText('Picture provided by i.pinimg.com', X4, 20);
-
-            }
-            if(pic3Loaded) {
-                canvasContext.drawImage(pic3, X3, Y1, 600, 400);
-                //canvasContext.fillText("pic3", X3, 20);
-                //canvasContext.drawImage(pic3, pic3InstanceX, 600, 400);
-                //canvasContext.fillText("pic3InstanceX", pic3InstanceX, 20);
-                canvasContext.fillStyle = "black"; // for text
-            }
-            if(pic4Loaded) {
-                canvasContext.drawImage(pic4, X5, Y1, 600, 400);
-                //canvasContext.fillText("pic4", X5, 20);
-                //canvasContext.drawImage(pic4, pic4InstanceX, 600, 400);
-                //canvasContext.fillText("pic4InstanceX", pic4InstanceX, 20);
-                canvasContext.fillStyle = "black"; // for text
-            }
-
-            if (picForFadeLoaded) {
-                canvasContext.drawImage(picForFade, 0, 0 - 1);
-            }
+            
         }
 
         function positionHome() {
