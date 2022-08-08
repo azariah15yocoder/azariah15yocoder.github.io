@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -146,7 +147,7 @@
             }
         }*/ /*code has been commented out to test some HTML code*/
     </style>
-    
+
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-JM35F2M4GK"></script>
     <script>
@@ -180,27 +181,25 @@
                 <div class="indent" id="indent_part">
                     <!--in div tag as so not to affect the other photos-->
                     <p>
-                        <i>We have no videos to show yet. We're working on it!</i> This is a test to see if this thing is working. 
-                        The original Home page stopped working, so I had to fix the entire web page. That's what I had to do. 
-                        The page should be working the way it was before. This is literally the same code for the About Us page, 
-                        just without the photos and the information concerning the K Road Rabbits business. That's the only difference 
+                        <i>We have no videos to show yet. We're working on it!</i> This is a test to see if this thing is working.
+                        The original Home page stopped working, so I had to fix the entire web page. That's what I had to do.
+                        The page should be working the way it was before. This is literally the same code for the About Us page,
+                        just without the photos and the information concerning the K Road Rabbits business. That's the only difference
                         with this page. Mostly, this alert is a test to see if this works.
                     </p>
                 </div>
-                
-                <input type="submit" 
-                       name="dimensions" 
+
+                <input type="submit"
+                       name="dimensions"
                        id="dimensions"
                        onclick="printDimensions();"
-                       value="Show Dimensions"
-                       >
-                
+                       value="Show Dimensions">
+
                 <input type="submit"
                        name="leftPadding"
                        id="leftPadding"
                        onclick="printPaddingLeft();"
-                       value="Show Padding Left Value"
-                       >
+                       value="Show Padding Left Value">
             </section>
         </article>
     </main>
@@ -225,10 +224,10 @@
 
         var pic2 = document.createElement('img');
         var pic2Loaded = false;
-        
+
         var pic3 = document.createElement('img');
         var pic3Loaded = false;
-        
+
         var pic4 = document.createElement('img');
         var pic4Loaded = false;
 
@@ -242,16 +241,16 @@
         var X3 = 600 - 450 + 295 - 30 + 50 + 1 + 68; // for pic3
         var X4 = 1109 + 450 + 50 + 40 - 50 + 20 + 14 + 1 + 35; // for pic2
         var X5 = 466 - 640 + 50 - 50 + 68; // for pic4
-        
+
         var rabbitPicInstanceX = 600 + 510 - 60 + 50 + 8 + 1 + 68; // instance of rabbitPic
         var pic2InstanceX = 1109 + 450 + 50 + 40 - 50 + 20 + 14 + 1; // instance of pic2
         var pic3InstanceX = 600 - 450 + 295 - 30 + 50 + 1 + 68; // instance of pic3
         var pic4InstanceX = 466 - 640 + 50 - 50 + 68; // instance of pic4
-        
+
         var numberOfChanges = 0;
-        
+
         /*After code test is over, keep the 1109. That's necessary.*/
-        
+
         /*if the 50s above don't work, remove them*/
         /*if the 68s don'g work, remove them*/
 
@@ -264,9 +263,10 @@
         function $(id) {
             return document.getElementById(id);
         }
-        
-        function fitText(divID) {
+
+        function fitText(divID, emSize) {
             divShrink = $(divID);
+            divShrink.style.fontSize = emSize.toString() + "em"; // normal paragraph tag size
             intDivH = divShrink.clientHeight;
             s=1;
             intWinH = window.innerHeight != null ? window.innerHeight: document.body != null ? document.body.clientHeight: null;
@@ -281,23 +281,23 @@
             canvasContext.fillStyle = e;
             canvasContext.fillRect(a, b, c, d);
         }
-        
+
         function printDimensions() {
             window.alert("width: " + window.innerWidth + "\n height: " + window.innerHeight);
         }
-        
+
         function printPaddingLeft() {
             window.alert("padding-left: " + $("indent_part").style.paddingLeft);
         }
-        
+
         window.onload = function () {
             console.log($("indent_part").style.fontSize);
             canvas = $("cv");
             canvasContext = canvas.getContext('2d');
             colorRect(0, 0, canvas.width, canvas.height, 'grey');
             setInterval(updateAll, 0.01);
-            
-            //fitText("indent_part"); // auto-fit text
+
+            fitText("indent_part", 2.5); // auto-fit text
 
             rabbitPic.onload = function () {
                 rabbitPicLoaded = true;
@@ -308,14 +308,14 @@
                 pic2Loaded = true;
             }
             pic2.src = "Rabbuny.jpg";
-            
+
             pic3.onload = function() {
                 pic3Loaded = true;
                 console.log("rabbit_holding.jpg has been loaded successfully");
             }
             pic3.src = 'rabbit_holding.jpg';
             //pic3.width = "100px";
-            
+
             pic4.onload = function() {
                 pic4Loaded = true;
                 console.log("eveBabyRabbitPhoto.jpg has been loaded successfully");
@@ -332,7 +332,7 @@
             moveAll();
             drawAll();
             positionHome();
-            //fitText("indent_part");
+            fitText("indent_part", 2.5);
         }
 
         function moveAll() {
@@ -370,10 +370,10 @@
             if (rabbitPicLoaded) {
                 //rabbitPic.width = 30;
                 //rabbitPic.height = 30;
-                
+
                 //canvasContext.drawImage(rabbitPic, X1, Y1);
                 //canvasContext.fillText("rabbitPic", X1, 20);
-                
+
                 //canvasContext.drawImage(rabbitPic, X3, Y1);
                 //canvasContext.drawImage(rabbitPic, X5, Y1);
                 canvasContext.fillStyle = 'black'; // was for the credits
@@ -382,19 +382,19 @@
                 //  canvasContext.fillText('Picture provided by www.rabbitcaretips.com', X5 + 40, 330);
                 canvasContext.drawImage(rabbitPic, X2, Y1);
                 //canvasContext.fillText("rabbitPic", X2, 20);
-                
+
                 //canvasContext.drawImage(rabbitPic, rabbitPicInstanceX, Y1);
                 //canvasContext.fillText("rabbitPicInstanceX", rabbitPicInstanceX, 20);
             }
             if (pic2Loaded) {
                 //canvasContext.drawImage(pic2, X2, Y1);
                 //canvasContext.fillText("pic2", X2, 20);
-                
+
                 // previous replaced with different photo
 
                 canvasContext.drawImage(pic2, X4, Y1);
                 //canvasContext.fillText("pic2", X4, 20);
-                
+
                 //canvasContext.drawImage(pic2, pic2InstanceX, Y1);
                 //canvasContext.fillText("pic2InstanceX", pic2InstanceX, 20);
 
@@ -430,14 +430,14 @@
                 //alert("clientHeight: " + $("indent_part").style.clientHeight);
                 numberOfChanges++;
             }
-            //fitText("indent_part");
+            fitText("indent_part", 2.5);
     if (window.innerWidth >= 1330) {
         console.log("Everything is left the way it is.");
     } else if (window.innerWidth >= 1280 && window.innerHeight >= 680) {
         $('homeButton').style.margin = "0px 0px 10px 120px";
     } else if (window.innerWidth >= 1280) {
         $('homeButton').style.margin = "0px 0px 10px 120px"; // might be edited if doesn't work
-        
+
     } else if (window.innerWidth <= 480) {
         $('homeButton').style.margin = "0px 0px 10px 20px";
         $('indent_part').style.paddingLeft = "calc(100% - 90%)";
