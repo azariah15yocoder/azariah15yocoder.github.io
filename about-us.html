@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,13 +11,13 @@
     <title>K-Road Rabbits</title>
     <style>
         body {
-            background-color: #808080;
+            background-color: white;
             overflow-x: hidden;
-            background-image: url(happyDaysReplacement.png);
+            /*background-image: url(happyDaysReplacement.png);
             background-repeat: repeat;
             background-position: -200px 200px;
             background-size: auto;
-            background-attachment: fixed;
+            background-attachment: fixed;*/
             color: black !important;
         }
 
@@ -38,69 +39,70 @@
         .indent {
             padding-left: 100px; /*used for videos*/
         }
-        
+
         #indent_part {
             padding-left: calc(100% - 80%);
             width: 60%;
         }
-        
+
         #homeButton {
             width: 150px;
             height: auto;
             margin: 0px 0px 10px 475px;
         }
-        
+
         #aboutUsButton {
             width: 150px;
             height: auto;
             margin: 0px 0px 10px 20px;
         }
-        
+
         #contactUsButton {
             width: 150px;
             height: auto;
             margin: 0px 0px 10px 20px;
         }
-        
+
         #storeButton {
             width: 150px;
             height: auto;
             margin: 0px 0px 10px 20px;
         }
-        
+
         #meetOurBunniesButton {
             width: 225px;
             height: auto;
             margin: 0px 0px 10px 20px; /* change made here */
         }
-        
+
         #actLikeParagraphTag {
             text-align: center;
         }
-        
-        #centerRow{
+
+        #centerRow {
             text-align: center;
             position: center;
         }
 
         /*@media only screen and (max-device-width: 6.20in) { /*edited for mobile devices, in this case the LG G7*/
-            html, body {
-                overflow-x: hidden; /*should prevent user from scrolling back and forth (aka side to side)*/
-            }
-            body {
-                /*position: relative; /*I hope the code still works, even though I put the attribue up here!*//*the code didn't work, so I commented it out for later*/
-                /*background-color: #808080;
+        html, body {
+            overflow-x: hidden; /*should prevent user from scrolling back and forth (aka side to side)*/
+        }
+
+        body {
+            /*position: relative; /*I hope the code still works, even though I put the attribue up here!*/ /*the code didn't work, so I commented it out for later*/
+            /*background-color: #808080;
                 overflow-x: hidden;
                 background: url(happyDaysReplacement.png);
                 background-repeat: repeat;
                 background-position: -200px 200px;
                 background-size: auto;
                 color: black !important;*/
-                /*I trunkated some of the comments I wrote in the code, since the comments are unecessary*/
-                /*This note was added to see whether the web page will update or not*/
-                /*This note was added to see whether the web page will update or not*//*
+            /*I trunkated some of the comments I wrote in the code, since the comments are unecessary*/
+            /*This note was added to see whether the web page will update or not*/
+            /*This note was added to see whether the web page will update or not*/ /*
             }
-            
+
             img {
                 max-width: 50% !important;
             }
@@ -121,41 +123,41 @@
             }
 
             .indent {
-                padding-left: 25px; /*used for videos*//*
+                padding-left: 25px; /*used for videos*/ /*
             }
-            
+
             #homeButton {
                 width: 75px;
                 height: auto;
                 margin: 0px 0px 20px 10px;
             }
-            
+
             #aboutUsButton {
                 width: 75px;
                 height: auto;
                 margin: 0px 0px 20px 10px;
             }
-            
+
             #contactUsButton {
                 width: 75px;
                 height: auto;
                 margin: 0px 0px 20px 10px;
             }
-            
+
             #storeButton {
                 width: 75px;
                 height: auto;
                 margin: 0px 0px 20px 10px;
             }
-            
+
             #meetOurBunniesButton {
                 width: 112.5px;
                 height: auto;
                 margin: 0px 0px 20px 10px;
             }
-        }*//*code has been commented out to test some HTML code*/
+        }*/ /*code has been commented out to test some HTML code*/
     </style>
-    
+
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-JM35F2M4GK"></script>
     <script>
@@ -164,7 +166,7 @@
         gtag('js', new Date());
 
         gtag('config', 'G-JM35F2M4GK');
-</script>
+    </script>
 </head>
 <body>
     <header>
@@ -186,7 +188,8 @@
     <main>
         <article>
             <section>
-                <div class="indent" id="indent_part"> <!--in div tag as so not to affect the other photos-->
+                <div class="indent" id="indent_part">
+                    <!--in div tag as so not to affect the other photos-->
                     <p>
                         is a rabbit breeding program that breeds rabbits of the English Spot, Himalayan, and Polish breeds. We also share
                         rabbit facts, videos, and pictures.
@@ -265,10 +268,10 @@
 
         var pic2 = document.createElement('img');
         var pic2Loaded = false;
-        
+
         var pic3 = document.createElement('img');
         var pic3Loaded = false;
-        
+
         var pic4 = document.createElement('img');
         var pic4Loaded = false;
 
@@ -282,15 +285,17 @@
         var X3 = 600 - 450 + 295 - 30 + 50 + 1 + 68; // for pic3
         var X4 = 1109 + 450 + 50 + 40 - 50 + 20 + 14 + 1 + 35; // for pic2
         var X5 = 466 - 640 + 50 - 50 + 68; // for pic4
-        
+
         var rabbitPicInstanceX = 600 + 510 - 60 + 50 + 8 + 1 + 68; // instance of rabbitPic
         var pic2InstanceX = 1109 + 450 + 50 + 40 - 50 + 20 + 14 + 1; // instance of pic2
         var pic3InstanceX = 600 - 450 + 295 - 30 + 50 + 1 + 68; // instance of pic3
         var pic4InstanceX = 466 - 640 + 50 - 50 + 68; // instance of pic4
-        
-        alert("width: " + window.innerWidth + "\n height: " + window.innerHeight);
+
+        //alert("width: " + window.innerWidth + "\n height: " + window.innerHeight);
         // This was used for testing to see what would be the best function that would resize images for this page
-        
+
+        var numberOfChanges = 0;
+
         positionHome(); // used to reposition the home button
 
 
@@ -298,16 +303,39 @@
             return document.getElementById(id);
         }
 
+        function fitText(divID, emSize) {
+            divShrink = $(divID);
+            divShrink.style.fontSize = emSize.toString() + "em"; // normal paragraph tag size
+            intDivH = divShrink.clientHeight;
+            s = 1;
+            intWinH = window.innerHeight != null ? window.innerHeight : document.body != null ? document.body.clientHeight : null;
+            while (intDivH > intWinH && s > 0) {
+                s = s - 0.01;
+                divShrink.style.fontSize = s + 'em';
+                intDivH = divShrink.clientHeight;
+            }
+        }
+
         function colorRect(a, b, c, d, e) {
             canvasContext.fillStyle = e;
             canvasContext.fillRect(a, b, c, d);
         }
 
+        function printDimensions() {
+            window.alert("width: " + window.innerWidth + "\n height: " + window.innerHeight);
+        }
+
+        function printPaddingLeft() {
+            window.alert("padding-left: " + $("indent_part").style.paddingLeft);
+        }
+
         window.onload = function () {
             canvas = $("cv");
             canvasContext = canvas.getContext('2d');
-            colorRect(0, 0, canvas.width, canvas.height, 'aqua');
+            colorRect(0, 0, canvas.width, canvas.height, 'grey');
             setInterval(updateAll, 0.01);
+
+            fitText("indent_part", 5.0); // auto-fit text
 
             rabbitPic.onload = function () {
                 rabbitPicLoaded = true;
@@ -318,14 +346,14 @@
                 pic2Loaded = true;
             }
             pic2.src = "Rabbuny.jpg";
-            
+
             pic3.onload = function() {
                 pic3Loaded = true;
                 console.log("rabbit_holding.jpg has been loaded successfully");
             }
             pic3.src = 'rabbit_holding.jpg';
             //pic3.width = "100px";
-            
+
             pic4.onload = function() {
                 pic4Loaded = true;
                 console.log("eveBabyRabbitPhoto.jpg has been loaded successfully");
@@ -342,6 +370,7 @@
             moveAll();
             drawAll();
             positionHome();
+            fitText("indent_part", 5.0); // continue auto-resizing
         }
 
         function moveAll() {
@@ -375,14 +404,15 @@
         }
 
         function drawAll() {
-            colorRect(0, 0, canvas.width, canvas.height, 'aqua');
-            if (rabbitPicLoaded) {
+            colorRect(0, 0, canvas.width, canvas.height, 'grey');
+            if (rabbitPicLoaded && pic2Loaded && pic3Loaded && pic4Loaded && picForFadeLoaded) { // wait till all photos are loaded
+                //if (rabbitPicLoaded) {
                 //rabbitPic.width = 30;
                 //rabbitPic.height = 30;
-                
+
                 //canvasContext.drawImage(rabbitPic, X1, Y1);
                 //canvasContext.fillText("rabbitPic", X1, 20);
-                
+
                 //canvasContext.drawImage(rabbitPic, X3, Y1);
                 //canvasContext.drawImage(rabbitPic, X5, Y1);
                 canvasContext.fillStyle = 'black'; // was for the credits
@@ -391,19 +421,19 @@
                 //  canvasContext.fillText('Picture provided by www.rabbitcaretips.com', X5 + 40, 330);
                 canvasContext.drawImage(rabbitPic, X2, Y1);
                 //canvasContext.fillText("rabbitPic", X2, 20);
-                
+
                 //canvasContext.drawImage(rabbitPic, rabbitPicInstanceX, Y1);
                 //canvasContext.fillText("rabbitPicInstanceX", rabbitPicInstanceX, 20);
-            }
-            if (pic2Loaded) {
+                //}
+                //if (pic2Loaded) {
                 //canvasContext.drawImage(pic2, X2, Y1);
                 //canvasContext.fillText("pic2", X2, 20);
-                
+
                 // previous replaced with different photo
 
                 canvasContext.drawImage(pic2, X4, Y1);
                 //canvasContext.fillText("pic2", X4, 20);
-                
+
                 //canvasContext.drawImage(pic2, pic2InstanceX, Y1);
                 //canvasContext.fillText("pic2InstanceX", pic2InstanceX, 20);
 
@@ -413,31 +443,41 @@
                 //    canvasContext.fillText('Picture provided by i.pinimg.com', X2, 20);
                 //  canvasContext.fillText('Picture provided by i.pinimg.com', X4, 20);
 
-            }
-            if(pic3Loaded) {
+                //}
+                //if (pic3Loaded) {
                 canvasContext.drawImage(pic3, X3, Y1, 600, 400);
                 //canvasContext.fillText("pic3", X3, 20);
                 //canvasContext.drawImage(pic3, pic3InstanceX, 600, 400);
                 //canvasContext.fillText("pic3InstanceX", pic3InstanceX, 20);
                 canvasContext.fillStyle = "black"; // for text
-            }
-            if(pic4Loaded) {
+                //}
+                //if (pic4Loaded) {
                 canvasContext.drawImage(pic4, X5, Y1, 600, 400);
                 //canvasContext.fillText("pic4", X5, 20);
                 //canvasContext.drawImage(pic4, pic4InstanceX, 600, 400);
                 //canvasContext.fillText("pic4InstanceX", pic4InstanceX, 20);
                 canvasContext.fillStyle = "black"; // for text
+                //}
+
+                //if (picForFadeLoaded) {
+                canvasContext.drawImage(picForFade, 0, 0 - 1);
+                //}
             }
 
-            if (picForFadeLoaded) {
-                canvasContext.drawImage(picForFade, 0, 0 - 1);
-            }
         }
 
-        
+
         function positionHome() {
-    if (window.innerWidth >= 1330) {
+            if (numberOfChanges === 0) {
+                numberOfChanges++;
+            }
+            if (window.innerWidth >= 1920 && window.innerHeight >= 1080 ||
+                window.innerWidth >= 1920 && window.innerHeight >= 937) {
+                console.log("Everything is left the way it is.");
+            }
+    else if (window.innerWidth >= 1330) {
         console.log("Everything is left the way it is.");
+        $("indent_part").style.fontSize = "0em";
     } else if (window.innerWidth >= 1280 && window.innerHeight >= 680) {
         $('homeButton').style.margin = "0px 0px 10px 120px";
         $('photoTable').innerHTML = `<tr>
@@ -564,7 +604,7 @@
         window.innerHeight >= 329) { // based off of LG phone
 
         $('homeButton').style.margin = "0px 0px 10px 20px";
-        $('photoTable').innerHTML = `<tr>
+                $('photoTable').innerHTML = `<tr>
     <td id="eveData">
         <figure id="eveRider">
             <img id="evePhoto" style="margin-top: -35px;" src="Eve holding a Rabbit 2.jpeg" width="200" alt="This is Eve Rider holding a rabbit." />
@@ -602,6 +642,8 @@
         </figure>
     </td>
 </tr>`;
+            $("indent_part").style.paddingLeft = "10%";
+            $("indent_part").style.width = "83%";
 
     } else if (window.innerWidth >= 800 && window.innerHeight >= 1160) {
         $('homeButton').style.margin = "0px 0px 10px 20px"; // looks good that way
