@@ -296,7 +296,7 @@
             colorRect(0, 0, canvas.width, canvas.height, 'grey');
             setInterval(updateAll, 0.01);
 
-            fitText("indent_part", 2.5); // auto-fit text
+            fitText("indent_part", 5.0); // auto-fit text
 
             rabbitPic.onload = function () {
                 rabbitPicLoaded = true;
@@ -331,7 +331,7 @@
             moveAll();
             drawAll();
             positionHome();
-            fitText("indent_part", 2.5);
+            fitText("indent_part", 5.0);
         }
 
         function moveAll() {
@@ -432,9 +432,14 @@
                 //alert("clientHeight: " + $("indent_part").style.clientHeight);
                 numberOfChanges++;
             }
-            fitText("indent_part", 2.5);
-    if (window.innerWidth >= 1330) {
+            fitText("indent_part", 5.0);
+            if (window.innerWidth >= 1920 && window.innerHeight >= 1080 ||
+                window.innerWidth >= 1920 && window.innerHeight >= 937) {
+                console.log("Everything is left the way it is.");
+                $("indent_part").style.fontSize = "0em";
+            } else if (window.innerWidth >= 1330) {
         console.log("Everything is left the way it is.");
+        $("indent_part").style.fontSize = "0em";
     } else if (window.innerWidth >= 1280 && window.innerHeight >= 680) {
         $('homeButton').style.margin = "0px 0px 10px 120px";
     } else if (window.innerWidth >= 1280) {
