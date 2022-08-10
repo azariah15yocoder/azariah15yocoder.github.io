@@ -215,7 +215,7 @@
     </footer>
 
     <script>
-        console.log("Hello World!");
+        //console.log("Hello World!");
         var canvas, canvasContext;
 
         var rabbitPic = document.createElement('img');
@@ -247,6 +247,8 @@
         var pic4InstanceX = 466 - 640 + 50 - 50 + 68; // instance of pic4
 
         var numberOfChanges = 0;
+
+        var dimensionOfWindow = "1920x937";
 
         /*After code test is over, keep the 1109. That's necessary.*/
 
@@ -331,7 +333,7 @@
             moveAll();
             drawAll();
             positionHome();
-            fitText("indent_part", 5.0); // used for auto-resize
+            //fitText("indent_part", 5.0); // used for auto-resize
         }
 
         function moveAll() {
@@ -436,28 +438,61 @@
             if (window.innerWidth >= 1920 && window.innerHeight >= 1080 ||
                 window.innerWidth >= 1920 && window.innerHeight >= 937) {
                 console.log("Everything is left the way it is.");
+                if (dimensionOfWindow !== "1920x937") {
+                    fitText("indent_part", 5.0);
+                    dimensionOfWindow = "1920x937";
+                }
                 //$("indent_part").style.fontSize = "0em";
             } else if (window.innerWidth >= 1330) {
         console.log("Everything is left the way it is.");
-        $("indent_part").style.fontSize = "0em";
+                $("indent_part").style.fontSize = "0em";
+                if (dimensionOfWindow !== "1330") {
+                    fitText("indent_part", 5.0);
+                    dimensionOfWindow = "1330";
+                }
     } else if (window.innerWidth >= 1280 && window.innerHeight >= 680) {
         $('homeButton').style.margin = "0px 0px 10px 120px";
+                if (dimensionOfWindow !== "1280x680") {
+                    fitText("indent_part", 5.0);
+                    dimensionOfWindow = "1280x680";
+                }
     } else if (window.innerWidth >= 1280) {
         $('homeButton').style.margin = "0px 0px 10px 120px"; // might be edited if doesn't work
+                if (dimensionOfWindow !== "1280") {
+                    fitText("indent_part", 5.0);
+                    dimensionOfWindow = "1280";
+                }
 
     } else if (window.innerWidth <= 480) {
         $('homeButton').style.margin = "0px 0px 10px 20px";
         $('indent_part').style.paddingLeft = "calc(100% - 90%)";
         $('indent_part').style.width = "80%";
+                if (dimensionOfWindow !== "480") {
+                    fitText("indent_part", 5.0);
+                    dimensionOfWindow = "480";
+                }
     } else if (window.innerWidth >= 817 &&
         window.innerHeight >= 329) { // based off of LG phone
         $('homeButton').style.margin = "0px 0px 10px 20px";
         $("indent_part").style.paddingLeft = "10%";
         $("indent_part").style.width = "83%";
+                if (dimensionOfWindow !== "817x329") {
+                    fitText("indent_part", 5.0);
+                    dimensionOfWindow = "817x329";
+                }
     } else if (window.innerWidth >= 800 && window.innerHeight >= 1160) {
         $('homeButton').style.margin = "0px 0px 10px 20px"; // looks good that way
+                if (dimensionOfWindow !== "800x1160") {
+                    fitText("indent_part", 5.0);
+                    dimensionOfWindow = "800x1160";
+                }
+
     } else if (window.innerWidth >= 800) { // when not sure what to do with width of tablet
         $('homeButton').style.margin = "0px 0px 10px 30px";
+                if (dimensionOfWindow !== "800") {
+                    fitText("indent_part", 5.0);
+                    dimensionOfWindow = "800";
+                }
     }
 }
     </script>
