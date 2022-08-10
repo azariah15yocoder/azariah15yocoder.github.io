@@ -331,7 +331,7 @@
             moveAll();
             drawAll();
             positionHome();
-            fitText("indent_part", 5.0);
+            fitText("indent_part", 5.0); // used for auto-resize
         }
 
         function moveAll() {
@@ -432,7 +432,7 @@
                 //alert("clientHeight: " + $("indent_part").style.clientHeight);
                 numberOfChanges++;
             }
-            fitText("indent_part", 5.0);
+            //fitText("indent_part", 5.0);
             if (window.innerWidth >= 1920 && window.innerHeight >= 1080 ||
                 window.innerWidth >= 1920 && window.innerHeight >= 937) {
                 console.log("Everything is left the way it is.");
