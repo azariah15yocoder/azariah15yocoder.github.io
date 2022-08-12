@@ -162,7 +162,7 @@
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-JM35F2M4GK"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
+        function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
 
         gtag('config', 'G-JM35F2M4GK');
@@ -296,8 +296,6 @@
 
         var numberOfChanges = 0;
 
-        var dimensionOfWindow = "1920x937";
-
         positionHome(); // used to reposition the home button
 
 
@@ -349,14 +347,14 @@
             }
             pic2.src = "Rabbuny.jpg";
 
-            pic3.onload = function () {
+            pic3.onload = function() {
                 pic3Loaded = true;
                 console.log("rabbit_holding.jpg has been loaded successfully");
             }
             pic3.src = 'rabbit_holding.jpg';
             //pic3.width = "100px";
 
-            pic4.onload = function () {
+            pic4.onload = function() {
                 pic4Loaded = true;
                 console.log("eveBabyRabbitPhoto.jpg has been loaded successfully");
             }
@@ -372,7 +370,7 @@
             moveAll();
             drawAll();
             positionHome();
-            //fitText("indent_part", 5.0); // continue auto-resizing
+            fitText("indent_part", 5.0); // continue auto-resizing
         }
 
         function moveAll() {
@@ -476,293 +474,261 @@
             if (window.innerWidth >= 1920 && window.innerHeight >= 1080 ||
                 window.innerWidth >= 1920 && window.innerHeight >= 937) {
                 console.log("Everything is left the way it is.");
-                if (dimensionOfWindow !== "1920x937") {
-                    fitText("indent_part", 5.0);
-                    dimensionOfWindow = "1920x937";
-                }
             }
-            else if (window.innerWidth >= 1330) {
-                console.log("Everything is left the way it is.");
-                $("indent_part").style.fontSize = "0em";
-                if (dimensionOfWindow !== "1330") {
-                    fitText("indent_part", 5.0);
-                    dimensionOfWindow = "1330";
-                }
-            } else if (window.innerWidth >= 1280 && window.innerHeight >= 680) {
-                $('homeButton').style.margin = "0px 0px 10px 120px";
-                $('photoTable').innerHTML = `<tr>
-        <td id="eveData">
-            <figure id="eveRider">
-                <img id="evePhoto" style="margin-top: -35px;" src="Eve holding a Rabbit 2.jpeg" width="250" alt="This is Eve Rider holding a rabbit." />
-                <figcaption id="actLikeParagraphTag" style="font-family: Arial;">
-                    Eve Rider
-                </figcaption>
-            </figure>
-        </td>
+    else if (window.innerWidth >= 1330) {
+        console.log("Everything is left the way it is.");
+        $("indent_part").style.fontSize = "0em";
+    } else if (window.innerWidth >= 1280 && window.innerHeight >= 680) {
+        $('homeButton').style.margin = "0px 0px 10px 120px";
+        $('photoTable').innerHTML = `<tr>
+    <td id="eveData">
+        <figure id="eveRider">
+            <img id="evePhoto" style="margin-top: -35px;" src="Eve holding a Rabbit 2.jpeg" width="250" alt="This is Eve Rider holding a rabbit." />
+            <figcaption id="actLikeParagraphTag" style="font-family: Arial;">
+                Eve Rider
+            </figcaption>
+        </figure>
+    </td>
 
-        <td id="daphneData">
-            <figure id="daphneRider">
-                <img id="daphnePhoto" src="DaphneHoldingRabbit.jpg" width="250" alt="This is Daphne Rider holding a rabbit." />
-                <figcaption id="actLikeParagraphTag" style="font-family: Arial;">
-                    Daphne Rider
-                </figcaption>
-            </figure>
-        </td>
+    <td id="daphneData">
+        <figure id="daphneRider">
+            <img id="daphnePhoto" src="DaphneHoldingRabbit.jpg" width="250" alt="This is Daphne Rider holding a rabbit." />
+            <figcaption id="actLikeParagraphTag" style="font-family: Arial;">
+                Daphne Rider
+            </figcaption>
+        </figure>
+    </td>
 
-        <td id="azariahData">
-            <figure id="azariahEasey">
-                <img id="azariahPhoto" src="Azariah Coding.JPEG" width="250" alt="This is Azariah Easey ready to code." />
-                <figcaption id="actLikeParagraphTag" style="font-family: Arial;">
-                    Azariah Easey
-                </figcaption>
-            </figure>
-        </td>
+    <td id="azariahData">
+        <figure id="azariahEasey">
+            <img id="azariahPhoto" src="Azariah Coding.JPEG" width="250" alt="This is Azariah Easey ready to code." />
+            <figcaption id="actLikeParagraphTag" style="font-family: Arial;">
+                Azariah Easey
+            </figcaption>
+        </figure>
+    </td>
 
-        <td id="jeremiahData">
-            <figure id="jeremiahEasey">
-                <img id="jeremiahPhoto" src="JerCamera.JPEG" width="250" alt="This is Jeremiah Easey ready to film." />
-                <figcaption id="actLikeParagraphTag" style="font-family: Arial;">
-                    Jeremiah Easey
-                </figcaption>
-            </figure>
-        </td>
+    <td id="jeremiahData">
+        <figure id="jeremiahEasey">
+            <img id="jeremiahPhoto" src="JerCamera.JPEG" width="250" alt="This is Jeremiah Easey ready to film." />
+            <figcaption id="actLikeParagraphTag" style="font-family: Arial;">
+                Jeremiah Easey
+            </figcaption>
+        </figure>
+    </td>
 </tr>`;
-                if (dimensionOfWindow !== "1280x680") {
-                    fitText("indent_part", 5.0);
-                    dimensionOfWindow = "1280x680";
-                }
-            } else if (window.innerWidth >= 1280) {
-                $('homeButton').style.margin = "0px 0px 10px 120px"; // might be edited if doesn't work
-                $('photoTable').innerHTML = `<tr>
-        <td id="eveData">
-            <figure id="eveRider">
-                <img id="evePhoto" style="margin-top: -35px;" src="Eve holding a Rabbit 2.jpeg" width="250" alt="This is Eve Rider holding a rabbit." />
-                <figcaption id="actLikeParagraphTag" style="font-family: Arial;">
-                    Eve Rider
-                </figcaption>
-            </figure>
-        </td>
+    } else if (window.innerWidth >= 1280) {
+        $('homeButton').style.margin = "0px 0px 10px 120px"; // might be edited if doesn't work
+        $('photoTable').innerHTML = `<tr>
+    <td id="eveData">
+        <figure id="eveRider">
+            <img id="evePhoto" style="margin-top: -35px;" src="Eve holding a Rabbit 2.jpeg" width="250" alt="This is Eve Rider holding a rabbit." />
+            <figcaption id="actLikeParagraphTag" style="font-family: Arial;">
+                Eve Rider
+            </figcaption>
+        </figure>
+    </td>
 
-        <td id="daphneData">
-            <figure id="daphneRider">
-                <img id="daphnePhoto" src="DaphneHoldingRabbit.jpg" width="250" alt="This is Daphne Rider holding a rabbit." />
-                <figcaption id="actLikeParagraphTag" style="font-family: Arial;">
-                    Daphne Rider
-                </figcaption>
-            </figure>
-        </td>
+    <td id="daphneData">
+        <figure id="daphneRider">
+            <img id="daphnePhoto" src="DaphneHoldingRabbit.jpg" width="250" alt="This is Daphne Rider holding a rabbit." />
+            <figcaption id="actLikeParagraphTag" style="font-family: Arial;">
+                Daphne Rider
+            </figcaption>
+        </figure>
+    </td>
 
-        <td id="azariahData">
-            <figure id="azariahEasey">
-                <img id="azariahPhoto" src="Azariah Coding.JPEG" width="250" alt="This is Azariah Easey ready to code." />
-                <figcaption id="actLikeParagraphTag" style="font-family: Arial;">
-                    Azariah Easey
-                </figcaption>
-            </figure>
-        </td>
+    <td id="azariahData">
+        <figure id="azariahEasey">
+            <img id="azariahPhoto" src="Azariah Coding.JPEG" width="250" alt="This is Azariah Easey ready to code." />
+            <figcaption id="actLikeParagraphTag" style="font-family: Arial;">
+                Azariah Easey
+            </figcaption>
+        </figure>
+    </td>
 
-        <td id="jeremiahData">
-            <figure id="jeremiahEasey">
-                <img id="jeremiahPhoto" src="JerCamera.JPEG" width="250" alt="This is Jeremiah Easey ready to film." />
-                <figcaption id="actLikeParagraphTag" style="font-family: Arial;">
-                    Jeremiah Easey
-                </figcaption>
-            </figure>
-        </td>
+    <td id="jeremiahData">
+        <figure id="jeremiahEasey">
+            <img id="jeremiahPhoto" src="JerCamera.JPEG" width="250" alt="This is Jeremiah Easey ready to film." />
+            <figcaption id="actLikeParagraphTag" style="font-family: Arial;">
+                Jeremiah Easey
+            </figcaption>
+        </figure>
+    </td>
 </tr>`;
-                if (dimensionOfWindow !== "1280") {
-                    fitText("indent_part", 5.0);
-                    dimensionOfWindow = "1280";
-                }
-            } else if (window.innerWidth <= 480) {
-                $('homeButton').style.margin = "0px 0px 10px 20px";
-                $('indent_part').style.paddingLeft = "calc(100% - 90%)";
-                $('indent_part').style.width = "80%";
-                $('photoTable').innerHTML = `<tr>
-        <td id="eveData">
-            <figure id="eveRider">
-                <img id="evePhoto" style="margin-top: -35px;" src="Eve holding a Rabbit 2.jpeg" width="150" alt="This is Eve Rider holding a rabbit." />
-                <figcaption style="font-family: Arial;">
-                    Eve Rider
-                </figcaption>
-            </figure>
-        </td>
+    } else if (window.innerWidth <= 480) {
+        $('homeButton').style.margin = "0px 0px 10px 20px";
+        $('indent_part').style.paddingLeft = "calc(100% - 90%)";
+        $('indent_part').style.width = "80%";
+        $('photoTable').innerHTML = `<tr>
+    <td id="eveData">
+        <figure id="eveRider">
+            <img id="evePhoto" style="margin-top: -35px;" src="Eve holding a Rabbit 2.jpeg" width="150" alt="This is Eve Rider holding a rabbit." />
+            <figcaption style="font-family: Arial;">
+                Eve Rider
+            </figcaption>
+        </figure>
+    </td>
 </tr>
 <tr>
-        <td id="daphneData">
-            <figure id="daphneRider">
-                <img id="daphnePhoto" src="DaphneHoldingRabbit.jpg" width="150" alt="This is Daphne Rider holding a rabbit." />
-                <figcaption style="font-family: Arial;">
-                    Daphne Rider
-                </figcaption>
-            </figure>
-        </td>
+    <td id="daphneData">
+        <figure id="daphneRider">
+            <img id="daphnePhoto" src="DaphneHoldingRabbit.jpg" width="150" alt="This is Daphne Rider holding a rabbit." />
+            <figcaption style="font-family: Arial;">
+                Daphne Rider
+            </figcaption>
+        </figure>
+    </td>
 </tr>
 <tr>
-        <td id="azariahData">
-            <figure id="azariahEasey" style="padding-left: 0px;">
-                <img id="azariahPhoto" src="Azariah Coding.JPEG" width="150" alt="This is Azariah Easey ready to code." />
-                <figcaption style="font-family: Arial;">
-                    Azariah Easey
-                </figcaption>
-            </figure>
-        </td>
+    <td id="azariahData">
+        <figure id="azariahEasey" style="padding-left: 0px;">
+            <img id="azariahPhoto" src="Azariah Coding.JPEG" width="150" alt="This is Azariah Easey ready to code." />
+            <figcaption style="font-family: Arial;">
+                Azariah Easey
+            </figcaption>
+        </figure>
+    </td>
 </tr>
 <tr>
-        <td id="jeremiahData">
-            <figure id="jeremiahEasey">
-                <img id="jeremiahPhoto" src="JerCamera.JPEG" width="150" alt="This is Jeremiah Easey ready to film." />
-                <figcaption style="font-family: Arial;">
-                    Jeremiah Easey
-                </figcaption>
-            </figure>
-        </td>
+    <td id="jeremiahData">
+        <figure id="jeremiahEasey">
+            <img id="jeremiahPhoto" src="JerCamera.JPEG" width="150" alt="This is Jeremiah Easey ready to film." />
+            <figcaption style="font-family: Arial;">
+                Jeremiah Easey
+            </figcaption>
+        </figure>
+    </td>
 </tr>`;
-                if (dimensionOfWindow !== "480") {
-                    fitText("indent_part", 5.0);
-                    dimensionOfWindow = "480";
-                }
-            } else if (window.innerWidth >= 817 &&
-                window.innerHeight >= 329) { // based off of LG phone
+    } else if (window.innerWidth >= 817 &&
+        window.innerHeight >= 329) { // based off of LG phone
 
-                $('homeButton').style.margin = "0px 0px 10px 20px";
+        $('homeButton').style.margin = "0px 0px 10px 20px";
                 $('photoTable').innerHTML = `<tr>
-        <td id="eveData">
-            <figure id="eveRider">
-                <img id="evePhoto" style="margin-top: -35px;" src="Eve holding a Rabbit 2.jpeg" width="200" alt="This is Eve Rider holding a rabbit." />
-                <figcaption style="font-family: Arial;">
-                    Eve Rider
-                </figcaption>
-            </figure>
-        </td>
+    <td id="eveData">
+        <figure id="eveRider">
+            <img id="evePhoto" style="margin-top: -35px;" src="Eve holding a Rabbit 2.jpeg" width="200" alt="This is Eve Rider holding a rabbit." />
+            <figcaption style="font-family: Arial;">
+                Eve Rider
+            </figcaption>
+        </figure>
+    </td>
 
-        <td id="daphneData">
-            <figure id="daphneRider">
-                <img id="daphnePhoto" src="DaphneHoldingRabbit.jpg" width="200" alt="This is Daphne Rider holding a rabbit." />
-                <figcaption style="font-family: Arial;">
-                    Daphne Rider
-                </figcaption>
-            </figure>
-        </td>
+    <td id="daphneData">
+        <figure id="daphneRider">
+            <img id="daphnePhoto" src="DaphneHoldingRabbit.jpg" width="200" alt="This is Daphne Rider holding a rabbit." />
+            <figcaption style="font-family: Arial;">
+                Daphne Rider
+            </figcaption>
+        </figure>
+    </td>
 </tr>
 <tr>
-        <td id="azariahData">
-            <figure id="azariahEasey" style="padding-left: 0px;">
-                <img id="azariahPhoto" src="Azariah Coding.JPEG" width="200" alt="This is Azariah Easey ready to code." />
-                <figcaption style="font-family: Arial;">
-                    Azariah Easey
-                </figcaption>
-            </figure>
-        </td>
+    <td id="azariahData">
+        <figure id="azariahEasey" style="padding-left: 0px;">
+            <img id="azariahPhoto" src="Azariah Coding.JPEG" width="200" alt="This is Azariah Easey ready to code." />
+            <figcaption style="font-family: Arial;">
+                Azariah Easey
+            </figcaption>
+        </figure>
+    </td>
 
-        <td id="jeremiahData">
-            <figure id="jeremiahEasey">
-                <img id="jeremiahPhoto" src="JerCamera.JPEG" width="200" alt="This is Jeremiah Easey ready to film." />
-                <figcaption style="font-family: Arial;">
-                    Jeremiah Easey
-                </figcaption>
-            </figure>
-        </td>
+    <td id="jeremiahData">
+        <figure id="jeremiahEasey">
+            <img id="jeremiahPhoto" src="JerCamera.JPEG" width="200" alt="This is Jeremiah Easey ready to film." />
+            <figcaption style="font-family: Arial;">
+                Jeremiah Easey
+            </figcaption>
+        </figure>
+    </td>
 </tr>`;
-                if (dimensionOfWindow !== "813x329") {
-                    fitText("indent_part", 5.0);
-                    dimensionOfWindow = "813x329";
-                }
-                $("indent_part").style.paddingLeft = "10%";
-                $("indent_part").style.width = "83%";
+            $("indent_part").style.paddingLeft = "10%";
+            $("indent_part").style.width = "83%";
 
-            } else if (window.innerWidth >= 800 && window.innerHeight >= 1160) {
-                $('homeButton').style.margin = "0px 0px 10px 20px"; // looks good that way
-                $('photoTable').innerHTML = `<tr>
-        <td id="eveData" style="padding-left: 85px;">
-            <figure id="eveRider">
-                <img id="evePhoto" style="margin-top: -35px;" src="Eve holding a Rabbit 2.jpeg" width="200" alt="This is Eve Rider holding a rabbit." />
-                <figcaption style="font-family: Arial;">
-                    Eve Rider
-                </figcaption>
-            </figure>
-        </td>
+    } else if (window.innerWidth >= 800 && window.innerHeight >= 1160) {
+        $('homeButton').style.margin = "0px 0px 10px 20px"; // looks good that way
+        $('photoTable').innerHTML = `<tr>
+    <td id="eveData" style="padding-left: 85px;">
+        <figure id="eveRider">
+            <img id="evePhoto" style="margin-top: -35px;" src="Eve holding a Rabbit 2.jpeg" width="200" alt="This is Eve Rider holding a rabbit." />
+            <figcaption style="font-family: Arial;">
+                Eve Rider
+            </figcaption>
+        </figure>
+    </td>
 
-        <td id="daphneData">
-            <figure id="daphneRider">
-                <img id="daphnePhoto" src="DaphneHoldingRabbit.jpg" width="200" alt="This is Daphne Rider holding a rabbit." />
-                <figcaption style="font-family: Arial;">
-                    Daphne Rider
-                </figcaption>
-            </figure>
-        </td>
+    <td id="daphneData">
+        <figure id="daphneRider">
+            <img id="daphnePhoto" src="DaphneHoldingRabbit.jpg" width="200" alt="This is Daphne Rider holding a rabbit." />
+            <figcaption style="font-family: Arial;">
+                Daphne Rider
+            </figcaption>
+        </figure>
+    </td>
 </tr>
 <tr>
-        <td id="azariahData" style="padding-left: 85px;">
-            <figure id="azariahEasey" style="padding-left: 0px;">
-                <img id="azariahPhoto" src="Azariah Coding.JPEG" width="200" alt="This is Azariah Easey ready to code." />
-                <figcaption style="font-family: Arial;">
-                    Azariah Easey
-                </figcaption>
-            </figure>
-        </td>
+    <td id="azariahData" style="padding-left: 85px;">
+        <figure id="azariahEasey" style="padding-left: 0px;">
+            <img id="azariahPhoto" src="Azariah Coding.JPEG" width="200" alt="This is Azariah Easey ready to code." />
+            <figcaption style="font-family: Arial;">
+                Azariah Easey
+            </figcaption>
+        </figure>
+    </td>
 
-        <td id="jeremiahData">
-            <figure id="jeremiahEasey">
-                <img id="jeremiahPhoto" src="JerCamera.JPEG" width="200" alt="This is Jeremiah Easey ready to film." />
-                <figcaption style="font-family: Arial;">
-                    Jeremiah Easey
-                </figcaption>
-            </figure>
-        </td>
+    <td id="jeremiahData">
+        <figure id="jeremiahEasey">
+            <img id="jeremiahPhoto" src="JerCamera.JPEG" width="200" alt="This is Jeremiah Easey ready to film." />
+            <figcaption style="font-family: Arial;">
+                Jeremiah Easey
+            </figcaption>
+        </figure>
+    </td>
 </tr>`;
-                if (dimensionOfWindow !== "800x1160") {
-                    fitText("indent_part", 5.0);
-                    dimensionOfWindow = "800x1160";
-                }
-            } else if (window.innerWidth >= 800) { // when not sure what to do with width of tablet
-                $('homeButton').style.margin = "0px 0px 10px 30px";
-                $('photoTable').innerHTML = `<tr>
-        <td id="eveData">
-            <figure id="eveRider">
-                <img id="evePhoto" style="margin-top: -35px;" src="Eve holding a Rabbit 2.jpeg" width="200" alt="This is Eve Rider holding a rabbit." />
-                <figcaption style="font-family: Arial;">
-                    Eve Rider
-                </figcaption>
-            </figure>
-        </td>
+    } else if (window.innerWidth >= 800) { // when not sure what to do with width of tablet
+        $('homeButton').style.margin = "0px 0px 10px 30px";
+        $('photoTable').innerHTML = `<tr>
+    <td id="eveData">
+        <figure id="eveRider">
+            <img id="evePhoto" style="margin-top: -35px;" src="Eve holding a Rabbit 2.jpeg" width="200" alt="This is Eve Rider holding a rabbit." />
+            <figcaption style="font-family: Arial;">
+                Eve Rider
+            </figcaption>
+        </figure>
+    </td>
 
-        <td id="daphneData">
-            <figure id="daphneRider">
-                <img id="daphnePhoto" src="DaphneHoldingRabbit.jpg" width="200" alt="This is Daphne Rider holding a rabbit." />
-                <figcaption style="font-family: Arial;">
-                    Daphne Rider
-                </figcaption>
-            </figure>
-        </td>
+    <td id="daphneData">
+        <figure id="daphneRider">
+            <img id="daphnePhoto" src="DaphneHoldingRabbit.jpg" width="200" alt="This is Daphne Rider holding a rabbit." />
+            <figcaption style="font-family: Arial;">
+                Daphne Rider
+            </figcaption>
+        </figure>
+    </td>
 </tr>
 <tr>
-        <td id="azariahData">
-            <figure id="azariahEasey" style="padding-left: 0px;">
-                <img id="azariahPhoto" src="Azariah Coding.JPEG" width="200" alt="This is Azariah Easey ready to code." />
-                <figcaption style="font-family: Arial;">
-                    Azariah Easey
-                </figcaption>
-            </figure>
-        </td>
+    <td id="azariahData">
+        <figure id="azariahEasey" style="padding-left: 0px;">
+            <img id="azariahPhoto" src="Azariah Coding.JPEG" width="200" alt="This is Azariah Easey ready to code." />
+            <figcaption style="font-family: Arial;">
+                Azariah Easey
+            </figcaption>
+        </figure>
+    </td>
 </tr>
 <tr>
-        <td id="jeremiahData">
-            <figure id="jeremiahEasey">
-                <img id="jeremiahPhoto" src="JerCamera.JPEG" width="200" alt="This is Jeremiah Easey ready to film." />
-                <figcaption style="font-family: Arial;">
-                    Jeremiah Easey
-                </figcaption>
-            </figure>
-        </td>
+    <td id="jeremiahData">
+        <figure id="jeremiahEasey">
+            <img id="jeremiahPhoto" src="JerCamera.JPEG" width="200" alt="This is Jeremiah Easey ready to film." />
+            <figcaption style="font-family: Arial;">
+                Jeremiah Easey
+            </figcaption>
+        </figure>
+    </td>
 </tr>`;
-                if (dimensionOfWindow !== "800") {
-                    fitText("indent_part", 5.0);
-                    dimensionOfWindow = "800";
-                }
 
-            }
-        }
+    }
+}
     </script>
 </body>
 </html>
