@@ -448,6 +448,8 @@
                     fitText("indent_part", 5.0);
                     dimensionOfWindow = "1920x937";
                 }
+                $("indent_part").style.paddingLeft = "calc(100% - 80%)";
+                $("indent_part").style.width = "60%";
                 //$("indent_part").style.fontSize = "0em";
             } else if (window.innerWidth >= 1330) {
                 console.log("Everything is left the way it is.");
@@ -457,6 +459,8 @@
                     fitText("indent_part", 5.0);
                     dimensionOfWindow = "1330";
                 }
+                $("indent_part").style.paddingLeft = "calc(100% - 80%)";
+                $("indent_part").style.width = "60%";
     } else if (window.innerWidth >= 1280 && window.innerHeight >= 680) {
         $('homeButton').style.margin = "0px 0px 10px 120px";
                 if (dimensionOfWindow !== "1280x680") {
