@@ -171,7 +171,7 @@
 
         </nav>
         <p></p>
-        <h1 style="text-align: center;">K Road Rabbits...</h1>
+        <h1 style="text-align: center;">K Road Rabbits</h1>
     </header>
 
     <main>
@@ -179,71 +179,31 @@
             <section>
                 <div class="indent" id="indent_part">
                     <!--in div tag as so not to affect the other photos-->
-                    <p>
-                        is a rabbit breeding program that breeds rabbits of the English Spot, Himalayan, and Polish breeds. We also share
-                        rabbit facts, videos, and pictures.
-                    </p>
-                    <p>
-                        We are a rural Kansas based program that breeds and sells rabbits. We sell rabbits as pets and
-                        enjoy showing animals to local people and at rabbit shows.
-                    </p>
-                    <p>
-                        Our group consists of Eve, our rabbit breeder, caretaker and ceo, Daphne, assistant rabbit breeder and caretaker, Jeremiah, our editor, and Azariah, our coder.
-                        You can find us on social media, on Facebook and Instagram <a href="null" target="_blank">@K Rd Rabbits</a>.
+                    <p id="temporaryId">
+                        <i>We have no videos to show yet. We're working on it!</i> This is a test to see if this thing is working.
+                        The original Home page stopped working, so I had to fix the entire web page. That's what I had to do.
+                        The page should be working the way it was before. This is literally the same code for the About Us page,
+                        just without the photos and the information concerning the K Road Rabbits business. That's the only difference
+                        with this page. Mostly, this alert is a test to see if this works.
                     </p>
                 </div>
 
-                <table id="photoTable">
-                    <tr id="centerRow">
+                <input type="submit"
+                       name="dimensions"
+                       id="dimensions"
+                       onclick="printDimensions();"
+                       value="Show Dimensions">
 
-                        <td id="eveData">
-                            <figure id="eveRider">
-                                <img id="evePhoto" style="margin-top: -35px;" src="Eve holding a Rabbit 2.jpeg" width="250" alt="This is Eve Rider holding a rabbit." /> <!--photos in here-->
-                                <figcaption id="actLikeParagraphTag" style="font-family: Arial;">
-                                    Eve Rider
-                                </figcaption>
-                            </figure>
-                        </td>
-
-                        <td id="daphneData">
-                            <figure id="daphneRider">
-                                <img id="daphnePhoto" src="DaphneHoldingRabbit.jpg" width="250" alt="This is Daphne Rider holding a rabbit." />
-                                <figcaption id="actLikeParagraphTag" style="font-family: Arial;">
-                                    Daphne Rider
-                                </figcaption>
-                            </figure>
-                        </td>
-
-                        <td id="azariahData" style="padding-left: 500px">
-                            <figure id="azariahEasey">
-                                <img id="azariahPhoto" src="Azariah Coding.JPEG" width="250" alt="This is Azariah Easey ready to code." />
-                                <figcaption id="actLikeParagraphTag" style="font-family: Arial;">
-                                    Azariah Easey
-                                </figcaption>
-                            </figure>
-                        </td>
-
-                        <td id="jeremiahData">
-                            <figure id="jeremiahEasey">
-                                <img id="jeremiahPhoto" src="JerCamera.JPEG" width="250" alt="This is Jeremiah Easey ready to film." />
-                                <figcaption id="actLikeParagraphTag" style="font-family: Arial;">
-                                    Jeremiah Easey
-                                </figcaption>
-                            </figure>
-                        </td>
-                    </tr>
-                </table>
-                <!--<input type="submit"
-           name="dimensions"
-           id="dimensions"
-           onclick="printDimensions();"
-           value="Show Dimensions">
-
-    <input type="submit"
-           name="leftPadding"
-           id="leftPadding"
-           onclick="printPaddingLeft();"
-           value="Show Padding Left Value">-->
+                <input type="submit"
+                       name="leftPadding"
+                       id="leftPadding"
+                       onclick="printPaddingLeft();"
+                       value="Show Padding Left Value">
+                <input type="submit"
+                       name="getFontSize"
+                       id="getFontSize"
+                       onclick="alert('Font size for div tag: ' + $('indent_part').style.fontSize + '\nFont size for p tag: ' + $('temporaryId').style.fontSize);"
+                       value="Show Font Size For indent_part And <p> Tags">
             </section>
         </article>
     </main>
@@ -483,18 +443,24 @@
             if (window.innerWidth >= 1920 && window.innerHeight >= 1080 ||
                 window.innerWidth >= 1920 && window.innerHeight >= 937) {
                 console.log("Everything is left the way it is.");
+                $("homeButton").style.margin = "0px 0px 10px 475px";
                 if (dimensionOfWindow !== "1920x937") {
                     fitText("indent_part", 5.0);
                     dimensionOfWindow = "1920x937";
                 }
+                $("indent_part").style.paddingLeft = "calc(100% - 80%)";
+                $("indent_part").style.width = "60%";
                 //$("indent_part").style.fontSize = "0em";
             } else if (window.innerWidth >= 1330) {
                 console.log("Everything is left the way it is.");
+                $("homeButton").style.margin = "0px 0px 10px 475px";
                 $("indent_part").style.fontSize = "0em";
                 if (dimensionOfWindow !== "1330") {
                     fitText("indent_part", 5.0);
                     dimensionOfWindow = "1330";
                 }
+                $("indent_part").style.paddingLeft = "calc(100% - 80%)";
+                $("indent_part").style.width = "60%";
             } else if (window.innerWidth >= 1280 && window.innerHeight >= 680) {
                 $('homeButton').style.margin = "0px 0px 10px 120px";
                 if (dimensionOfWindow !== "1280x680") {
