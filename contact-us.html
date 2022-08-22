@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -191,7 +193,7 @@
         <article>
             <section>
                 <div class="indent" id="indent_part">
-                    <p>
+                    <p id="temporaryId">
                         If you have any questions concerning rabbits, or are trying to report a failiure of this
                         webpage, or if you want to buy one of our bunnies,
                         you can email us at eveerider@yahoo.com.
@@ -200,44 +202,61 @@
                     <p>Or, you can just send your questions here!</p>
                 </div>
 
-                <form name="gform"
-                      id="gform"
-                      class="emailHashtagFriends"
-                      enctype="text/plain"
-                      action="https://docs.google.com/forms/d/e/1FAIpQLSfn1dtFNS2m1O001Eaw6K0eEsfYofgdmJW6aGfem4fck6A3CA/formResponse?"
-                      target="hidden_iframe"
-                      onsubmit="submitted = true; switchPages();">
-                    <input type="text"
-                           name="entry.1843912332"
-                           id="entry.1843912332"
-                           style="font-family: Arial; font-size: medium; color: black; width: 230px; height: 50px;"
-                           placeholder="Email Address"
-                           required> <!--for inserting email-->
-                    <br>
-                    <br>
-                    <input type="text"
-                           name="entry.513306115"
-                           id="entry.513306115"
-                           style="font-family: Arial; font-size: medium; color: black; width: 230px; height: 50px;"
-                           placeholder="Subject"
-                           required> <!--for placing subject in form-->
-                    <br>
-                    <br>
-                    <div class="indentABitMore">
-                        <textarea name="entry.745821572"
-                                  id="entry.745821572"
-                                  style="font-family: Arial; font-size: medium; color: black; width: 230px; height: 50px;"
-                                  placeholder="Place Question or Comment Here" required></textarea>
-                    </div>
-                    <br>
-                    <br>
+                <div class="center" id="centerRow">
+                    <form name="gform"
+                          id="gform"
+                          class="emailHashtagFriends"
+                          enctype="text/plain"
+                          action="https://docs.google.com/forms/d/e/1FAIpQLSfn1dtFNS2m1O001Eaw6K0eEsfYofgdmJW6aGfem4fck6A3CA/formResponse?"
+                          target="hidden_iframe"
+                          onsubmit="submitted = true; switchPages();">
+                        <input type="text"
+                               name="entry.1843912332"
+                               id="entry.1843912332"
+                               style="font-family: Arial; font-size: medium; color: black; width: 230px; height: 50px;"
+                               placeholder="Email Address"
+                               required> <!--for inserting email-->
+                        <br>
+                        <br>
+                        <input type="text"
+                               name="entry.513306115"
+                               id="entry.513306115"
+                               style="font-family: Arial; font-size: medium; color: black; width: 230px; height: 50px;"
+                               placeholder="Subject"
+                               required> <!--for placing subject in form-->
+                        <br>
+                        <br>
+                        <div class="indentABitMore">
+                            <textarea name="entry.745821572"
+                                      id="entry.745821572"
+                                      style="font-family: Arial; font-size: medium; color: black; width: 230px; height: 50px;"
+                                      placeholder="Place Question or Comment Here" required></textarea>
+                        </div>
+                        <br>
+                        <br>
 
-                    <input type="submit" value="Submit">
-                </form>
+                        <input type="submit" value="Submit">
+                    </form>
+                </div>
 
                 <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if (submitted) {  }"></iframe>
 
+                <input type="submit"
+                       name="dimensions"
+                       id="dimensions"
+                       onclick="printDimensions();"
+                       value="Show Dimensions">
 
+                <input type="submit"
+                       name="leftPadding"
+                       id="leftPadding"
+                       onclick="printPaddingLeft();"
+                       value="Show Padding Left Value">
+                <input type="submit"
+                       name="getFontSize"
+                       id="getFontSize"
+                       onclick="alert('Font size for div tag: ' + $('indent_part').style.fontSize + '\nFont size for p tag: ' + $('temporaryId').style.fontSize);"
+                       value="Show Font Size For indent_part And <p> Tags">
             </section>
 
         </article>
@@ -303,8 +322,8 @@
             s = 1;
             intWinH = window.innerHeight != null ? window.innerHeight : document.body != null ? document.body.clientHeight : null;
             while (intDivH > intWinH && s > 0) {
-                s = s-0.01;
-                divShrink.style.fontSize = s+'em';
+                s = s - 0.01;
+                divShrink.style.fontSize = s + 'em';
                 intDivH = divShrink.clientHeight;
             }
         }
@@ -326,7 +345,7 @@
             console.log($("indent_part").style.fontSize);
             canvas = $("cv");
             canvasContext = canvas.getContext('2d');
-            colorRect(0, 0, canvas.width, canvas.height, 'aqua');
+            colorRect(0, 0, canvas.width, canvas.height, 'grey');
             setInterval(updateAll, 0.01);
 
             fitText("indent_part", 5.0);
@@ -401,7 +420,7 @@
         }
 
         function drawAll() {
-            colorRect(0, 0, canvas.width, canvas.height, 'aqua');
+            colorRect(0, 0, canvas.width, canvas.height, 'grey');
             if (rabbitPicLoaded) {
                 //rabbitPic.width = 30;
                 //rabbitPic.height = 30;
