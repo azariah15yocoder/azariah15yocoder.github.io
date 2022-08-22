@@ -536,19 +536,21 @@
                     fitText("indent_part", 5.0);
                     dimensionOfWindow = "817x329";
                 }
+                $('indent_part').style.fontSize = "0.62em"; // might change to 0.49 em
             } else if (window.innerWidth >= 800 && window.innerHeight >= 1160) {
                 $('homeButton').style.margin = "0px 0px 10px 20px"; // looks good that way
                 if (dimensionOfWindow !== "800x1160") {
                     fitText("indent_part", 5.0);
                     dimensionOfWindow = "800x1160";
                 }
-
+                $('indent_part').style.fontSize = "0.62em"; // might also change to 0.49 em
             } else if (window.innerWidth >= 800) { // when not sure what to do with width of tablet
                 $('homeButton').style.margin = "0px 0px 10px 30px";
                 if (dimensionOfWindow !== "800") {
                     fitText("indent_part", 5.0);
                     dimensionOfWindow = "800";
                 }
+                $("indent_part").style.fontSize = "0.49em";
             }
         }
     </script>
