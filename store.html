@@ -468,7 +468,7 @@
                 $('indent_part').style.paddingLeft = "calc(100% - 90%)";
                 $('indent_part').style.width = "80%";
                 if (dimensionOfWindow !== "480") {
-                    fitText("indent_part", 2.0);
+                    fitText("indent_part", 0.47);
                     dimensionOfWindow = "480";
                 }
                 //$("indent_part").style.fontSize = "0.47em";
@@ -478,21 +478,21 @@
                 $("indent_part").style.paddingLeft = "10%";
                 $("indent_part").style.width = "83%";
                 if (dimensionOfWindow !== "817x329") {
-                    fitText("indent_part", 2.0);
+                    fitText("indent_part", 0.47);
                     dimensionOfWindow = "817x329";
                 }
                 //$("indent_part").style.fontSize = "0.47em";
             } else if (window.innerWidth >= 800 && window.innerHeight >= 1160) {
                 $('homeButton').style.margin = "0px 0px 10px 20px"; // looks good that way
                 if (dimensionOfWindow !== "800x1160") {
-                    fitText("indent_part", 2.0);
+                    fitText("indent_part", 0.47);
                     dimensionOfWindow = "800x1160";
                 }
                 // if resizing doesn't work, add same code in previous condition
             } else if (window.innerWidth >= 800) { // when not sure what to do with width of tablet
                 $('homeButton').style.margin = "0px 0px 10px 30px";
                 if (dimensionOfWindow !== "800") {
-                    fitText("indent_part", 2.0);
+                    fitText("indent_part", 0.47);
                     dimensionOfWindow = "800";
                 }
             }
