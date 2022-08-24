@@ -293,8 +293,7 @@
             colorRect(0, 0, canvas.width, canvas.height, 'grey');
             setInterval(updateAll, 0.01);
 
-            //fitText("indent_part", 5.0)
-            // commented for debugging purposes
+            fitText("indent_part", 1.0); // this might be the culprit
 
             rabbitPic.onload = function () {
                 rabbitPicLoaded = true;
@@ -432,7 +431,7 @@
                 console.log("Everything is left the way it is.");
                 $("homeButton").style.margin = "0px 0px 10px 475px";
                 if (dimensionOfWindow !== "1920x937") {
-                    //fitText("indent_part", 5.0);
+                    fitText("indent_part", 1.0);
                     dimensionOfWindow = "1920x937";
                 }
                 $("indent_part").style.paddingLeft = "calc(100% - 80%)";
@@ -443,7 +442,7 @@
                 $("homeButton").style.margin = "0px 0px 10px 475px";
                 $("indent_part").style.fontSize = "0em";
                 if (dimensionOfWindow !== "1330") {
-                    //fitText("indent_part", 5.0);
+                    fitText("indent_part", 1.0);
                     dimensionOfWindow = "1330";
                 }
                 // might have to commment and uncomment the fitText() functions in this function
@@ -454,13 +453,13 @@
             } else if (window.innerWidth >= 1280 && window.innerHeight >= 680) {
                 $('homeButton').style.margin = "0px 0px 10px 120px";
                 if (dimensionOfWindow !== "1280x680") {
-                    fitText("indent_part", 5.0);
+                    fitText("indent_part", 1.0);
                     dimensionOfWindow = "1280x680";
                 }
             } else if (window.innerWidth >= 1280) {
                 $('homeButton').style.margin = "0px 0px 10px 120px"; // might be edited if doesn't work
                 if (dimensionOfWindow !== "1280") {
-                    fitText("indent_part", 5.0);
+                    fitText("indent_part", 1.0);
                     dimensionOfWindow = "1280";
                 }
 
@@ -469,7 +468,7 @@
                 $('indent_part').style.paddingLeft = "calc(100% - 90%)";
                 $('indent_part').style.width = "80%";
                 if (dimensionOfWindow !== "480") {
-                    fitText("indent_part", 5.0);
+                    fitText("indent_part", 1.0);
                     dimensionOfWindow = "480";
                 }
                 //$("indent_part").style.fontSize = "0.47em";
@@ -479,21 +478,21 @@
                 $("indent_part").style.paddingLeft = "10%";
                 $("indent_part").style.width = "83%";
                 if (dimensionOfWindow !== "817x329") {
-                    fitText("indent_part", 5.0);
+                    fitText("indent_part", 1.0);
                     dimensionOfWindow = "817x329";
                 }
                 //$("indent_part").style.fontSize = "0.47em";
             } else if (window.innerWidth >= 800 && window.innerHeight >= 1160) {
                 $('homeButton').style.margin = "0px 0px 10px 20px"; // looks good that way
                 if (dimensionOfWindow !== "800x1160") {
-                    fitText("indent_part", 5.0);
+                    fitText("indent_part", 1.0);
                     dimensionOfWindow = "800x1160";
                 }
                 // if resizing doesn't work, add same code in previous condition
             } else if (window.innerWidth >= 800) { // when not sure what to do with width of tablet
                 $('homeButton').style.margin = "0px 0px 10px 30px";
                 if (dimensionOfWindow !== "800") {
-                    fitText("indent_part", 5.0);
+                    fitText("indent_part", 1.0);
                     dimensionOfWindow = "800";
                 }
             }
