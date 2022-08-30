@@ -442,7 +442,8 @@
             }
             //fitText("indent_part", 5.0);
             if (window.innerWidth >= 1920 && window.innerHeight >= 1080 ||
-                window.innerWidth >= 1920 && window.innerHeight >= 937) {
+                window.innerWidth >= 1920 && window.innerHeight >= 937 ||
+                window.innerWidth >= 1920) { // should fix download tab bug
                 console.log("Everything is left the way it is.");
                 $("homeButton").style.margin = "0px 0px 10px 475px";
                 if (dimensionOfWindow !== "1920x937") {
