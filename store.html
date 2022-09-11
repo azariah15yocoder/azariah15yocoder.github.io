@@ -362,7 +362,8 @@
 
         function drawAll() {
             colorRect(0, 0, canvas.width, canvas.height, 'grey');
-            if (rabbitPicLoaded) {
+            if (rabbitPicLoaded && pic2Loaded && pic3Loaded && pic4Loaded && picForFadeLoaded) { // wait till all photos are loaded
+                //if (rabbitPicLoaded) {
                 //rabbitPic.width = 30;
                 //rabbitPic.height = 30;
 
@@ -380,8 +381,8 @@
 
                 //canvasContext.drawImage(rabbitPic, rabbitPicInstanceX, Y1);
                 //canvasContext.fillText("rabbitPicInstanceX", rabbitPicInstanceX, 20);
-            }
-            if (pic2Loaded) {
+                //}
+                //if (pic2Loaded) {
                 //canvasContext.drawImage(pic2, X2, Y1);
                 //canvasContext.fillText("pic2", X2, 20);
 
@@ -399,24 +400,25 @@
                 //    canvasContext.fillText('Picture provided by i.pinimg.com', X2, 20);
                 //  canvasContext.fillText('Picture provided by i.pinimg.com', X4, 20);
 
-            }
-            if(pic3Loaded) {
+                //}
+                //if (pic3Loaded) {
                 canvasContext.drawImage(pic3, X3, Y1, 600, 400);
                 //canvasContext.fillText("pic3", X3, 20);
                 //canvasContext.drawImage(pic3, pic3InstanceX, 600, 400);
                 //canvasContext.fillText("pic3InstanceX", pic3InstanceX, 20);
                 canvasContext.fillStyle = "black"; // for text
-            }
-            if(pic4Loaded) {
+                //}
+                //if (pic4Loaded) {
                 canvasContext.drawImage(pic4, X5, Y1, 600, 400);
                 //canvasContext.fillText("pic4", X5, 20);
                 //canvasContext.drawImage(pic4, pic4InstanceX, 600, 400);
                 //canvasContext.fillText("pic4InstanceX", pic4InstanceX, 20);
                 canvasContext.fillStyle = "black"; // for text
-            }
+                //}
 
-            if (picForFadeLoaded) {
+                //if (picForFadeLoaded) {
                 canvasContext.drawImage(picForFade, 0, 0 - 1);
+                //}
             }
         }
 
