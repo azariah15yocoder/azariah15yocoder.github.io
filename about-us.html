@@ -303,6 +303,8 @@
 
         var dimensionOfWindow = "1920x937";
 
+        var photoTableHTML = $('photoTable').innerHTML;
+
         /*After code test is over, keep the 1109. That's necessary.*/
 
         /*if the 50s above don't work, remove them*/
@@ -497,6 +499,7 @@
                     fitText("indent_part", 5.0);
                     dimensionOfWindow = "1920x937";
                 }
+                $('photoTable').innerHTML = photoTableHTML;
                 $("indent_part").style.paddingLeft = "calc(100% - 80%)";
                 $("indent_part").style.width = "60%";
                 //$("indent_part").style.fontSize = "0em";
@@ -508,6 +511,7 @@
                     fitText("indent_part", 5.0);
                     dimensionOfWindow = "1330";
                 }
+                $('photoTable').innerHTML = photoTableHTML;
                 $("indent_part").style.paddingLeft = "calc(100% - 80%)";
                 $("indent_part").style.width = "60%";
             } else if (window.innerWidth >= 1280 && window.innerHeight >= 680) {
