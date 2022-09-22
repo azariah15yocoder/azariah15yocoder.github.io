@@ -649,7 +649,7 @@
         </td>
 </tr>`;
             } else if (window.innerWidth >= 817 &&
-                window.innerHeight >= 329) { // based off of LG phone
+                window.innerHeight >= 329 || window.innerWidth >= 817) { // based off of LG phone
                 $('homeButton').style.margin = "0px 0px 10px 20px";
                 $("indent_part").style.paddingLeft = "10%";
                 $("indent_part").style.width = "83%";
@@ -660,7 +660,7 @@
                 $("indent_part").style.fontSize = "0.42em"; // prevents it from being too small
                 $('photoTable').innerHTML = `<tr>
         <td id="eveData">
-            <figure id="eveRider">
+            <figure id="eveRider" style="padding-left: 110px;">
                 <img id="evePhoto" style="margin-top: -35px;" src="EveHoldingRabbit2.jpeg" width="200" alt="This is Eve Rider holding a rabbit." />
                 <figcaption style="font-family: Arial;">
                     Eve Rider
@@ -679,7 +679,7 @@
 </tr>
 <tr>
         <td id="azariahData">
-            <figure id="azariahEasey" style="padding-left: 0px;">
+            <figure id="azariahEasey" style="padding-left: 110px;">
                 <img id="azariahPhoto" src="AzariahCoding.jpg" width="200" alt="This is Azariah Easey ready to code." />
                 <figcaption style="font-family: Arial;">
                     Azariah Easey
