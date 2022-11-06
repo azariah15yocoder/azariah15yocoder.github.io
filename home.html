@@ -184,11 +184,7 @@
                 <div class="indent" id="indent_part">
                     <!--in div tag as so not to affect the other photos-->
                     <p>
-                        <i>We have no videos to show yet. We're working on it!</i> <i style="display: none;">This is a test to see if this thing is working.
-                        The original Home page stopped working, so I had to fix the entire web page. That's what I had to do.
-                        The page should be working the way it was before. This is literally the same code for the About Us page,
-                        just without the photos and the information concerning the K Road Rabbits business. That's the only difference
-                        with this page. Mostly, this alert is a test to see if this works.</i>
+                        <i>We have no videos to show yet. We're working on it!</i>
                     </p>
                 </div>
 
@@ -450,7 +446,7 @@
                 console.log("Everything is left the way it is.");
                 $("homeButton").style.margin = "0px 0px 10px 475px";
                 if (dimensionOfWindow !== "1920x937") {
-                    fitText("indent_part", 5.0);
+                    //fitText("indent_part", 5.0);
                     dimensionOfWindow = "1920x937";
                 }
                 $("indent_part").style.paddingLeft = "calc(100% - 80%)";
@@ -461,7 +457,7 @@
                 $("homeButton").style.margin = "0px 0px 10px 475px";
                 $("indent_part").style.fontSize = "0em";
                 if (dimensionOfWindow !== "1330") {
-                    fitText("indent_part", 5.0);
+                    //fitText("indent_part", 5.0);
                     dimensionOfWindow = "1330";
                 }
                 $("indent_part").style.paddingLeft = "calc(100% - 80%)";
@@ -469,13 +465,13 @@
             } else if (window.innerWidth >= 1280 && window.innerHeight >= 680) {
                 $('homeButton').style.margin = "0px 0px 10px 120px";
                 if (dimensionOfWindow !== "1280x680") {
-                    fitText("indent_part", 5.0);
+                    //fitText("indent_part", 5.0);
                     dimensionOfWindow = "1280x680";
                 }
             } else if (window.innerWidth >= 1280) {
                 $('homeButton').style.margin = "0px 0px 10px 120px"; // might be edited if doesn't work
                 if (dimensionOfWindow !== "1280") {
-                    fitText("indent_part", 5.0);
+                    //fitText("indent_part", 5.0);
                     dimensionOfWindow = "1280";
                 }
 
@@ -484,7 +480,7 @@
                 $('indent_part').style.paddingLeft = "calc(100% - 90%)";
                 $('indent_part').style.width = "80%";
                 if (dimensionOfWindow !== "480") {
-                    fitText("indent_part", 5.0);
+                    //fitText("indent_part", 5.0);
                     dimensionOfWindow = "480";
                 }
             } else if (window.innerWidth >= 817 &&
@@ -493,20 +489,20 @@
                 $("indent_part").style.paddingLeft = "10%";
                 $("indent_part").style.width = "83%";
                 if (dimensionOfWindow !== "817x329") {
-                    fitText("indent_part", 5.0);
+                    //fitText("indent_part", 5.0);
                     dimensionOfWindow = "817x329";
                 }
             } else if (window.innerWidth >= 800 && window.innerHeight >= 1160) {
                 $('homeButton').style.margin = "0px 0px 10px 20px"; // looks good that way
                 if (dimensionOfWindow !== "800x1160") {
-                    fitText("indent_part", 5.0);
+                    //fitText("indent_part", 5.0);
                     dimensionOfWindow = "800x1160";
                 }
 
             } else if (window.innerWidth >= 800) { // when not sure what to do with width of tablet
                 $('homeButton').style.margin = "0px 0px 10px 30px";
                 if (dimensionOfWindow !== "800") {
-                    fitText("indent_part", 5.0);
+                    //fitText("indent_part", 5.0);
                     dimensionOfWindow = "800";
                 }
             }
