@@ -256,6 +256,8 @@
         var numberOfChanges = 0;
         var dimensionOfWindow = "1920x937";
 
+        var browserWidth = 0;
+
         positionHome();
 
 
@@ -296,6 +298,8 @@
             colorRect(0, 0, canvas.width, canvas.height, 'grey');
             setInterval(updateAll, 0.01);
 
+            browserWidth = window.innerWidth;
+
             //fitText("indent_part", 1.0); // this might be the culprit
 
             rabbitPic.onload = function () {
@@ -328,6 +332,7 @@
             picForFade.src = "https://www.pngkey.com/png/full/136-1361851_gradient-white-gradient-circle-png.png";
         }
         function updateAll() {
+            browserWidth = window.innerWidth;
             moveAll();
             drawAll();
             positionHome();
@@ -431,10 +436,10 @@
                 numberOfChanges++;
             }
             ////fitText("indent_part", 5.0);
-            if (window.innerWidth >= 1920 && window.innerHeight >= 1080 ||
-                window.innerWidth >= 1920 && window.innerHeight >= 937 ||
-                window.innerWidth >= 1920 ||
-                window.innerWidth >= 1900 ||
+            if (browserWidth >= 1920 && window.innerHeight >= 1080 ||
+                browserWidth >= 1920 && window.innerHeight >= 937 ||
+                browserWidth >= 1920 ||
+                browserWidth >= 1900 ||
                 browserWidth >= 1700 ||
                 browserWidth >= 1600 ||
                 browserWidth >= 1500 ||
