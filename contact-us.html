@@ -505,19 +505,12 @@
                 browserWidth >= 1920 && window.innerHeight >= 937 ||
                 browserWidth >= 1920 ||
                 browserWidth >= 1900 ||
-                browserWidth >= 1700 ||
-                browserWidth >= 1600 ||
-                browserWidth >= 1500 ||
-                browserWidth >= 1400 ||
+                browserWidth >= 1800 ||
                 window.innerWidth >= 1920 && window.innerHeight >= 1080 ||
                 window.innerWidth >= 1920 && window.innerHeight >= 937 ||
                 window.innerWidth >= 1920 ||
                 window.innerWidth >= 1900 ||
-                window.innerWidth >= 1700 ||
-                window.innerWidth >= 1600 ||
-                window.innerWidth >= 1500 ||
-                window.innerWidth >= 1400 ||
-                window.innerWidth >= 1340) {
+                window.innerWidth >= 1800) {
                 console.log("Everything is left the way it is.");
                 $("homeButton").style.margin = "0px 0px 10px 475px";
                 if (dimensionOfWindow !== "1920x937") {
@@ -528,6 +521,23 @@
                 $("indent_part").style.paddingLeft = "calc(100% - 80%)";
                 $("indent_part").style.width = "60%";
                 //$("indent_part").style.fontSize = "0em";
+            } else if (browserWidth >= 1600 || window.innerWidth >= 1600) {
+                console.log("Everything is left the way it is.");
+                $("homeButton").style.margin = "0px 0px 10px 325px";
+                if (dimensionOfWindow !== "1600") {
+                    dimensionOfWindow = "1600";
+                }
+            } else if (browserWidth >= 1500 || window.innerWidth >= 1500) {
+                console.log("Everything is left the way it is.");
+                $("homeButton").style.margin = "0px 0px 10px 280px";
+                if (dimensionOfWindow !== "1500") {
+                    dimensionOfWindow = "1500";
+                }
+            } else if (browserWidth >= 1400 || window.innerWidth >= 1400) {
+                $("homeButton").style.margin = "0px 0px 10px 280px";
+                if (dimensionOfWindow !== "1400") {
+                    dimensionOfWindow = "1400";
+                }
             } else if (browserWidth >= 1330 || window.innerWidth >= 1330) {
                 console.log("Everything is left the way it is.");
                 $("homeButton").style.margin = "0px 0px 10px 475px";
@@ -626,6 +636,16 @@
                 </figure>
             </td>
 </tr>`;*/
+            } else if (browserWidth >= 1200 || window.innerWidth >= 1200) {
+                $("homeButton").style.margin = "0px 0px 10px 120px";
+                if (dimensionOfWindow !== "1200") {
+                    dimensionOfWindow = "1200";
+                }
+            } else if (browserWidth >= 1100 || window.innerWidth >= 1100) {
+                $("homeButton").style.margin = "0px 0px 10px 80px";
+                if (dimensionOfWindow !== "1100") {
+                    dimensionOfWindow = "1100";
+                }
             } else if (browserWidth <= 480 || window.innerWidth <= 480) { // might be an issue, but good for now
                 $('homeButton').style.margin = "0px 0px 10px 20px";
                 $('indent_part').style.paddingLeft = "calc(100% - 90%)";
@@ -674,7 +694,7 @@
                 </figure>
             </td>
 </tr>`;*/
-            /*} else if (browserWidth >= 817 || window.innerWidth >= 817 &&
+            } else if (browserWidth >= 817 || window.innerWidth >= 817 &&
                 window.innerHeight >= 329 || window.innerWidth >= 817) { // based off of LG phone
                 $('homeButton').style.margin = "0px 0px 10px 20px";
                 $("indent_part").style.paddingLeft = "10%";
@@ -684,7 +704,7 @@
                     dimensionOfWindow = "817x329";
                 }
                 $("indent_part").style.fontSize = "0.42em"; // prevents it from being too small
-                $('photoTable').innerHTML = `<tr>
+                /*$('photoTable').innerHTML = `<tr>
             <td id="eveData">
                 <figure id="eveRider" style="padding-left: 110px;">
                     <img id="evePhoto" style="margin-top: -35px;" src="EveHoldingRabbit2.jpeg" width="200" alt="This is Eve Rider holding a rabbit." />
