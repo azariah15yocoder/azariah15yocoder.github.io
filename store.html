@@ -26,7 +26,7 @@
         }
 
         p {
-            font-size: 2.5em;
+            font-size: 20.0pt;
             font-family: /*'Ink Free',*/ sans-serif;
             line-height: 50px;
         }
@@ -90,6 +90,12 @@
 
         ::-webkit-scrollbar {
             display: none;
+        }
+
+        @media only screen and (max-width: 1100px) {
+            p {
+                font-size: 15pt;
+            }
         }
 
         /*body {
@@ -269,7 +275,7 @@
             return document.getElementById(id);
         }
 
-        function fitText(divID, emSize) {
+        function fitText(divID, emSize) { // might not be needed anymore
             divShrink = $(divID);
             divShrink.style.fontSize = emSize.toString() + "em"; // normal paragraph tag size
             intDivH = divShrink.clientHeight;
@@ -439,7 +445,7 @@
                 //alert("clientHeight: " + $("indent_part").style.clientHeight);
                 numberOfChanges++;
             }
-            //fitText("indent_part", 5.0);
+            ////fitText("indent_part", 5.0);
             if (browserWidth >= 1920 && window.innerHeight >= 1080 ||
                 browserWidth >= 1920 && window.innerHeight >= 937 ||
                 browserWidth >= 1920 ||
@@ -449,18 +455,19 @@
                 window.innerWidth >= 1920 && window.innerHeight >= 937 ||
                 window.innerWidth >= 1920 ||
                 window.innerWidth >= 1900 ||
-                window.innerWidth >= 1800) { // should fix download tab bug
+                window.innerWidth >= 1800) {
                 console.log("Everything is left the way it is.");
                 $("homeButton").style.margin = "0px 0px 10px 475px";
                 if (dimensionOfWindow !== "1920x937") {
                     //fitText("indent_part", 5.0);
                     dimensionOfWindow = "1920x937";
                 }
+                //$('photoTable').innerHTML = photoTableHTML;
                 $("indent_part").style.paddingLeft = "calc(100% - 80%)";
                 $("indent_part").style.width = "60%";
                 //$("indent_part").style.fontSize = "0em";
             } else if (browserWidth >= 1600 || window.innerWidth >= 1600) {
-                console.log("Everything is left the way it is."); // not really; home button is moving
+                console.log("Everything is left the way it is.");
                 $("homeButton").style.margin = "0px 0px 10px 325px";
                 if (dimensionOfWindow !== "1600") {
                     dimensionOfWindow = "1600";
@@ -472,19 +479,19 @@
                     dimensionOfWindow = "1500";
                 }
             } else if (browserWidth >= 1400 || window.innerWidth >= 1400) {
-                console.log("Everything is left the way it is.");
                 $("homeButton").style.margin = "0px 0px 10px 280px";
                 if (dimensionOfWindow !== "1400") {
                     dimensionOfWindow = "1400";
                 }
             } else if (browserWidth >= 1330 || window.innerWidth >= 1330) {
                 console.log("Everything is left the way it is.");
-                $("homeButton").style.margin = "0px 0px 10px 170px";
+                $("homeButton").style.margin = "0px 0px 10px 475px";
                 //$("indent_part").style.fontSize = "0em";
                 if (dimensionOfWindow !== "1330") {
                     //fitText("indent_part", 5.0);
                     dimensionOfWindow = "1330";
                 }
+                //$('photoTable').innerHTML = photoTableHTML;
                 $("indent_part").style.paddingLeft = "calc(100% - 80%)";
                 $("indent_part").style.width = "60%";
             } else if (browserWidth >= 1280 && browserWidth >= 680 ||
@@ -510,7 +517,7 @@
                 if (dimensionOfWindow !== "1100") {
                     dimensionOfWindow = "1100";
                 }
-            } else if (browserWidth <= 480 || window.innerWidth <= 480) {
+            } else if (browserWidth <= 480 || window.innerWidth <= 480) { // might be an issue, but good for now
                 $('homeButton').style.margin = "0px 0px 10px 20px";
                 $('indent_part').style.paddingLeft = "calc(100% - 90%)";
                 $('indent_part').style.width = "80%";
@@ -527,17 +534,17 @@
                     //fitText("indent_part", 5.0);
                     dimensionOfWindow = "817x329";
                 }
+                $("indent_part").style.fontSize = "0.42em"; // prevents it from being too small
             } else if (browserWidth >= 800 || window.innerWidth >= 800 && window.innerHeight >= 1160) {
                 $('homeButton').style.margin = "0px 0px 10px 20px"; // looks good that way
                 if (dimensionOfWindow !== "800x1160") {
                     //fitText("indent_part", 5.0);
                     dimensionOfWindow = "800x1160";
                 }
-
             } else if (browserWidth >= 800 || window.innerWidth >= 800) { // when not sure what to do with width of tablet
                 $('homeButton').style.margin = "0px 0px 10px 30px";
                 if (dimensionOfWindow !== "800") {
-                    //fitText("indent_part", 5.0);
+                    //fitText("indent_part", 15.0);
                     dimensionOfWindow = "800";
                 }
             }
