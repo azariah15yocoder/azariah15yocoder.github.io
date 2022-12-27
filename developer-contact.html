@@ -102,7 +102,7 @@
             max-width: 500px;
         }
 
-        #bugExplanation {
+        #description {
             font-family: sans-serif;
             height: 60px;
             width: 350px;
@@ -125,7 +125,7 @@
         }
 
         @media only screen and (max-width: 385px) {
-            #bugExplanation {
+            #description {
                 font-family: sans-serif;
                 height: 60px;
                 width: 300px;
@@ -134,7 +134,7 @@
         }
 
         @media only screen and (max-width: 336px) {
-            #bugExplanation {
+            #description {
                 font-family: sans-serif;
                 height: 60px;
                 width: 250px;
@@ -252,7 +252,7 @@
                         <p>Enter the URL of the page that is experiencing the issues.</p>
                         <input type="text" name="siteURL" id="siteURL" style="height: 30px; width: 250px; font-size: 13pt;" placeholder="Enter URL Here" required />
                         <p>Enter the issues you are experiencing in the paragraph field below.</p>
-                        <textarea name="bugExplanation" id="bugExplanation" class="paragraphTags" placeholder="Enter Message Here"></textarea><br /><br />
+                        <textarea name="description" id="description" class="paragraphTags" placeholder="Enter Message Here"></textarea><br /><br />
                         <input name="_formsubmit_id" type="text" style="display:none;" />
                         <input type="submit" value="Submit" style="width: 100px; height: 30px;"  />
                     </form>
@@ -334,7 +334,7 @@
 
         var browserWidth = 0;
 
-        var textarea = $("bugExplanation");
+        var textarea = $("description");
 
         textarea.oninput = function () {
             textarea.style.height = "";
