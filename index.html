@@ -238,7 +238,7 @@
             <br />
             <br />
             <div id="textHolder">
-                <p style="position: relative; bottom: 0; font-size: 12.0pt;">Experiencing bugs on this site? Contact our developer <a href="developer-contact.html" target="_blank">here.</a></p>
+                <p style="position: relative; bottom: 0; font-size: 12.0pt; text-indent: 50px;">Experiencing bugs on this site? Contact our developer <a href="developer-contact.html" target="_blank">here.</a></p>
                 <!--add some javascript to change HTML depending on OS-->
             </div>
         </footer>
@@ -294,6 +294,12 @@
 
             function $(id) {
                 return document.getElementById(id);
+            }
+
+            function checkOS() {
+                if (navigator.userAgent.indexOf('Mac') != -1 || navigator.userAgent.indexOf('like Mac') != -1) {
+                    $("textHolder").innerHTML = '<p style="position: relative; bottom: 0; font-size: 12.0pt; text-indent: 50px;">Experiencing bugs on this site? Contact our developer <a href="googleForm" target="_blank">here.</a></p>';
+                }
             }
 
             function fitText(divID, emSize) {
