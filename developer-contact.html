@@ -249,11 +249,13 @@
                           action="https://formsubmit.io/send/534c2b9a-1707-4329-8a1b-949b7da86ea8"
                           method="POST">
                         <input name="_redirect" type="hidden" id="messageSent" value="https://azariah15yocoder.github.io/message-sent.html" />
+                        <p>Enter you email here:</p>
+                        <input type="text" name="email" id="email" placeholder="Enter Email Here" style="height: 30px; width: 250px; font-size: 13pt;" required/>
                         <p>Enter the URL of the page that is experiencing the issues.</p>
                         <input type="text" name="siteURL" id="siteURL" style="height: 30px; width: 250px; font-size: 13pt;" placeholder="Enter URL Here" required />
                         <p>Enter the issues you are experiencing in the paragraph field below.</p>
                         <textarea name="description" id="description" class="paragraphTags" placeholder="Enter Message Here"></textarea><br /><br />
-                        <input name="_formsubmit_id" type="text" style="display:none;" />
+                        <input name="_formsubmit_id" type="text" style="display:none;" /> <!--might have to remove this; this might be the culprit-->
                         <input type="submit" value="Submit" style="width: 100px; height: 30px;"  />
                     </form>
                 </div>
