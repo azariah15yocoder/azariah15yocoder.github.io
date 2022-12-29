@@ -32,6 +32,13 @@
             line-height: 50px;
         }
 
+        #textHolder {
+            position: center;
+            margin: auto;
+            max-width: 1234px;
+            padding: 10px;
+        }
+
         .hilightme {
             background-color: #ffd800;
         }
@@ -201,7 +208,7 @@
                     <p id="changingParagraph">Or, you can just send your questions here!</p>
                 </div>
 
-                <div class="center" id="centerRow">
+                <div class="center" id="centerRow"> <!--change form type to formsubmit-->
                     <form name="gform"
                           id="gform"
                           class="emailHashtagFriends"
@@ -272,6 +279,9 @@
             <!--This section of code is for our Youtube page-->
             <img src="https://pngimg.com/uploads/youtube/youtube_PNG102355.png" width="20" alt="Navigate to our Youtube channel"><!--All the code for this page was written by hand-->
         </a>
+        <div id="textHolder">
+            <p style="position: relative; bottom: 0; font-size: 12.0pt; text-indent: 50px;">Experiencing bugs on this site? Contact our developer <a href="developer-contact.html" target="_blank">here.</a></p>
+        </div>
     </footer>
 
     <script>
@@ -313,13 +323,17 @@
         //var photoTableHTML = $('photoTable').innerHTML;
 
         var browserWidth = 0;
-
-        if (navigator.userAgent.indexOf('Mac') != -1 ||
-            navigator.userAgent.indexOf('like Mac') != -1) {
-            $("changingParagraph").innerHTML = 'Or, you can just send your questions <a href="https://docs.google.com/forms/d/e/1FAIpQLSc9_eXn4W7ty1wch7K8dl8JhUCn0lBvN2LSLDgaK9TeENd0nw/viewform?usp=sf_link" target="_blank">here!</a>';
-            $("gform").style.display = "none"; // hides form
+        function checkOS() {
+            if (navigator.userAgent.indexOf('Mac') != -1 ||
+                navigator.userAgent.indexOf('like Mac') != -1) {
+                $("changingParagraph").innerHTML = 'Or, you can just send your questions <a href="https://docs.google.com/forms/d/e/1FAIpQLSc9_eXn4W7ty1wch7K8dl8JhUCn0lBvN2LSLDgaK9TeENd0nw/viewform?usp=sf_link" target="_blank">here!</a>';
+                $("gform").style.display = "none"; // hides form
+                $("textHolder").innerHTML = '<p style="position: relative; bottom: 0; font-size: 12.0pt; text-indent: 50px;">Experiencing bugs on this site? Contact our developer <a href="https://docs.google.com/forms/d/e/1FAIpQLSetAnRBubPN7S0uskkUOxHKgnz3IpGZR-vE_X7PGSsnAjeDqQ/viewform?usp=sf_link" target="_blank">here.</a></p>';
+            }
         } // This is a temporary solution to a bug that I found on another site. There 
           // will be more research done concerning this matter.
+
+        checkOS();
 
         /*After code test is over, keep the 1109. That's necessary.*/
 
@@ -401,6 +415,8 @@
                 picForFadeLoaded = true;
             }
             picForFade.src = "https://www.pngkey.com/png/full/136-1361851_gradient-white-gradient-circle-png.png";
+
+            checkOS();
         }
         function updateAll() {
             browserWidth = window.innerWidth; // run over and over
