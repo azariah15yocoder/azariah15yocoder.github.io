@@ -209,43 +209,41 @@
                 </div>
 
                 <div class="center" id="centerRow"> <!--change form type to formsubmit-->
-                    <form name="gform"
-                          id="gform"
-                          class="emailHashtagFriends"
-                          enctype="text/plain"
-                          action="https://docs.google.com/forms/d/e/1FAIpQLSc9_eXn4W7ty1wch7K8dl8JhUCn0lBvN2LSLDgaK9TeENd0nw/formResponse?"
-                          target="hidden_iframe"
-                          onsubmit="submitted = true; switchPages();">
+                    <form id="contactform" action="https://formsubmit.io/send/1fb9527e-da92-4f9d-ad7b-c4b13bde22c3"
+                          method="post">
+                        <input name="_redirect" type="hidden" id="name" value="message-sent.html" />
                         <input type="text"
-                               name="entry.1029559291"
-                               id="entry.1029559291"
+                               name="email"
+                               id="email"
                                style="font-family: Arial; font-size: medium; color: black; width: 230px; height: 50px;"
                                placeholder="Email Address"
                                required> <!--for inserting email-->
                         <br>
                         <br>
                         <input type="text"
-                               name="entry.429930527"
-                               id="entry.429930527"
+                               name="subject"
+                               id="subject"
                                style="font-family: Arial; font-size: medium; color: black; width: 230px; height: 50px;"
                                placeholder="Subject"
                                required> <!--for placing subject in form-->
                         <br>
                         <br>
                         <div class="indentABitMore">
-                            <textarea name="entry.1438258154"
-                                      id="entry.1438258154"
+                            <textarea name="message"
+                                      id="message"
                                       style="font-family: Arial; font-size: medium; color: black; width: 230px; height: 50px;"
                                       placeholder="Place Question or Comment Here" required></textarea>
                         </div>
                         <br>
                         <br>
 
+                        <input name="_formsubmit_id" type="text" style="display:none;" />
+
                         <input type="submit" value="Submit">
                     </form>
                 </div>
 
-                <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if (submitted) {  }"></iframe>
+                <!--<iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if (submitted) {  }"></iframe>-->
 
                 <!--<input type="submit"
                        name="dimensions"
@@ -307,6 +305,8 @@
         var picForFade = document.createElement('img');
         var picForFadeLoaded = false;
 
+        var textarea = $("message");
+
         var X1 = 600;
         //var X2 = X1 + 510 - 60 + 50 + 8 + 1; // for rabbitPic
         var X2 = 600 + 510 - 60 + 50 + 8 + 1 + 68 + 35; // for rabbitPic
@@ -338,6 +338,11 @@
           // will be more research done concerning this matter.
 
         checkOS();
+
+        textarea.oninput = function () {
+            textarea.style.height = "";
+            textarea.style.height = textarea.scrollHeight + "px";
+        }
 
         /*After code test is over, keep the 1109. That's necessary.*/
 
@@ -427,9 +432,9 @@
             moveAll();
             drawAll();
             positionHome();
-            if (submitted) {
-                parent.location = "message-sent.html";
-            }
+            //if (submitted) {
+            //    parent.location = "message-sent.html";
+            //}
             ////fitText("indent_part", 5.0); // used for auto-resize
         }
 
