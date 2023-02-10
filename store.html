@@ -324,7 +324,6 @@
         }
 
         window.onload = function () {
-          //  $("i").innerHTML = "We don't have anything to sell quite yet. We're working on it!"
             canvas = $("cv");
             canvasContext = canvas.getContext('2d');
             colorRect(0, 0, canvas.width, canvas.height, 'grey');
@@ -349,21 +348,17 @@
                 console.log("rabbit_holding.jpg has been loaded successfully");
             }
             pic3.src = 'rabbit_holding.jpg';
-            //pic3.width = "100px";
 
             pic4.onload = function() {
                 pic4Loaded = true;
                 console.log("eveBabyRabbitPhoto.jpg has been loaded successfully");
             }
             pic4.src = 'eveBabyRabbitPhoto.jpg';
-            //pic4.width = "100px";
 
             picForFade.onload = function () {
                 picForFadeLoaded = true;
             }
             picForFade.src = "https://www.pngkey.com/png/full/136-1361851_gradient-white-gradient-circle-png.png";
-
-            //
         }
         function updateAll() {
             browserWidth = window.innerWidth;
