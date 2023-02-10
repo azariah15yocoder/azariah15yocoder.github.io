@@ -246,37 +246,16 @@
                     <p></p>
                 </div>
 
-                <div id="textArea">
-                    
-                    <form name="gform" id="gform" enctype="text/plain" action="https://docs.google.com/forms/d/e/1FAIpQLSetAnRBubPN7S0uskkUOxHKgnz3IpGZR-vE_X7PGSsnAjeDqQ/formResponse?"
-                          target="hidden_frame" onsubmit="submitted = true;">
+                <div id="textArea">                    
+                    <form id="developerform" name="developerForm" class="developerForm" action="https://formsubmit.io/send/534c2b9a-1707-4329-8a1b-949b7da86ea8" method="post">
+                        <input name="_redirect" type="hidden" id="name" value="https://easeystrings.com/website-issue-sent.html" />
                         <p>Enter the URL of the page that is experiencing the issues.</p>
-                        <input type="text" name="entry.97946401" id="entry.97946401" style="height: 30px; width: 250px; font-size: 13pt;" placeholder="Enter URL Here" />
+                        <input type="text" name="urlName" id="urlName" style="height: 30px; width: 250px; font-size: 13pt;" placeholder="Enter URL Here" />
                         <p>Enter the issues you are experiencing in the paragraph field below.</p>
-                        <textarea id="entry.3068766" name="entry.3068766" class="paragraphTags" placeholder="Enter Message Here"></textarea><br /><br />
+                        <textarea id="issueExplanation" name="issueExplanation" class="paragraphTags" placeholder="Enter Message Here"></textarea><br /><br />
                         <input type="submit" value="Send" style="width: 100px; height: 30px;" />
                     </form>
-                    <iframe name="hidden_frame" id="hidden_frame" style="display: none;" onload="if (submitted) { }"></iframe>
                 </div>
-
-                <!--<iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if (submitted) {  }"></iframe>-->
-
-                <!--<input type="submit"
-                       name="dimensions"
-                       id="dimensions"
-                       onclick="printDimensions();"
-                       value="Show Dimensions">
-
-                <input type="submit"
-                       name="leftPadding"
-                       id="leftPadding"
-                       onclick="printPaddingLeft();"
-                       value="Show Padding Left Value">
-                <input type="submit"
-                       name="getFontSize"
-                       id="getFontSize"
-                       onclick="alert('Font size for div tag: ' + $('indent_part').style.fontSize + '\nFont size for p tag: ' + $('temporaryId').style.fontSize);"
-                       value="Show Font Size For indent_part And <p> Tags">-->
             </section>
 
         </article>
@@ -342,7 +321,7 @@
 
         var browserWidth = 0;
 
-        var textarea = $("entry.3068766");
+        var textarea = $("issueExplanation");
 
         textarea.oninput = function () {
             textarea.style.height = "";

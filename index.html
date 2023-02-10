@@ -282,14 +282,6 @@
 
             var browserWidth = 0;
 
-            /*After code test is over, keep the 1109. That's necessary.*/
-
-            /*if the 50s above don't work, remove them*/
-            /*if the 68s don'g work, remove them*/
-
-            //alert("width: " + window.innerWidth + "\n height: " + window.innerHeight);
-            // This was used for testing to see what would be the best function that would resize images for this page
-
             positionHome(); // used to reposition the home button
 
 
@@ -355,14 +347,12 @@
                     console.log("rabbit_holding.jpg has been loaded successfully");
                 }
                 pic3.src = 'rabbit_holding.jpg';
-                //pic3.width = "100px";
 
                 pic4.onload = function () {
                     pic4Loaded = true;
                     console.log("eveBabyRabbitPhoto.jpg has been loaded successfully");
                 }
                 pic4.src = 'eveBabyRabbitPhoto.jpg';
-                //pic4.width = "100px";
 
                 picForFade.onload = function () {
                     picForFadeLoaded = true;
@@ -410,19 +400,7 @@
             function drawAll() {
                 colorRect(0, 0, canvas.width, canvas.height, 'grey');
                 if (rabbitPicLoaded && pic2Loaded && pic3Loaded && pic4Loaded && picForFadeLoaded) { // wait till all photos are loaded
-                    //if (rabbitPicLoaded) {
-                    //rabbitPic.width = 30;
-                    //rabbitPic.height = 30;
-
-                    //canvasContext.drawImage(rabbitPic, X1, Y1);
-                    //canvasContext.fillText("rabbitPic", X1, 20);
-
-                    //canvasContext.drawImage(rabbitPic, X3, Y1);
-                    //canvasContext.drawImage(rabbitPic, X5, Y1);
                     canvasContext.fillStyle = 'black'; // was for the credits
-                    //       canvasContext.fillText('Picture provided by www.rabbitcaretips.com', X1, 330);
-                    //     canvasContext.fillText('Picture provided by www.rabbitcaretips.com', X3, 330);
-                    //  canvasContext.fillText('Picture provided by www.rabbitcaretips.com', X5 + 40, 330);
                     canvasContext.drawImage(rabbitPic, X2, Y1);
                     //canvasContext.fillText("rabbitPic", X2, 20);
 
