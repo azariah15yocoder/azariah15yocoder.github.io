@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<urlset xmln="http://www.sitemaps.org/schemas/sitemap/0.9">
+<!--https://krdrabbits.com/index.html-->
+<url>
+<loc>https://krdrabbits.com/index.html</loc>
+<lastmod>2023-01</lastmod>
+</url>
+<!--https://easeystrings.com/contact-us.html-->
+<url>
+<loc>https://krdrabbits.com/about-us.html</loc>
+<lastmod>2023-01</lastmod>
+</url>
+<!--https://easeystrings.com/instrument.html-->
+<url>
+<loc>https://krdrabbits.com/contact-us.html</loc>
+<lastmod>2023-01</lastmod>
+</url>
+<!--https://easeystrings.com/lessons.html-->
+<url>
+<loc>https://krdrabbits.com/meet-our-bunnies.html</loc>
+<lastmod>2023-01</lastmod>
+</url>
+<!--https://easeystrings.com/meet-the-teachers.html-->
+<url>
+<loc>https://krdrabbits.com/store.html</loc>
+<lastmod>2023-01</lastmod>
+</url>
+<!--https://easeystrings.com/signup.html-->
+<url>
+<loc>https://krdrabbits.com/developer-contact.html</loc>
+<lastmod>2023-01</lastmod>
+</url>
+</urlset>
