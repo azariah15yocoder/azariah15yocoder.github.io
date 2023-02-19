@@ -13,22 +13,17 @@
         body {
             background-color: white;
             overflow-x: hidden;
-            /*background-image: url(happyDaysReplacement.png);
-            background-repeat: repeat;
-            background-position: -200px 200px;
-            background-size: auto;
-            background-attachment: fixed;*/
             color: black !important;
         }
 
         h1 {
             font-size: 3em;
-            font-family: /*'Ink Free',*/ sans-serif;
+            font-family: sans-serif;
         }
 
         p {
             font-size: 20.0pt;
-            font-family: /*'Ink Free',*/ sans-serif;
+            font-family: sans-serif;
             line-height: 50px;
         }
 
@@ -37,6 +32,7 @@
             margin: auto;
             max-width: 1234px;
             padding: 10px;
+            padding-left: 110px;
         }
 
         .hilightme {
@@ -106,63 +102,17 @@
             }
         }
 
-        /*body {
-            /*position: relative; /*I hope the code still works, even though I put the attribue up here!*/ /*the code didn't work, so I commented it out for later*/
-        /*background-color: #808080;
-                overflow-x: hidden;
-                background: url(happyDaysReplacement.png);
-                background-repeat: repeat;
-                background-position: -200px 200px;
-                background-size: auto;
-                color: black !important;*/
-        /*I trunkated some of the comments I wrote in the code, since the comments are unecessary*/
-        /*This note was added to see whether the web page will update or not*/
-        /*This note was added to see whether the web page will update or not*/ /*
+        @media only screen and (max-width: 1040px) {
+            #textHolder {
+                padding-left: 50px;
             }
-            img {
-                max-width: 50% !important;
+        }
+
+        @media only screen and (max-width: 524px) {
+            #textHolder {
+                padding-left: 0px;
             }
-            h1 {
-                font-size: 2em;
-                font-family: 'Ink Free', sans-serif;
-            }
-            p {
-                font-size: 1.5em;
-                font-family: 'Ink Free', sans-serif;
-                line-height: 25px;
-            }
-            .hilightme {
-                background-color: #ffd800;
-            }
-            .indent {
-                padding-left: 25px; /*used for videos*/ /*
-            }
-            #homeButton {
-                width: 75px;
-                height: auto;
-                margin: 0px 0px 20px 10px;
-            }
-            #aboutUsButton {
-                width: 75px;
-                height: auto;
-                margin: 0px 0px 20px 10px;
-            }
-            #contactUsButton {
-                width: 75px;
-                height: auto;
-                margin: 0px 0px 20px 10px;
-            }
-            #storeButton {
-                width: 75px;
-                height: auto;
-                margin: 0px 0px 20px 10px;
-            }
-            #meetOurBunniesButton {
-                width: 112.5px;
-                height: auto;
-                margin: 0px 0px 20px 10px;
-            }
-        }*/ /*code has been commented out to test some HTML code*/
+        }
     </style>
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -394,8 +344,6 @@
 
             browserWidth = window.innerWidth;
 
-            //fitText("indent_part", 5.0); // auto-fit text
-
             rabbitPic.onload = function () {
                 rabbitPicLoaded = true;
             }
@@ -411,14 +359,14 @@
                 console.log("rabbit_holding.jpg has been loaded successfully");
             }
             pic3.src = 'rabbit_holding.jpg';
-            //pic3.width = "100px";
+            
 
             pic4.onload = function () {
                 pic4Loaded = true;
                 console.log("eveBabyRabbitPhoto.jpg has been loaded successfully");
             }
             pic4.src = 'eveBabyRabbitPhoto.jpg';
-            //pic4.width = "100px";
+            
 
             picForFade.onload = function () {
                 picForFadeLoaded = true;
@@ -432,10 +380,6 @@
             moveAll();
             drawAll();
             positionHome();
-            //if (submitted) {
-            //    parent.location = "message-sent.html";
-            //}
-            ////fitText("indent_part", 5.0); // used for auto-resize
         }
 
         function moveAll() {
@@ -471,64 +415,19 @@
         function drawAll() {
             colorRect(0, 0, canvas.width, canvas.height, 'grey');
             if (rabbitPicLoaded && pic2Loaded && pic3Loaded && pic4Loaded && picForFadeLoaded) { // wait till all photos are loaded
-                //if (rabbitPicLoaded) {
-                //rabbitPic.width = 30;
-                //rabbitPic.height = 30;
-
-                //canvasContext.drawImage(rabbitPic, X1, Y1);
-                //canvasContext.fillText("rabbitPic", X1, 20);
-
-                //canvasContext.drawImage(rabbitPic, X3, Y1);
-                //canvasContext.drawImage(rabbitPic, X5, Y1);
                 canvasContext.fillStyle = 'black'; // was for the credits
-                //       canvasContext.fillText('Picture provided by www.rabbitcaretips.com', X1, 330);
-                //     canvasContext.fillText('Picture provided by www.rabbitcaretips.com', X3, 330);
-                //  canvasContext.fillText('Picture provided by www.rabbitcaretips.com', X5 + 40, 330);
                 canvasContext.drawImage(rabbitPic, X2, Y1);
-                //canvasContext.fillText("rabbitPic", X2, 20);
-
-                //canvasContext.drawImage(rabbitPic, rabbitPicInstanceX, Y1);
-                //canvasContext.fillText("rabbitPicInstanceX", rabbitPicInstanceX, 20);
-                //}
-                //if (pic2Loaded) {
-                //canvasContext.drawImage(pic2, X2, Y1);
-                //canvasContext.fillText("pic2", X2, 20);
-
-                // previous replaced with different photo
-
                 canvasContext.drawImage(pic2, X4, Y1);
-                //canvasContext.fillText("pic2", X4, 20);
 
-                //canvasContext.drawImage(pic2, pic2InstanceX, Y1);
-                //canvasContext.fillText("pic2InstanceX", pic2InstanceX, 20);
-
-                //canvasContext.drawImage(pic2, X2, 0);
                 canvasContext.fillStyle = 'black';
-                //  canvasContext.fillText('Picture provided by www.rabbitcaretips.com', X1, 330);
-                //    canvasContext.fillText('Picture provided by i.pinimg.com', X2, 20);
-                //  canvasContext.fillText('Picture provided by i.pinimg.com', X4, 20);
-
-                //}
-                //if (pic3Loaded) {
                 canvasContext.drawImage(pic3, X3, Y1, 600, 400);
-                //canvasContext.fillText("pic3", X3, 20);
-                //canvasContext.drawImage(pic3, pic3InstanceX, 600, 400);
-                //canvasContext.fillText("pic3InstanceX", pic3InstanceX, 20);
+
                 canvasContext.fillStyle = "black"; // for text
-                //}
-                //if (pic4Loaded) {
                 canvasContext.drawImage(pic4, X5, Y1, 600, 400);
-                //canvasContext.fillText("pic4", X5, 20);
-                //canvasContext.drawImage(pic4, pic4InstanceX, 600, 400);
-                //canvasContext.fillText("pic4InstanceX", pic4InstanceX, 20);
+
                 canvasContext.fillStyle = "black"; // for text
-                //}
-
-                //if (picForFadeLoaded) {
                 canvasContext.drawImage(picForFade, 0, 0 - 1);
-                //}
             }
-
         }
 
         function positionHome() {

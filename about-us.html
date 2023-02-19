@@ -13,22 +13,17 @@
         body {
             background-color: white;
             overflow-x: hidden;
-            /*background-image: url(happyDaysReplacement.png);
-            background-repeat: repeat;
-            background-position: -200px 200px;
-            background-size: auto;
-            background-attachment: fixed;*/
             color: black !important;
         }
 
         h1 {
             font-size: 3em;
-            font-family: /*'Ink Free',*/ sans-serif;
+            font-family: sans-serif;
         }
 
         p {
             font-size: 20.0pt;
-            font-family: /*'Ink Free',*/ sans-serif;
+            font-family: sans-serif;
             line-height: 50px;
         }
 
@@ -37,6 +32,7 @@
             margin: auto;
             max-width: 1234px;
             padding: 10px;
+            padding-left: 110px;
         }
 
         .hilightme {
@@ -130,63 +126,17 @@
             }
         }
 
-        /*body {
-            /*position: relative; /*I hope the code still works, even though I put the attribue up here!*/ /*the code didn't work, so I commented it out for later*/
-            /*background-color: #808080;
-                overflow-x: hidden;
-                background: url(happyDaysReplacement.png);
-                background-repeat: repeat;
-                background-position: -200px 200px;
-                background-size: auto;
-                color: black !important;*/
-            /*I trunkated some of the comments I wrote in the code, since the comments are unecessary*/
-            /*This note was added to see whether the web page will update or not*/
-            /*This note was added to see whether the web page will update or not*/ /*
+        @media only screen and (max-width: 1040px) {
+            #textHolder {
+                padding-left: 50px;
             }
-            img {
-                max-width: 50% !important;
+        }
+
+        @media only screen and (max-width: 524px) {
+            #textHolder {
+                padding-left: 0px;
             }
-            h1 {
-                font-size: 2em;
-                font-family: 'Ink Free', sans-serif;
-            }
-            p {
-                font-size: 1.5em;
-                font-family: 'Ink Free', sans-serif;
-                line-height: 25px;
-            }
-            .hilightme {
-                background-color: #ffd800;
-            }
-            .indent {
-                padding-left: 25px; /*used for videos*/ /*
-            }
-            #homeButton {
-                width: 75px;
-                height: auto;
-                margin: 0px 0px 20px 10px;
-            }
-            #aboutUsButton {
-                width: 75px;
-                height: auto;
-                margin: 0px 0px 20px 10px;
-            }
-            #contactUsButton {
-                width: 75px;
-                height: auto;
-                margin: 0px 0px 20px 10px;
-            }
-            #storeButton {
-                width: 75px;
-                height: auto;
-                margin: 0px 0px 20px 10px;
-            }
-            #meetOurBunniesButton {
-                width: 112.5px;
-                height: auto;
-                margin: 0px 0px 20px 10px;
-            }
-        }*/ /*code has been commented out to test some HTML code*/
+        }
     </style>
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -238,47 +188,6 @@
                         You can find us on social media, on Facebook and Instagram <a href="null" target="_blank">@K Rd Rabbits</a>.
                     </p>
                 </div>
-
-                <!--<table id="photoTable">
-                    <tr id="centerRow">
-
-                        <td id="eveData">
-                            <figure id="eveRider">
-                                <img id="evePhoto" style="margin-top: -35px;" src="EveHoldingRabbit2.jpeg" width="250" alt="This is Eve Rider holding a rabbit." /> <!--photos in here-->
-                                <!--<figcaption id="actLikeParagraphTag" style="font-family: Arial;">
-                                    Eve Rider
-                                </figcaption>
-                            </figure>
-                        </td>
-
-                        <td id="daphneData">
-                            <figure id="daphneRider">
-                                <img id="daphnePhoto" src="DaphneHoldingRabbit.jpg" width="250" alt="This is Daphne Rider holding a rabbit." />
-                                <figcaption id="actLikeParagraphTag" style="font-family: Arial;">
-                                    Daphne Rider
-                                </figcaption>
-                            </figure>
-                        </td>
-
-                        <td id="azariahData" style="padding-left: 500px">
-                            <figure id="azariahEasey">
-                                <img id="azariahPhoto" src="AzariahCoding.jpg" width="250" alt="This is Azariah Easey ready to code." />
-                                <figcaption id="actLikeParagraphTag" style="font-family: Arial;">
-                                    Azariah Easey
-                                </figcaption>
-                            </figure>
-                        </td>
-
-                        <td id="jeremiahData">
-                            <figure id="jeremiahEasey">
-                                <img id="jeremiahPhoto" src="JerCamera.jpg" width="250" alt="This is Jeremiah Easey ready to film." />
-                                <figcaption id="actLikeParagraphTag" style="font-family: Arial;">
-                                    Jeremiah Easey
-                                </figcaption>
-                            </figure>
-                        </td>
-                    </tr>
-                </table>-->
 
                 <div id="photoTable" align="center">
                     <img id="evePhoto" src="eve_new_photo_with_caption.jpg"  alt="Eve Rider holding a rabbit." />
@@ -367,14 +276,6 @@
 
         var browserWidth = 0;
 
-        /*After code test is over, keep the 1109. That's necessary.*/
-
-        /*if the 50s above don't work, remove them*/
-        /*if the 68s don'g work, remove them*/
-
-        //alert("width: " + window.innerWidth + "\n height: " + window.innerHeight);
-        // This was used for testing to see what would be the best function that would resize images for this page
-
         positionHome(); // used to reposition the home button
 
 
@@ -442,14 +343,14 @@
                 console.log("rabbit_holding.jpg has been loaded successfully");
             }
             pic3.src = 'rabbit_holding.jpg';
-            //pic3.width = "100px";
+            
 
             pic4.onload = function () {
                 pic4Loaded = true;
                 console.log("eveBabyRabbitPhoto.jpg has been loaded successfully");
             }
             pic4.src = 'eveBabyRabbitPhoto.jpg';
-            //pic4.width = "100px";
+            
 
             picForFade.onload = function () {
                 picForFadeLoaded = true;

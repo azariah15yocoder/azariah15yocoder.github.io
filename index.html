@@ -13,23 +13,18 @@
             body {
                 background-color: white;
                 overflow-x: hidden;
-                /*background-image: url(happyDaysReplacement.png);
-                background-repeat: repeat;
-                background-position: -200px 200px;
-                background-size: auto;
-                background-attachment: fixed;*/
                 color: black !important;
             }
 
             h1 {
                 font-size: 3em;
-                font-family: /*'Ink Free',*/ sans-serif;
+                font-family: sans-serif;
             }
 
             p {
                 /*font-size: 2.5em;*/
                 font-size: 20.0pt;
-                font-family: /*'Ink Free',*/ sans-serif;
+                font-family: sans-serif;
                 line-height: 50px;
             }
 
@@ -90,6 +85,7 @@
                 margin: auto;
                 max-width: 1234px;
                 padding: 10px;
+                padding-left: 110px;
             }
 
             /*@media only screen and (max-device-width: 6.20in) { /*edited for mobile devices, in this case the LG G7*/
@@ -107,63 +103,17 @@
                 }
             }
 
-            /*body {
-                /*position: relative; /*I hope the code still works, even though I put the attribue up here!*/ /*the code didn't work, so I commented it out for later*/
-            /*background-color: #808080;
-                    overflow-x: hidden;
-                    background: url(happyDaysReplacement.png);
-                    background-repeat: repeat;
-                    background-position: -200px 200px;
-                    background-size: auto;
-                    color: black !important;*/
-            /*I trunkated some of the comments I wrote in the code, since the comments are unecessary*/
-            /*This note was added to see whether the web page will update or not*/
-            /*This note was added to see whether the web page will update or not*/ /*
+            @media only screen and (max-width: 1040px) {
+                #textHolder {
+                    padding-left: 50px;
                 }
-                img {
-                    max-width: 50% !important;
+            }
+
+            @media only screen and (max-width: 524px) {
+                #textHolder {
+                    padding-left: 0px;
                 }
-                h1 {
-                    font-size: 2em;
-                    font-family: 'Ink Free', sans-serif;
-                }
-                p {
-                    font-size: 1.5em;
-                    font-family: 'Ink Free', sans-serif;
-                    line-height: 25px;
-                }
-                .hilightme {
-                    background-color: #ffd800;
-                }
-                .indent {
-                    padding-left: 25px; /*used for videos*/ /*
-                }
-                #homeButton {
-                    width: 75px;
-                    height: auto;
-                    margin: 0px 0px 20px 10px;
-                }
-                #aboutUsButton {
-                    width: 75px;
-                    height: auto;
-                    margin: 0px 0px 20px 10px;
-                }
-                #contactUsButton {
-                    width: 75px;
-                    height: auto;
-                    margin: 0px 0px 20px 10px;
-                }
-                #storeButton {
-                    width: 75px;
-                    height: auto;
-                    margin: 0px 0px 20px 10px;
-                }
-                #meetOurBunniesButton {
-                    width: 112.5px;
-                    height: auto;
-                    margin: 0px 0px 20px 10px;
-                }
-            }*/ /*code has been commented out to test some HTML code*/
+            }
         </style>
 
         <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -230,7 +180,7 @@
             <br />
             <br />
             <div id="textHolder">
-                <p style="position: relative; bottom: 0; font-size: 12.0pt; text-indent: 50px;">Experiencing bugs on this site? Contact our developer <a href="developer-contact.html" target="_blank">here.</a></p>
+                <p style="position: relative; bottom: 0; font-size: 12.0pt; /*text-indent: 50px;*/">Experiencing bugs on this site? Contact our developer <a href="developer-contact.html" target="_blank">here.</a></p>
             </div>
             <br />
             <br />
@@ -402,48 +352,16 @@
                 if (rabbitPicLoaded && pic2Loaded && pic3Loaded && pic4Loaded && picForFadeLoaded) { // wait till all photos are loaded
                     canvasContext.fillStyle = 'black'; // was for the credits
                     canvasContext.drawImage(rabbitPic, X2, Y1);
-                    //canvasContext.fillText("rabbitPic", X2, 20);
-
-                    //canvasContext.drawImage(rabbitPic, rabbitPicInstanceX, Y1);
-                    //canvasContext.fillText("rabbitPicInstanceX", rabbitPicInstanceX, 20);
-                    //}
-                    //if (pic2Loaded) {
-                    //canvasContext.drawImage(pic2, X2, Y1);
-                    //canvasContext.fillText("pic2", X2, 20);
-
-                    // previous replaced with different photo
-
                     canvasContext.drawImage(pic2, X4, Y1);
-                    //canvasContext.fillText("pic2", X4, 20);
 
-                    //canvasContext.drawImage(pic2, pic2InstanceX, Y1);
-                    //canvasContext.fillText("pic2InstanceX", pic2InstanceX, 20);
-
-                    //canvasContext.drawImage(pic2, X2, 0);
                     canvasContext.fillStyle = 'black';
-                    //  canvasContext.fillText('Picture provided by www.rabbitcaretips.com', X1, 330);
-                    //    canvasContext.fillText('Picture provided by i.pinimg.com', X2, 20);
-                    //  canvasContext.fillText('Picture provided by i.pinimg.com', X4, 20);
-
-                    //}
-                    //if (pic3Loaded) {
                     canvasContext.drawImage(pic3, X3, Y1, 600, 400);
-                    //canvasContext.fillText("pic3", X3, 20);
-                    //canvasContext.drawImage(pic3, pic3InstanceX, 600, 400);
-                    //canvasContext.fillText("pic3InstanceX", pic3InstanceX, 20);
-                    canvasContext.fillStyle = "black"; // for text
-                    //}
-                    //if (pic4Loaded) {
-                    canvasContext.drawImage(pic4, X5, Y1, 600, 400);
-                    //canvasContext.fillText("pic4", X5, 20);
-                    //canvasContext.drawImage(pic4, pic4InstanceX, 600, 400);
-                    //canvasContext.fillText("pic4InstanceX", pic4InstanceX, 20);
-                    canvasContext.fillStyle = "black"; // for text
-                    //}
 
-                    //if (picForFadeLoaded) {
+                    canvasContext.fillStyle = "black"; // for text
+                    canvasContext.drawImage(pic4, X5, Y1, 600, 400);
+
+                    canvasContext.fillStyle = "black"; // for text
                     canvasContext.drawImage(picForFade, 0, 0 - 1);
-                    //}
                 }
 
             }
