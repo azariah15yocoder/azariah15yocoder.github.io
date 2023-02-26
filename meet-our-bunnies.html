@@ -20,6 +20,10 @@
             font-family: sans-serif;
         }
 
+        h2 {
+            font-family: sans-serif;
+        }
+
         p {
             font-size: 20.0pt;
             font-family: sans-serif;
@@ -86,9 +90,89 @@
             /*position: center;*/
         }
 
+        .images {
+            text-align: center;
+        }
+
+        figcaption {
+            font-family: sans-serif;
+        }
+
+        #dart {
+            width: 300px;
+        }
+
+        #dartInfoImage {
+            width: 300px;
+        }
+
         /*@media only screen and (max-device-width: 6.20in) { /*edited for mobile devices, in this case the LG G7*/
         html, body {
             overflow-x: hidden; /*should prevent user from scrolling back and forth (aka side to side)*/
+        }
+
+        .info_panel {
+            visibility: hidden;
+            background-color: white;
+            border: 10px solid black;
+            position: absolute;
+            top: 50%;
+            left: 45%;
+            max-width: 700px;
+            max-height: 500px;
+            margin-top: -250px;
+            margin-left: -250px;
+            overflow-x: hidden;
+        }
+
+        .info_panel p {
+            font-size: 15pt;
+            padding: 20px;
+        }
+
+        .info_panel h2 {
+            padding-left: 20px;
+            padding-bottom: 10px;
+        }
+
+        @-webkit-keyframes showPopup {
+            from{opacity:0;}
+            to{opacity:1;}
+        }
+
+        @keyframes showPopup{
+            from{opacity:0;}
+            to{opacity:1;}
+        }
+
+        @-webkit-keyframes hidePopup {
+            from{opacity:1;}
+            to{opacity:0;}
+        }
+
+        @keyframes hidePopup {
+            from{opacity: 1;}
+            to{opacity:0;}
+        }
+
+        @-webkit-keyframes hideBackground {
+            from{opacity: 1;}
+            to{opacity:0.4;}
+        }
+
+        @keyframes hideBackground {
+            from{opacity:1;}
+            to{opacity:0.4;}
+        }
+
+        @-webkit-keyframes showBackground {
+            from{opacity:0.4;}
+            to{opacity:1;}
+        }
+
+        @keyframes showBackground {
+            from{opacity:0.4;}
+            to{opacity:1;}
         }
 
         ::-webkit-scrollbar {
@@ -150,7 +234,21 @@
             <section>
                 <h4 style="visibility: hidden; font-size: 0.00000000000001px;"></h4>
                 <div class="indent" id="indent_part">
-                    <p id="temporaryId"><i>We don't have any bunny-friends to share yet. We're working on it!</i></p>
+                </div> <!--Nothing in here for now.-->
+
+                <div class="images">
+                    <table>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <a href="javascript:void(0)" onclick="showPopup('dartInfo');" style="color: black;">
+                                        <figure><img src="Images/dart.JPG" id="dart" alt="Dart Relaxing" /></figure>
+                                        <figcaption>Meet Dart!</figcaption>
+                                    </a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
 
                 <!--<input type="submit"
@@ -195,6 +293,23 @@
         </a>
     </footer>
 
+    <div class="info_panel" id="dartInfo">
+        <p style="padding-top: 10px; padding-left: 10px; padding-bottom: 10px;"><a href="javascript:void(0);" onclick="hidePopup('dartInfo', 'dart');"><== Back</a></p>
+        <h2>Meet Dart!</h2>
+        <img src="Images/dart.JPG" id="dartInfoImage" alt="Dart Relaxing" /><br>
+        <p>
+            Dart is a Black Polish rabbit, one of the first baby rabbits here at the Rider's rabbitry.
+            He is a very friendly rabbit and likes to be handled. As K Road Rabbit's CEO and founder, Eve Rider,
+            puts it: "He is very, very friendly because we've been holding him since he was like a little tiny baby."
+        </p>
+    </div>
+
+    <div class="info_panel" id="loremIpsum">
+        <p>
+            Luctus cursus ligula nascetur mauris penatibus aliquam justo condimentum fusce ornare curae;! Felis odio quis rhoncus nascetur scelerisque habitasse sapien vivamus leo. Sem interdum nec libero dui dolor est cras. Porttitor, torquent vitae fringilla rutrum sapien quisque semper sapien lorem ipsum euismod. Eu ligula, tincidunt integer quis dignissim fusce imperdiet. Lectus malesuada vestibulum posuere lectus. Ligula arcu metus cubilia.
+        </p>
+    </div>
+
     <script>
         //$("i").innerHTML = "This page is still in development!";
         var canvas, canvasContext;
@@ -232,6 +347,12 @@
 
         var browserWidth = 0;
 
+        var lastImageScrolledTo = [];
+
+        function select(name) {
+            return document.querySelector(name);
+        }
+
         positionHome();
 
 
@@ -243,6 +364,45 @@
             if (navigator.userAgent.indexOf('Mac') != -1 || navigator.userAgent.indexOf('like Mac') != -1) {
                 $("textHolder").innerHTML = '<p style="position: relative; bottom: 0; font-size: 12.0pt;">Experiencing bugs on this site? Contact our developer <a href="https://docs.google.com/forms/d/e/1FAIpQLSetAnRBubPN7S0uskkUOxHKgnz3IpGZR-vE_X7PGSsnAjeDqQ/viewform?usp=sf_link" target="_blank">here.</a></p>';
             }
+        }
+
+        function showPopup(id) {
+            var popup = $(id);
+            popup.scrollIntoView(true);
+            select(".info_panel").style.visibility = "visible";
+            popup.style.visibility = "visible";
+            popup.style.webkitAnimation = "showPopup 1s";
+            popup.style.animation = "showPopup 1s";
+            select("header").style.opacity = "0.4";
+            select("main").style.opacity = "0.4";
+            select("footer").style.opacity = "0.4";
+            select("header").style.webkitAnimation = "hideBackground 1s";
+            select("header").style.animation = "hideBackground 1s";
+            select("main").style.webkitAnimation = "hideBackground 1s";
+            select("main").style.animation = "hideBackground 1s";
+            select("footer").style.webkitAnimation = "hideBackground 1s";
+            select("footer").style.animation = "hideBackground 1s";
+        }
+
+        function hidePopup(id, imgID) {
+            var popup = $(id);
+            var image = $(imgID);
+            popup.style.webkitAnimation = "hidePopup 1s";
+            popup.style.animation = "hidePopup 1s";
+            select("header").style.opacity = "1";
+            select("main").style.opacity = "1";
+            select("footer").style.opacity = "1";
+            select("header").style.webkitAnimation = "showBackground 1s";
+            select("header").style.animation = "showBackground 1s";
+            select("main").style.webkitAnimation = "showBackground 1s";
+            select("main").style.animation = "showBackground 1s";
+            select("footer").style.webkitAnimation = "showBackground 1s";
+            select("footer").style.animation = "showBackground 1s";
+            setTimeout(function () {
+                select(".info_panel").style.visibility = "hidden";
+                popup.style.visibility = "hidden";
+                image.scrollIntoView(true);
+            }, 500);
         }
 
         function fitText(divID, emSize) {
@@ -272,7 +432,7 @@
         }
 
         window.onload = function () {
-          //  $("i").innerHTML = "We don't have anything to sell quite yet. We're working on it!"
+            //  $("i").innerHTML = "We don't have anything to sell quite yet. We're working on it!"
             canvas = $("cv");
             canvasContext = canvas.getContext('2d');
             colorRect(0, 0, canvas.width, canvas.height, 'grey');
@@ -290,19 +450,19 @@
             }
             pic2.src = "Rabbuny.jpg";
 
-            pic3.onload = function() {
+            pic3.onload = function () {
                 pic3Loaded = true;
                 console.log("rabbit_holding.jpg has been loaded successfully");
             }
             pic3.src = 'rabbit_holding.jpg';
-            
 
-            pic4.onload = function() {
+
+            pic4.onload = function () {
                 pic4Loaded = true;
                 console.log("eveBabyRabbitPhoto.jpg has been loaded successfully");
             }
             pic4.src = 'eveBabyRabbitPhoto.jpg';
-            
+
 
             picForFade.onload = function () {
                 picForFadeLoaded = true;
