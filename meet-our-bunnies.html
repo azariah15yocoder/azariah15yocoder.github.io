@@ -267,6 +267,18 @@
                                         <figcaption>Meet Dart!</figcaption>
                                     </a>
                                 </td>
+                                <td>
+                                    <a href="javascript:void(0)" onclick="showPopup('batmanInfo');" style="color: black;">
+                                        <figure><img src="Images/batman.JPG" id="batman" alt="Batman" /></figure>
+                                        <figcaption>Meet Batman!</figcaption>
+                                    </a>
+                                </td>
+                                <td>
+                                    <a href="javascript:void(0)" onclick="showPopup('maxInfo');" style="color: black;">
+                                        <figure><img src="Images/max.JPG" id="max" alt="Max" /></figure>
+                                        <figcaption>Meet Max!</figcaption>
+                                    </a>
+                                </td>
                             </tr>
                         </tbody>
                     </table>
@@ -323,6 +335,25 @@
             He is a very friendly rabbit and likes to be handled. As K Road Rabbit's CEO and founder, Eve Rider,
             puts it: "He is very, very friendly because we've been holding him since he was like a little tiny baby."
         </p>
+    </div>
+
+    <div class="info_panel" id="batmanInfo">
+        <p style="padding-top: 10px; padding-left: 10px; padding-bottom: 10px;"><a href="javascript:void(0);" onclick="hidePopup('batmanInfo', 'batman');"><== Back</a></p>
+        <h2>Meet Batman!</h2>
+        <img src="Images/batman.JPG" id="batmanInfoImage" alt="Batman on Stage" /><br>
+        <p>Batman is a Chocolate Polish rabbit. He has gotten a little feisty over the past few years, according to 
+        the K Road Rabbits staff. As part of the K Road Rabbit's rabbitry league, he has been able to gain a sidekick: 
+        his sister, who bears the name of Robin. You can guess which superhero character that rabbit has been named after!</p>
+    </div>
+
+    <div class="info_panel" id="maxInfo">
+        <p style="padding-top: 10px; padding-left: 10px; padding-bottom: 10px;"><a href="javascript:void(0);" onclick="hidePopup('maxInfo', 'max');"><== Back</a></p>
+        <h2>Meet Max!</h2>
+        <img src="Images/batman.JPG" id="batmanInfoImage" alt="Batman on Stage" /><br>
+        <p>Max is a Broken Black Polish, which means that he has spots all over him, hence the spots on his fur. He is a year 
+        younger than his brother Dart. However, even though he doesn't mind being handled by those who work around him, he is not 
+        a friendly individual. Because of this, he has the habit of biting on people's thumbs and ears. Because of this, he never 
+        became part of Batman's league.</p>
     </div>
 
     <div class="info_panel" id="loremIpsum">
@@ -390,7 +421,6 @@
         function showPopup(id) {
             var popup = $(id);
             popup.scrollIntoView(true);
-            select(".info_panel").style.visibility = "visible";
             popup.style.visibility = "visible";
             popup.style.webkitAnimation = "showPopup 1s";
             popup.style.animation = "showPopup 1s";
