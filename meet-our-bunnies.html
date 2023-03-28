@@ -131,6 +131,11 @@
             max-width: 300px;
         }
 
+        .center {
+            margin-left: auto;
+            margin-right: auto;
+        }
+
         @-webkit-keyframes showPopup {
             from{opacity:0;}
             to{opacity:1;}
@@ -189,7 +194,17 @@
 
         @media only screen and (max-width: 1132px) {
             figure img {
-                max-width: 200px;
+                width: 200px;
+            }
+        }
+
+        @media only screen and (max-width: 735px) {
+            /*nothing happens here*/
+        }
+
+        @media only screen and (max-width: 845px) {
+            figure img {
+                width: 150px;
             }
         }
 
@@ -264,7 +279,7 @@
                 </div> <!--Nothing in here for now.-->
 
                 <div class="images">
-                    <table>
+                    <table class="center">
                         <tbody>
                             <tr>
                                 <td>
