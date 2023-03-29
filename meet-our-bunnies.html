@@ -6,7 +6,7 @@
     <meta name="author" content="Azariah Easey, krdrabbits.com, easeystrings.com">
     <meta name="keywords" content="Rabbits, Bunnies, Facts, Products">
     <meta name="HandheldFriendly" content="True">
-    <meta name="viewport" content="width=device-width"> <!---->
+    <meta name="viewport" content="width=device-width">
     <title>Meet Our Bunnies</title>
     <style>
         body {
@@ -198,13 +198,15 @@
             }
         }
 
-        @media only screen and (max-width: 735px) {
-            /*nothing happens here*/
-        }
-
         @media only screen and (max-width: 845px) {
             figure img {
                 width: 150px;
+            }
+        }
+
+        @media only screen and (max-width: 738px) {
+            figure img {
+                width: 400px;
             }
         }
 
@@ -401,6 +403,8 @@
 
         var picForFade = document.createElement('img');
         var picForFadeLoaded = false;
+
+        var formerImageHTML = select(".images").innerHTML;
 
         var X1 = 600;
         //var X2 = X1 + 510 - 60 + 50 + 8 + 1; // for rabbitPic
@@ -620,6 +624,7 @@
                 }
                 $("indent_part").style.paddingLeft = "calc(100% - 80%)";
                 $("indent_part").style.width = "60%";
+                select(".images").innerHTML = formerImageHTML;
                 //$("indent_part").style.fontSize = "0em";
             } else if (browserWidth >= 1600 || window.innerWidth >= 1600) {
                 console.log("Everything is left the way it is."); // not really; home button is moving
@@ -627,18 +632,21 @@
                 if (dimensionOfWindow !== "1600") {
                     dimensionOfWindow = "1600";
                 }
+                select(".images").innerHTML = formerImageHTML;
             } else if (browserWidth >= 1500 || window.innerWidth >= 1500) {
                 console.log("Everything is left the way it is.");
                 $("homeButton").style.margin = "0px 0px 10px 280px";
                 if (dimensionOfWindow !== "1500") {
                     dimensionOfWindow = "1500";
                 }
+                select(".images").innerHTML = formerImageHTML;
             } else if (browserWidth >= 1400 || window.innerWidth >= 1400) {
                 console.log("Everything is left the way it is.");
                 $("homeButton").style.margin = "0px 0px 10px 280px";
                 if (dimensionOfWindow !== "1400") {
                     dimensionOfWindow = "1400";
                 }
+                select(".images").innerHTML = formerImageHTML;
             } else if (browserWidth >= 1330 || window.innerWidth >= 1330) {
                 console.log("Everything is left the way it is.");
                 $("homeButton").style.margin = "0px 0px 10px 170px";
@@ -649,6 +657,7 @@
                 }
                 $("indent_part").style.paddingLeft = "calc(100% - 80%)";
                 $("indent_part").style.width = "60%";
+                select(".images").innerHTML = formerImageHTML;
             } else if (browserWidth >= 1280 && browserWidth >= 680 ||
                 window.innerWidth >= 1280 && window.innerHeight >= 680) {
                 $('homeButton').style.margin = "0px 0px 10px 120px";
@@ -656,22 +665,26 @@
                     //fitText("indent_part", 5.0);
                     dimensionOfWindow = "1280x680";
                 }
+                select(".images").innerHTML = formerImageHTML;
             } else if (browserWidth >= 1280 || window.innerWidth >= 1280) {
                 $('homeButton').style.margin = "0px 0px 10px 120px"; // might be edited if doesn't work
                 if (dimensionOfWindow !== "1280") {
                     //fitText("indent_part", 5.0);
                     dimensionOfWindow = "1280";
                 }
+                select(".images").innerHTML = formerImageHTML;
             } else if (browserWidth >= 1200 || window.innerWidth >= 1200) {
                 $("homeButton").style.margin = "0px 0px 10px 120px";
                 if (dimensionOfWindow !== "1200") {
                     dimensionOfWindow = "1200";
                 }
+                select(".images").innerHTML = formerImageHTML;
             } else if (browserWidth >= 1100 || window.innerWidth >= 1100) {
                 $("homeButton").style.margin = "0px 0px 10px 80px";
                 if (dimensionOfWindow !== "1100") {
                     dimensionOfWindow = "1100";
                 }
+                select(".images").innerHTML = formerImageHTML;
             } else if (browserWidth <= 480 || window.innerWidth <= 480) {
                 $('homeButton').style.margin = "0px 0px 10px 20px";
                 $('indent_part').style.paddingLeft = "calc(100% - 90%)";
@@ -680,6 +693,30 @@
                     //fitText("indent_part", 5.0);
                     dimensionOfWindow = "480";
                 }
+                select(".images").innerHTML = `<table class="center">
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <a href="javascript:void(0)" onclick="showPopup('dartInfo');" style="color: black;">
+                                        <figure><img src="Images/dart.JPG" id="dart" alt="Dart Relaxing" /></figure> <!--work on table image sizes later-->
+                                        <figcaption>Meet Dart!</figcaption>
+                                    </a>
+                                </td></tr><tr>
+                                <td>
+                                    <a href="javascript:void(0)" onclick="showPopup('batmanInfo');" style="color: black;">
+                                        <figure><img src="Images/batman.JPG" id="batman" alt="Batman" /></figure>
+                                        <figcaption>Meet Batman!</figcaption>
+                                    </a>
+                                </td></tr><tr>
+                                <td>
+                                    <a href="javascript:void(0)" onclick="showPopup('maxInfo');" style="color: black;">
+                                        <figure><img src="Images/max.JPG" id="max" alt="Max" /></figure>
+                                        <figcaption>Meet Max!</figcaption>
+                                    </a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>`;
             } else if (browserWidth >= 817 || window.innerWidth >= 817 &&
                 window.innerHeight >= 329 || window.innerWidth >= 817) { // based off of LG phone
                 $('homeButton').style.margin = "0px 0px 10px 20px";
@@ -689,19 +726,50 @@
                     //fitText("indent_part", 5.0);
                     dimensionOfWindow = "817x329";
                 }
+                select(".images").innerHTML = formerImageHTML;
             } else if (browserWidth >= 800 || window.innerWidth >= 800 && window.innerHeight >= 1160) {
                 $('homeButton').style.margin = "0px 0px 10px 20px"; // looks good that way
                 if (dimensionOfWindow !== "800x1160") {
                     //fitText("indent_part", 5.0);
                     dimensionOfWindow = "800x1160";
                 }
-
+                select(".images").innerHTML = formerImageHTML;
             } else if (browserWidth >= 800 || window.innerWidth >= 800) { // when not sure what to do with width of tablet
                 $('homeButton').style.margin = "0px 0px 10px 30px";
                 if (dimensionOfWindow !== "800") {
                     //fitText("indent_part", 5.0);
                     dimensionOfWindow = "800";
                 }
+                select(".images").innerHTML = formerImageHTML;
+            } else if (browserWidth >= 738 || window.innerWidth >= 738) {
+                $('homeButton').style.margin = "0px 0px 10px 30px";
+                if (dimensionOfWindow !== "800") {
+                    dimensionOfWindow = "800";
+                }
+                select(".images").innerHTML = `<table class="center">
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <a href="javascript:void(0)" onclick="showPopup('dartInfo');" style="color: black;">
+                                        <figure><img src="Images/dart.JPG" id="dart" alt="Dart Relaxing" /></figure> <!--work on table image sizes later-->
+                                        <figcaption>Meet Dart!</figcaption>
+                                    </a>
+                                </td></tr><tr>
+                                <td>
+                                    <a href="javascript:void(0)" onclick="showPopup('batmanInfo');" style="color: black;">
+                                        <figure><img src="Images/batman.JPG" id="batman" alt="Batman" /></figure>
+                                        <figcaption>Meet Batman!</figcaption>
+                                    </a>
+                                </td></tr><tr>
+                                <td>
+                                    <a href="javascript:void(0)" onclick="showPopup('maxInfo');" style="color: black;">
+                                        <figure><img src="Images/max.JPG" id="max" alt="Max" /></figure>
+                                        <figcaption>Meet Max!</figcaption>
+                                    </a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>`;
             }
         }
     </script>
