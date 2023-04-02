@@ -255,7 +255,7 @@
             }
         }
 
-        td a figure img {
+        td figure a img, figure img {
             max-width: 300px;
         }
     </style>
@@ -303,22 +303,13 @@
                         <tbody>
                             <tr>
                                 <td>
-                                    <a href="javascript:void(0)" onclick="showPopup('dartInfo');" style="color: black;">
-                                        <figure><img src="Images/dart.JPG" id="dart" alt="Dart Relaxing" /></figure> <!--work on table image sizes later-->
-                                        <figcaption>Meet Dart!</figcaption>
-                                    </a>
+                                    <figure><a href="javascript:void(0)" onclick="showPopup('dartInfo');" style="color: black;"><img src="Images/dart.JPG" id="dart" alt="Dart Relaxing" /><figcaption>Meet Dart!</figcaption></a></figure> <!--work on table image sizes later-->
                                 </td>
                                 <td>
-                                    <a href="javascript:void(0)" onclick="showPopup('batmanInfo');" style="color: black;">
-                                        <figure><img src="Images/batman.JPG" id="batman" alt="Batman" /></figure>
-                                        <figcaption>Meet Batman!</figcaption>
-                                    </a>
+                                    <figure><a href="javascript:void(0)" onclick="showPopup('batmanInfo');" style="color: black;"><img src="Images/batman.JPG" id="batman" alt="Batman" /><figcaption>Meet Batman!</figcaption></a></figure>
                                 </td>
                                 <td>
-                                    <a href="javascript:void(0)" onclick="showPopup('maxInfo');" style="color: black;">
-                                        <figure><img src="Images/max.JPG" id="max" alt="Max" /></figure>
-                                        <figcaption>Meet Max!</figcaption>
-                                    </a>
+                                    <figure><a href="javascript:void(0)" onclick="showPopup('maxInfo');" style="color: black;"><img src="Images/max.JPG" id="max" alt="Max" /><figcaption>Meet Max!</figcaption></a></figure>
                                 </td>
                             </tr>
                         </tbody>
@@ -642,7 +633,7 @@
                 }
                 $("indent_part").style.paddingLeft = "calc(100% - 80%)";
                 $("indent_part").style.width = "60%";
-                select(".images").innerHTML = formerImageHTML;
+                //select(".images").innerHTML = formerImageHTML;
                 //$("indent_part").style.fontSize = "0em";
             } else if (browserWidth >= 1600 || window.innerWidth >= 1600) {
                 console.log("Everything is left the way it is."); // not really; home button is moving
@@ -650,21 +641,21 @@
                 if (dimensionOfWindow !== "1600") {
                     dimensionOfWindow = "1600";
                 }
-                select(".images").innerHTML = formerImageHTML;
+                //select(".images").innerHTML = formerImageHTML;
             } else if (browserWidth >= 1500 || window.innerWidth >= 1500) {
                 console.log("Everything is left the way it is.");
                 $("homeButton").style.margin = "0px 0px 10px 280px";
                 if (dimensionOfWindow !== "1500") {
                     dimensionOfWindow = "1500";
                 }
-                select(".images").innerHTML = formerImageHTML;
+                //select(".images").innerHTML = formerImageHTML;
             } else if (browserWidth >= 1400 || window.innerWidth >= 1400) {
                 console.log("Everything is left the way it is.");
                 $("homeButton").style.margin = "0px 0px 10px 280px";
                 if (dimensionOfWindow !== "1400") {
                     dimensionOfWindow = "1400";
                 }
-                select(".images").innerHTML = formerImageHTML;
+                //select(".images").innerHTML = formerImageHTML;
             } else if (browserWidth >= 1330 || window.innerWidth >= 1330) {
                 console.log("Everything is left the way it is.");
                 $("homeButton").style.margin = "0px 0px 10px 170px";
@@ -675,7 +666,7 @@
                 }
                 $("indent_part").style.paddingLeft = "calc(100% - 80%)";
                 $("indent_part").style.width = "60%";
-                select(".images").innerHTML = formerImageHTML;
+                //select(".images").innerHTML = formerImageHTML;
             } else if (browserWidth >= 1280 && browserWidth >= 680 ||
                 window.innerWidth >= 1280 && window.innerHeight >= 680) {
                 $('homeButton').style.margin = "0px 0px 10px 120px";
