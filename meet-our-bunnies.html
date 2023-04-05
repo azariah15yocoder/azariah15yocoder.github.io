@@ -310,6 +310,11 @@
                                     <figure><a href="javascript:void(0)" onclick="showPopup('maxInfo');" style="color: black;"><img src="Images/max.JPG" id="max" alt="Max" /><figcaption>Meet Max!</figcaption></a></figure>
                                 </td>
                             </tr>
+                            <tr>
+                                <td>
+                                    <figure><a href="javascript:void(0)" onclick="showPopup('maryInfo');" style="color: black;"><img src="Images/mary1.JPG" id="mary" alt="Mary Chillin' Out" /><figcaption>Meet Mary!</figcaption></a></figure>
+                                </td>
+                            </tr>
                         </tbody>
                     </table>
                 </div>
@@ -384,6 +389,16 @@
         younger than his brother Dart. However, even though he doesn't mind being handled by those who work around him, he is not 
         a friendly individual. Because of this, he has the habit of biting on people's thumbs and ears. Because of this, he never 
         became part of Batman's league.</p>
+    </div>
+
+    <div class="info_panel" id="maryInfo">
+        <p style="padding-top: 10px; padding-left: 10px; padding-bottom: 10px;"><a href="javascript:void(0);" onclick="hidePopup('maryInfo', 'mary');"><== Back</a></p>
+        <h2>Meet Mary!</h2>
+        <img src="Images/mary1.JPG" id="maryInfoImage" alt="Mary on Stage" /><br />
+        <p>Mary is a Chocolate Polish Doe who is still learning how it is like to live on the K Road Rabbit's rabbitry. She is still 
+        very new to her environment, due to the fact that she is only five months old. Because of this, she is still very timid but 
+        is willing to learn something new while exploring her environment. According to Eve Rider, Mary is one of Titus's favorite 
+        rabbits.</p>
     </div>
 
     <div class="info_panel" id="loremIpsum">
@@ -766,8 +781,6 @@
                             </tr>
                         </tbody>
                     </table>`;
-            } else {
-                select(".images").innerHTML = formerImageHTML;
             }
         }
     </script>
