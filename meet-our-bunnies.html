@@ -314,6 +314,9 @@
                                 <td>
                                     <figure><a href="javascript:void(0)" onclick="showPopup('maryInfo');" style="color: black;"><img src="Images/mary1.JPG" id="mary" alt="Mary Chillin' Out" /><figcaption>Meet Mary!</figcaption></a></figure>
                                 </td>
+                                <td>
+                                    <figure><a href="javascript:void(0)" onclick="showPopup('neoInfo');" style="color: black;"><img src="Images/neo.JPG" id="neo" alt="Neo in Eve's arms" /><figcaption>Meet Neo!</figcaption></a></figure>
+                                </td>
                             </tr>
                         </tbody>
                     </table>
@@ -401,13 +404,25 @@
         rabbits.</p>
     </div>
 
+    <div class="info_panel" id="neoInfo">
+        <p style="padding-top: 10px; padding-left: 10px; padding-bottom: 10px;"><a href="javascript:void(0);" onclick="hidePopup('neoInfo', 'neo');"><== Back</a></p>
+        <h2>Meet Neo!</h2>
+        <img src="Images/neo.JPG" id="neoInfoImage" alt="Neo In Eve's Arms" /><br />
+        <p>Neo is an almost two-year-old Chocolate Polish Buck. He is a very friendly rabbit and likes to be handled by other people. 
+        Neo is one of the few rabbits who had the chance to go to rabbit shows with Eve Rider, the CEO of K Road Rabbits.</p>
+        <p>One of the most interesting facts concerning Neo involves how he received his name. Jeremiah Easey, the video editor and 
+        photographer for K Road Rabbits, helped pick the name when Neo was first purchased. "I am very happy that I did [get the chance 
+        to name Neo]," Jeremiah remarks. "In a way, I'm like, 'That's my boy!'—just a little bit."</p>
+        <p>Another interesting fact to note concerning Neo is that he is the father of Dart and Max. <!--Might add a few more things here later--></p>
+    </div>
+
     <div class="info_panel" id="loremIpsum">
         <p>
             Luctus cursus ligula nascetur mauris penatibus aliquam justo condimentum fusce ornare curae;! Felis odio quis rhoncus nascetur scelerisque habitasse sapien vivamus leo. Sem interdum nec libero dui dolor est cras. Porttitor, torquent vitae fringilla rutrum sapien quisque semper sapien lorem ipsum euismod. Eu ligula, tincidunt integer quis dignissim fusce imperdiet. Lectus malesuada vestibulum posuere lectus. Ligula arcu metus cubilia.
         </p>
     </div>
 
-    <script>
+    <script>onclick
         //$("i").innerHTML = "This page is still in development!";
         var canvas, canvasContext;
 
@@ -447,6 +462,8 @@
         var browserWidth = 0;
 
         var lastImageScrolledTo = [];
+
+        var smallerView = false;
 
         function select(name) {
             return document.querySelector(name);
@@ -550,14 +567,14 @@
 
             pic3.onload = function () {
                 pic3Loaded = true;
-                console.log("rabbit_holding.jpg has been loaded successfully");
+                //console.log("rabbit_holding.jpg has been loaded successfully");
             }
             pic3.src = 'rabbit_holding.jpg';
 
 
             pic4.onload = function () {
                 pic4Loaded = true;
-                console.log("eveBabyRabbitPhoto.jpg has been loaded successfully");
+                //console.log("eveBabyRabbitPhoto.jpg has been loaded successfully");
             }
             pic4.src = 'eveBabyRabbitPhoto.jpg';
 
@@ -638,7 +655,7 @@
                 window.innerWidth >= 1920 ||
                 window.innerWidth >= 1900 ||
                 window.innerWidth >= 1800) { // should fix download tab bug
-                console.log("Everything is left the way it is.");
+                //console.log("Everything is left the way it is.");
                 $("homeButton").style.margin = "0px 0px 10px 475px";
                 if (dimensionOfWindow !== "1920x937") {
                     //fitText("indent_part", 5.0);
@@ -647,26 +664,42 @@
                 $("indent_part").style.paddingLeft = "calc(100% - 80%)";
                 $("indent_part").style.width = "60%";
                 //$("indent_part").style.fontSize = "0em";
+                if (smallerView) {
+                    select(".images").innerHTML = formerImageHTML;
+                    smallerView = false;
+                }
             } else if (browserWidth >= 1600 || window.innerWidth >= 1600) {
-                console.log("Everything is left the way it is."); // not really; home button is moving
+                //console.log("Everything is left the way it is."); // not really; home button is moving
                 $("homeButton").style.margin = "0px 0px 10px 325px";
                 if (dimensionOfWindow !== "1600") {
                     dimensionOfWindow = "1600";
                 }
+                if (smallerView) {
+                    select(".images").innerHTML = formerImageHTML;
+                    smallerView = false;
+                }
             } else if (browserWidth >= 1500 || window.innerWidth >= 1500) {
-                console.log("Everything is left the way it is.");
+                //console.log("Everything is left the way it is.");
                 $("homeButton").style.margin = "0px 0px 10px 280px";
                 if (dimensionOfWindow !== "1500") {
                     dimensionOfWindow = "1500";
                 }
+                if (smallerView) {
+                    select(".images").innerHTML = formerImageHTML;
+                    smallerView = false;
+                }
             } else if (browserWidth >= 1400 || window.innerWidth >= 1400) {
-                console.log("Everything is left the way it is.");
+                //console.log("Everything is left the way it is.");
                 $("homeButton").style.margin = "0px 0px 10px 280px";
                 if (dimensionOfWindow !== "1400") {
                     dimensionOfWindow = "1400";
                 }
+                if (smallerView) {
+                    select(".images").innerHTML = formerImageHTML;
+                    smallerView = false;
+                }
             } else if (browserWidth >= 1330 || window.innerWidth >= 1330) {
-                console.log("Everything is left the way it is.");
+                //console.log("Everything is left the way it is.");
                 $("homeButton").style.margin = "0px 0px 10px 170px";
                 //$("indent_part").style.fontSize = "0em";
                 if (dimensionOfWindow !== "1330") {
@@ -675,6 +708,10 @@
                 }
                 $("indent_part").style.paddingLeft = "calc(100% - 80%)";
                 $("indent_part").style.width = "60%";
+                if (smallerView) {
+                    select(".images").innerHTML = formerImageHTML;
+                    smallerView = false;
+                }
             } else if (browserWidth >= 1280 && browserWidth >= 680 ||
                 window.innerWidth >= 1280 && window.innerHeight >= 680) {
                 $('homeButton').style.margin = "0px 0px 10px 120px";
@@ -682,22 +719,37 @@
                     //fitText("indent_part", 5.0);
                     dimensionOfWindow = "1280x680";
                 }
-                select(".images").innerHTML = formerImageHTML;
+                if (smallerView) {
+                    select(".images").innerHTML = formerImageHTML;
+                    smallerView = false;
+                }
             } else if (browserWidth >= 1280 || window.innerWidth >= 1280) {
                 $('homeButton').style.margin = "0px 0px 10px 120px"; // might be edited if doesn't work
                 if (dimensionOfWindow !== "1280") {
                     //fitText("indent_part", 5.0);
                     dimensionOfWindow = "1280";
                 }
+                if (smallerView) {
+                    select(".images").innerHTML = formerImageHTML;
+                    smallerView = false;
+                }
             } else if (browserWidth >= 1200 || window.innerWidth >= 1200) {
                 $("homeButton").style.margin = "0px 0px 10px 120px";
                 if (dimensionOfWindow !== "1200") {
                     dimensionOfWindow = "1200";
                 }
+                if (smallerView) {
+                    select(".images").innerHTML = formerImageHTML;
+                    smallerView = false;
+                }
             } else if (browserWidth >= 1100 || window.innerWidth >= 1100) {
                 $("homeButton").style.margin = "0px 0px 10px 80px";
                 if (dimensionOfWindow !== "1100") {
                     dimensionOfWindow = "1100";
+                }
+                if (smallerView) {
+                    select(".images").innerHTML = formerImageHTML;
+                    smallerView = false;
                 }
             } else if (browserWidth <= 480 || window.innerWidth <= 480) {
                 $('homeButton').style.margin = "0px 0px 10px 20px";
@@ -725,8 +777,14 @@
                                     <figure><a href="javascript:void(0)" onclick="showPopup('maryInfo');" style="color: black;"><img src="Images/mary1.JPG" id="mary" alt="Mary Chillin' Out" /><figcaption>Meet Mary!</figcaption></a></figure>
                                 </td>
                             </tr>
+                            <tr>
+                                <td>
+                                    <figure><a href="javascript:void(0)" onclick="showPopup('neoInfo');" style="color: black;"><img src="Images/neo.JPG" id="neo" alt="Neo in Eve's arms" /><figcaption>Meet Neo!</figcaption></a></figure>
+                                </td>
+                            </tr>
                         </tbody>
                     </table>`;
+                smallerView = true;
             } else if (browserWidth >= 817 || window.innerWidth >= 817 &&
                 window.innerHeight >= 329 || window.innerWidth >= 817) { // based off of LG phone
                 $('homeButton').style.margin = "0px 0px 10px 20px";
@@ -736,17 +794,28 @@
                     //fitText("indent_part", 5.0);
                     dimensionOfWindow = "817x329";
                 }
+                if (smallerView) {
+                    select(".images").innerHTML = formerImageHTML;
+                    smallerView = false;
+                }
             } else if (browserWidth >= 800 || window.innerWidth >= 800 && window.innerHeight >= 1160) {
                 $('homeButton').style.margin = "0px 0px 10px 20px"; // looks good that way
                 if (dimensionOfWindow !== "800x1160") {
                     //fitText("indent_part", 5.0);
                     dimensionOfWindow = "800x1160";
                 }
+                if (smallerView) {
+                    select(".images").innerHTML = formerImageHTML;
+                    smallerView = false;
+                }
             } else if (browserWidth >= 800 || window.innerWidth >= 800) { // when not sure what to do with width of tablet
                 $('homeButton').style.margin = "0px 0px 10px 30px";
                 if (dimensionOfWindow !== "800") {
                     //fitText("indent_part", 5.0);
                     dimensionOfWindow = "800";
+                }
+                if (smallerView) {
+                    select(".images").innerHTML = formerImageHTML;
                 }
             } else if (browserWidth >= 738 || window.innerWidth >= 738) {
                 $('homeButton').style.margin = "0px 0px 10px 30px";
@@ -771,8 +840,14 @@
                                     <figure><a href="javascript:void(0)" onclick="showPopup('maryInfo');" style="color: black;"><img src="Images/mary1.JPG" id="mary" alt="Mary Chillin' Out" /><figcaption>Meet Mary!</figcaption></a></figure>
                                 </td>
                             </tr>
+                            <tr>
+                                <td>
+                                    <figure><a href="javascript:void(0)" onclick="showPopup('neoInfo');" style="color: black;"><img src="Images/neo.JPG" id="neo" alt="Neo in Eve's arms" /><figcaption>Meet Neo!</figcaption></a></figure>
+                                </td>
+                            </tr>
                         </tbody>
                     </table>`;
+                smallerView = true;
             }
         }
     </script>
