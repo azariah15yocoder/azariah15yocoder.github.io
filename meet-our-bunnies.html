@@ -325,6 +325,14 @@
                                 <td>
                                     <figure><a href="javascript:void(0)" onclick="showPopup('neoInfo');" style="color: black;"><img src="Images/neo.JPG" id="neo" alt="Neo in Eve's arms" /><figcaption>Meet Neo!</figcaption></a></figure>
                                 </td>
+                                <td>
+                                    <figure><a href="javascript:void(0)" onclick="showPopup('hersheyInfo');" style="color: black;"><img src="Images/hershey.JPG" id="hershey" alt="Hershey in Jayne's Arm's" /><figcaption>Meet Hershey!</figcaption></a></figure>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <figure><a href="javascript:void(0)" onclick="showPopup('dollyInfo');" style="color: black;"><img src="Images/dolly.JPG" id="dolly" alt="Dolly on Stage" /><figcaption>Meet Dolly!</figcaption></a></figure>
+                                </td>
                             </tr>
                         </tbody>
                     </table>
@@ -429,6 +437,23 @@
         <p class="attribution">Image by <a href="https://bunnyeatsdesign.com/2014/11/04/tofu-tuesday-bunny-years-infographic/" target="_blank">bunnyeatsdesign.com</a></p>
     </div>
 
+    <div class="info_panel" id="hersheyInfo">
+        <p style="padding-top: 10px; padding-left: 10px; padding-bottom: 10px;"><a href="javascript:void(0);" onclick="hidePopup('hersheyInfo', 'hershey');"><== Back</a></p>
+        <h2>Meet Hershey!</h2>
+        <img src="Images/hershey.JPG" id="hersheyImage" alt="Hershey In Jayne's Arms" /><br />
+        <p>Hershey is one of Jayne's favorite rabbits! What's interseting about his breed, Dwarf Hotot, is that the eyes of such rabbits look like eye liners. 
+        Hershey has a brother by the name of <a href="javascript:void(0)" onclick="changeBranchStatus(); hidePopup('hersheyInfo', 'hershey'); showPopup('paganiniInfo');">Paganini</a>, who is also a Dwarf Hotot. He seems to 
+        be getting along fine with his brother for now, but things may change in the next few years or months.</p>
+    </div>
+
+    <div class="info_panel" id="dollyInfo">
+        <p style="padding-top: 10px; padding-left: 10px; padding-bottom: 10px;"><a href="javascript:void(0);" onclick="hidePopup('dollyInfo', 'dolly');"><== Back</a></p>
+        <h2>Meet Dolly!</h2>
+        <img src="Images/dolly.JPG" id="dollyImage" alt="Dolly on Stage" /><br />
+        <p>Dolly is a Broken Black Polish with a peculiar personality. One of the most interesting facts about her is that she is the mother of <a href="javascript:void(0);" onclick="changeBranchStatus(); hidePopup('dollyInfo', 'dolly'); showPopup('maxInfo');">Max</a>. 
+        She also has a bit of an introverted personality, which means that she prefers to be alone by herself most of the time. However, she is a very friendly rabbit, and doesn't mind to be petted.</p>
+    </div>
+
     <div class="info_panel" id="loremIpsum">
         <p>
             Luctus cursus ligula nascetur mauris penatibus aliquam justo condimentum fusce ornare curae;! Felis odio quis rhoncus nascetur scelerisque habitasse sapien vivamus leo. Sem interdum nec libero dui dolor est cras. Porttitor, torquent vitae fringilla rutrum sapien quisque semper sapien lorem ipsum euismod. Eu ligula, tincidunt integer quis dignissim fusce imperdiet. Lectus malesuada vestibulum posuere lectus. Ligula arcu metus cubilia.
@@ -478,6 +503,14 @@
 
         var smallerView = false;
 
+        var branchingOff = false;
+
+        var rabbitBranchLines = [];
+
+        var currentRabbit = null;
+
+        var previousRabbit = null;
+
         function select(name) {
             return document.querySelector(name);
         }
@@ -495,8 +528,21 @@
             }
         }
 
+        function changeBranchStatus() {
+            branchingOff = !branchingOff;
+        }
+
         function showPopup(id) {
             var popup = $(id);
+            if (currentRabbit !== null) {
+                console.log("There is a rabbit being used!")
+                if (branchingOff === true) {
+                    console.log(branchingOff);
+                    console.log("There is a rabbit branch involved: let's transfer the information");
+                    rabbitBranchLines.push(currentRabbit);
+                }
+            }
+            currentRabbit = id;
             popup.scrollIntoView(true);
             popup.style.visibility = "visible";
             popup.style.webkitAnimation = "showPopup 1s";
@@ -510,11 +556,16 @@
             select("main").style.animation = "hideBackground 1s";
             select("footer").style.webkitAnimation = "hideBackground 1s";
             select("footer").style.animation = "hideBackground 1s";
+            branchingOff = false;
         }
 
         function hidePopup(id, imgID) {
             var popup = $(id);
             var image = $(imgID);
+            var returnRabbit;
+            if (branchingOff) {
+                previousRabbit = currentRabbit;
+            }
             popup.style.webkitAnimation = "hidePopup 1s";
             popup.style.animation = "hidePopup 1s";
             select("header").style.opacity = "1";
@@ -529,8 +580,11 @@
             setTimeout(function () {
                 select(".info_panel").style.visibility = "hidden";
                 popup.style.visibility = "hidden";
-                image.scrollIntoView(true);
             }, 500);
+            if (previousRabbit !== null && branchingOff === false) {
+                showPopup(previousRabbit);
+                previousRabbit = null;
+            }
         }
 
         function fitText(divID, emSize) {
@@ -795,6 +849,16 @@
                                     <figure><a href="javascript:void(0)" onclick="showPopup('neoInfo');" style="color: black;"><img src="Images/neo.JPG" id="neo" alt="Neo in Eve's arms" /><figcaption>Meet Neo!</figcaption></a></figure>
                                 </td>
                             </tr>
+                            <tr>
+                                <td>
+                                    <figure><a href="javascript:void(0)" onclick="showPopup('hersheyInfo');" style="color: black;"><img src="Images/hershey.JPG" id="hershey" alt="Hershey in Jayne's Arm's" /><figcaption>Meet Hershey!</figcaption></a></figure>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <figure><a href="javascript:void(0)" onclick="showPopup('dollyInfo');" style="color: black;"><img src="Images/dolly.JPG" id="dolly" alt="Dolly on Stage" /><figcaption>Meet Dolly!</figcaption></a></figure>
+                                </td>
+                            </tr>
                         </tbody>
                     </table>`;
                 smallerView = true;
@@ -856,6 +920,16 @@
                             <tr>
                                 <td>
                                     <figure><a href="javascript:void(0)" onclick="showPopup('neoInfo');" style="color: black;"><img src="Images/neo.JPG" id="neo" alt="Neo in Eve's arms" /><figcaption>Meet Neo!</figcaption></a></figure>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <figure><a href="javascript:void(0)" onclick="showPopup('hersheyInfo');" style="color: black;"><img src="Images/hershey.JPG" id="hershey" alt="Hershey in Jayne's Arm's" /><figcaption>Meet Hershey!</figcaption></a></figure>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <figure><a href="javascript:void(0)" onclick="showPopup('dollyInfo');" style="color: black;"><img src="Images/dolly.JPG" id="dolly" alt="Dolly on Stage" /><figcaption>Meet Dolly!</figcaption></a></figure>
                                 </td>
                             </tr>
                         </tbody>
