@@ -505,7 +505,7 @@
 
         var branchingOff = false;
 
-        var rabbitBranchLines = [];
+        var rabbitBranchLines = new Stack();
 
         var currentRabbit = null;
 
@@ -520,6 +520,38 @@
 
         function $(id) {
             return document.getElementById(id);
+        }
+
+        function Stack() {
+            var items = [];
+
+            this.push = function (e) {
+                items.push(e);
+            }
+
+            this.pop = function () {
+                return items.pop();
+            }
+
+            this.peek = function () {
+                return items[items.length - 1];
+            }
+
+            this.clear = function () {
+                items = [];
+            }
+
+            this.size = function () {
+                return items.length;
+            }
+
+            this.isEmpty = function () {
+                return items.length === 0;
+            }
+
+            this.print = function () {
+                console.log(items.toString());
+            }
         }
 
         function checkOS() {
@@ -562,9 +594,10 @@
         function hidePopup(id, imgID) {
             var popup = $(id);
             var image = $(imgID);
-            var returnRabbit;
             if (branchingOff) {
                 previousRabbit = currentRabbit;
+                rabbitBranchLines.push(currentRabbit);
+                rabbitBranchLines.print();
             }
             popup.style.webkitAnimation = "hidePopup 1s";
             popup.style.animation = "hidePopup 1s";
@@ -577,13 +610,30 @@
             select("main").style.animation = "showBackground 1s";
             select("footer").style.webkitAnimation = "showBackground 1s";
             select("footer").style.animation = "showBackground 1s";
+            if (previousRabbit === null || rabbitBranchLines.length < 1) {
+                setTimeout(function () {
+                    image.scrollIntoView(true);
+                }, 500);
+            }
             setTimeout(function () {
                 select(".info_panel").style.visibility = "hidden";
                 popup.style.visibility = "hidden";
             }, 500);
-            if (previousRabbit !== null && branchingOff === false) {
+            if (previousRabbit !== null && branchingOff === false ||
+                rabbitBranchLines.size() >= 1 && branchingOff === false) {
                 showPopup(previousRabbit);
                 previousRabbit = null;
+                var currentListSize = rabbitBranchLines.size();
+                while (true) {
+                    if (currentListSize === 1) {
+                        rabbitBranchLines.clear();
+                    }
+                    rabbitBranchLines.pop();
+                    if (rabbitBranchLines.size() < currentListSize) {
+                        break;
+                    }
+                }
+                rabbitBranchLines.print();
             }
         }
 
