@@ -505,11 +505,9 @@
 
         var branchingOff = false;
 
-        var rabbitBranchLines = new Stack();
+        var rabbitBranchLines = [];
 
         var currentRabbit = null;
-
-        var previousRabbit = null;
 
         function select(name) {
             return document.querySelector(name);
@@ -520,38 +518,6 @@
 
         function $(id) {
             return document.getElementById(id);
-        }
-
-        function Stack() {
-            var items = [];
-
-            this.push = function (e) {
-                items.push(e);
-            }
-
-            this.pop = function () {
-                return items.pop();
-            }
-
-            this.peek = function () {
-                return items[items.length - 1];
-            }
-
-            this.clear = function () {
-                items = [];
-            }
-
-            this.size = function () {
-                return items.length;
-            }
-
-            this.isEmpty = function () {
-                return items.length === 0;
-            }
-
-            this.print = function () {
-                console.log(items.toString());
-            }
         }
 
         function checkOS() {
@@ -571,7 +537,6 @@
                 if (branchingOff === true) {
                     console.log(branchingOff);
                     console.log("There is a rabbit branch involved: let's transfer the information");
-                    rabbitBranchLines.push(currentRabbit);
                 }
             }
             currentRabbit = id;
@@ -595,9 +560,8 @@
             var popup = $(id);
             var image = $(imgID);
             if (branchingOff) {
-                previousRabbit = currentRabbit;
                 rabbitBranchLines.push(currentRabbit);
-                rabbitBranchLines.print();
+                console.log(rabbitBranchLines.toString());
             }
             popup.style.webkitAnimation = "hidePopup 1s";
             popup.style.animation = "hidePopup 1s";
@@ -610,7 +574,7 @@
             select("main").style.animation = "showBackground 1s";
             select("footer").style.webkitAnimation = "showBackground 1s";
             select("footer").style.animation = "showBackground 1s";
-            if (previousRabbit === null || rabbitBranchLines.length < 1) {
+            if (rabbitBranchLines.length < 1) {
                 setTimeout(function () {
                     image.scrollIntoView(true);
                 }, 500);
@@ -619,21 +583,11 @@
                 select(".info_panel").style.visibility = "hidden";
                 popup.style.visibility = "hidden";
             }, 500);
-            if (previousRabbit !== null && branchingOff === false ||
-                rabbitBranchLines.size() >= 1 && branchingOff === false) {
-                showPopup(previousRabbit);
+            if (rabbitBranchLines.length >= 1 && branchingOff === false) {
+                showPopup(rabbitBranchLines[rabbitBranchLines.length - 1]);
                 previousRabbit = null;
-                var currentListSize = rabbitBranchLines.size();
-                while (true) {
-                    if (currentListSize === 1) {
-                        rabbitBranchLines.clear();
-                    }
-                    rabbitBranchLines.pop();
-                    if (rabbitBranchLines.size() < currentListSize) {
-                        break;
-                    }
-                }
-                rabbitBranchLines.print();
+                rabbitBranchLines.pop();
+                console.log(rabbitBranchLines.toString());
             }
         }
 
