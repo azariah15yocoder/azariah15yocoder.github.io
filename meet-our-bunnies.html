@@ -333,6 +333,12 @@
                                 <td>
                                     <figure><a href="javascript:void(0)" onclick="showPopup('dollyInfo');" style="color: black;"><img src="Images/dolly.JPG" id="dolly" alt="Dolly on Stage" /><figcaption>Meet Dolly!</figcaption></a></figure>
                                 </td>
+                                <td>
+                                    <figure><a href="javascript:void(0)" onclick="showPopup('paganiniInfo');" style="color: black;"><img src="Images/paganini.JPG" id="paganini" alt="Paganini on Stage" /><figcaption>Meet Paganini!</figcaption></a></figure>
+                                </td>
+                                <td>
+                                    <figure><a href="javascript:void(0)" onclick="showPopup('lukeInfo');" style="color: black;"><img src="Images/luke.JPG" id="luke" alt="Luke on Stage" /><figcaption>Meet Luke!</figcaption></a></figure>
+                                </td>
                             </tr>
                         </tbody>
                     </table>
@@ -441,7 +447,7 @@
         <p style="padding-top: 10px; padding-left: 10px; padding-bottom: 10px;"><a href="javascript:void(0);" onclick="hidePopup('hersheyInfo', 'hershey');"><== Back</a></p>
         <h2>Meet Hershey!</h2>
         <img src="Images/hershey.JPG" id="hersheyImage" alt="Hershey In Jayne's Arms" /><br />
-        <p>Hershey is one of Jayne's favorite rabbits! What's interseting about his breed, Dwarf Hotot, is that the eyes of such rabbits look like eye liners. 
+        <p>Hershey is one of Jayne's favorite rabbits! What's interesting about his breed, Dwarf Hotot, is that the eyes of such rabbits look like eye liners. 
         Hershey has a brother by the name of <a href="javascript:void(0)" onclick="changeBranchStatus(); hidePopup('hersheyInfo', 'hershey'); showPopup('paganiniInfo');">Paganini</a>, who is also a Dwarf Hotot. He seems to 
         be getting along fine with his brother for now, but things may change in the next few years or months.</p>
     </div>
@@ -452,6 +458,23 @@
         <img src="Images/dolly.JPG" id="dollyImage" alt="Dolly on Stage" /><br />
         <p>Dolly is a Broken Black Polish with a peculiar personality. One of the most interesting facts about her is that she is the mother of <a href="javascript:void(0);" onclick="changeBranchStatus(); hidePopup('dollyInfo', 'dolly'); showPopup('maxInfo');">Max</a>. 
         She also has a bit of an introverted personality, which means that she prefers to be alone by herself most of the time. However, she is a very friendly rabbit, and doesn't mind to be petted.</p>
+    </div>
+
+    <div class="info_panel" id="paganiniInfo">
+        <p style="padding-top: 10px; padding-left: 10px; padding-bottom: 10px;"><a href="javascript:void(0);" onclick="hidePopup('paganiniInfo', 'paganini');"><== Back</a></p>
+        <h2>Meet Paganini!</h2>
+        <img src="Images/paganini.JPG" id="paganiniImage" alt="Paganini on Stage" /><br />
+        <p>Paganini is a Dwarf Hotot rabbit, just like his brother, <a href="javascript:void(0)" onclick="changeBranchStatus(); hidePopup('paganiniInfo', 'paganini'); showPopup('hersheyInfo');">Hershey</a>. 
+        He seems to be getting along fine with his brother, but things may change in the next few years or months. The K Road Rabbits team will keep you posted on their attitudes towards each other.</p>
+    </div>
+
+    <div class="info_panel" id="lukeInfo">
+        <p style="padding-top: 10px; padding-left: 10px; padding-bottom: 10px;"><a href="javascript:void(0);" onclick="hidePopup('lukeInfo', 'luke');"><== Back</a></p>
+        <h2>Meet Luke!</h2>
+        <img src="Images/luke.JPG" id="lukeImage" alt="Luke on Stage" /><br />
+        <p>Luke is a Chocolate Himalayan rabbit. He is a very friendly rabbit, who happened to be born with red eyes. This is not surprising, however, since his breed usually displays red eyes.</p>
+        <p>What's very interesting about Luke is that he is one of the pet rabbits at K Road Rabbits. The reason why this is was because of a miscoloration flaw that caused him to be disqualified 
+        for showmanship. However, he seems to have gotten over that and enjoys most of his time at our rabbitry.</p>
     </div>
 
     <div class="info_panel" id="loremIpsum">
@@ -713,10 +736,8 @@
 
         function positionHome() {
             if (numberOfChanges === 0) {
-                //alert("clientHeight: " + $("indent_part").style.clientHeight);
                 numberOfChanges++;
             }
-            //fitText("indent_part", 5.0);
             if (browserWidth >= 1920 && window.innerHeight >= 1080 ||
                 browserWidth >= 1920 && window.innerHeight >= 937 ||
                 browserWidth >= 1920 ||
@@ -727,21 +748,17 @@
                 window.innerWidth >= 1920 ||
                 window.innerWidth >= 1900 ||
                 window.innerWidth >= 1800) { // should fix download tab bug
-                //console.log("Everything is left the way it is.");
                 $("homeButton").style.margin = "0px 0px 10px 475px";
                 if (dimensionOfWindow !== "1920x937") {
-                    //fitText("indent_part", 5.0);
                     dimensionOfWindow = "1920x937";
                 }
                 $("indent_part").style.paddingLeft = "calc(100% - 80%)";
                 $("indent_part").style.width = "60%";
-                //$("indent_part").style.fontSize = "0em";
                 if (smallerView) {
                     select(".images").innerHTML = formerImageHTML;
                     smallerView = false;
                 }
             } else if (browserWidth >= 1600 || window.innerWidth >= 1600) {
-                //console.log("Everything is left the way it is."); // not really; home button is moving
                 $("homeButton").style.margin = "0px 0px 10px 325px";
                 if (dimensionOfWindow !== "1600") {
                     dimensionOfWindow = "1600";
@@ -751,7 +768,6 @@
                     smallerView = false;
                 }
             } else if (browserWidth >= 1500 || window.innerWidth >= 1500) {
-                //console.log("Everything is left the way it is.");
                 $("homeButton").style.margin = "0px 0px 10px 280px";
                 if (dimensionOfWindow !== "1500") {
                     dimensionOfWindow = "1500";
@@ -761,7 +777,6 @@
                     smallerView = false;
                 }
             } else if (browserWidth >= 1400 || window.innerWidth >= 1400) {
-                //console.log("Everything is left the way it is.");
                 $("homeButton").style.margin = "0px 0px 10px 280px";
                 if (dimensionOfWindow !== "1400") {
                     dimensionOfWindow = "1400";
@@ -771,11 +786,8 @@
                     smallerView = false;
                 }
             } else if (browserWidth >= 1330 || window.innerWidth >= 1330) {
-                //console.log("Everything is left the way it is.");
                 $("homeButton").style.margin = "0px 0px 10px 170px";
-                //$("indent_part").style.fontSize = "0em";
                 if (dimensionOfWindow !== "1330") {
-                    //fitText("indent_part", 5.0);
                     dimensionOfWindow = "1330";
                 }
                 $("indent_part").style.paddingLeft = "calc(100% - 80%)";
@@ -788,7 +800,6 @@
                 window.innerWidth >= 1280 && window.innerHeight >= 680) {
                 $('homeButton').style.margin = "0px 0px 10px 120px";
                 if (dimensionOfWindow !== "1280x680") {
-                    //fitText("indent_part", 5.0);
                     dimensionOfWindow = "1280x680";
                 }
                 if (smallerView) {
@@ -798,7 +809,6 @@
             } else if (browserWidth >= 1280 || window.innerWidth >= 1280) {
                 $('homeButton').style.margin = "0px 0px 10px 120px"; // might be edited if doesn't work
                 if (dimensionOfWindow !== "1280") {
-                    //fitText("indent_part", 5.0);
                     dimensionOfWindow = "1280";
                 }
                 if (smallerView) {
@@ -828,7 +838,6 @@
                 $('indent_part').style.paddingLeft = "calc(100% - 90%)";
                 $('indent_part').style.width = "80%";
                 if (dimensionOfWindow !== "480") {
-                    //fitText("indent_part", 5.0);
                     dimensionOfWindow = "480";
                 }
                 select(".images").innerHTML = `<table class="center">
@@ -864,6 +873,16 @@
                                     <figure><a href="javascript:void(0)" onclick="showPopup('dollyInfo');" style="color: black;"><img src="Images/dolly.JPG" id="dolly" alt="Dolly on Stage" /><figcaption>Meet Dolly!</figcaption></a></figure>
                                 </td>
                             </tr>
+                            <tr>
+                                <td>
+                                    <figure><a href="javascript:void(0)" onclick="showPopup('paganiniInfo');" style="color: black;"><img src="Images/paganini.JPG" id="paganini" alt="Paganini on Stage" /><figcaption>Meet Paganini!</figcaption></a></figure>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <figure><a href="javascript:void(0)" onclick="showPopup('lukeInfo');" style="color: black;"><img src="Images/luke.JPG" id="luke" alt="Luke on Stage" /><figcaption>Meet Luke!</figcaption></a></figure>
+                                </td>
+                            </tr>
                         </tbody>
                     </table>`;
                 smallerView = true;
@@ -873,7 +892,6 @@
                 $("indent_part").style.paddingLeft = "10%";
                 $("indent_part").style.width = "83%";
                 if (dimensionOfWindow !== "817x329") {
-                    //fitText("indent_part", 5.0);
                     dimensionOfWindow = "817x329";
                 }
                 if (smallerView) {
@@ -883,7 +901,6 @@
             } else if (browserWidth >= 800 || window.innerWidth >= 800 && window.innerHeight >= 1160) {
                 $('homeButton').style.margin = "0px 0px 10px 20px"; // looks good that way
                 if (dimensionOfWindow !== "800x1160") {
-                    //fitText("indent_part", 5.0);
                     dimensionOfWindow = "800x1160";
                 }
                 if (smallerView) {
@@ -893,7 +910,6 @@
             } else if (browserWidth >= 800 || window.innerWidth >= 800) { // when not sure what to do with width of tablet
                 $('homeButton').style.margin = "0px 0px 10px 30px";
                 if (dimensionOfWindow !== "800") {
-                    //fitText("indent_part", 5.0);
                     dimensionOfWindow = "800";
                 }
                 if (smallerView) {
@@ -935,6 +951,16 @@
                             <tr>
                                 <td>
                                     <figure><a href="javascript:void(0)" onclick="showPopup('dollyInfo');" style="color: black;"><img src="Images/dolly.JPG" id="dolly" alt="Dolly on Stage" /><figcaption>Meet Dolly!</figcaption></a></figure>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <figure><a href="javascript:void(0)" onclick="showPopup('paganiniInfo');" style="color: black;"><img src="Images/paganini.JPG" id="paganini" alt="Paganini on Stage" /><figcaption>Meet Paganini!</figcaption></a></figure>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <figure><a href="javascript:void(0)" onclick="showPopup('lukeInfo');" style="color: black;"><img src="Images/luke.JPG" id="luke" alt="Luke on Stage" /><figcaption>Meet Luke!</figcaption></a></figure>
                                 </td>
                             </tr>
                         </tbody>
