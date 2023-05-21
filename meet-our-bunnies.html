@@ -340,6 +340,11 @@
                                     <figure><a href="javascript:void(0)" onclick="showPopup('lukeInfo');" style="color: black;"><img src="Images/luke.JPG" id="luke" alt="Luke on Stage" /><figcaption>Meet Luke!</figcaption></a></figure>
                                 </td>
                             </tr>
+                            <tr>
+                                <td>
+                                    <figure><a href="javascript:void(0)" onclick="showPopup('pettyInfo');" style="color: black;"><img src="Images/petty.JPG" id="petty" alt="Petty on Stage" /><figcaption>Meet Petty!</figcaption></a></figure>
+                                </td>
+                            </tr>
                         </tbody>
                     </table>
                 </div>
@@ -464,7 +469,7 @@
         <p style="padding-top: 10px; padding-left: 10px; padding-bottom: 10px;"><a href="javascript:void(0);" onclick="hidePopup('paganiniInfo', 'paganini');"><== Back</a></p>
         <h2>Meet Paganini!</h2>
         <img src="Images/paganini.JPG" id="paganiniImage" alt="Paganini on Stage" /><br />
-        <p>Paganini is a Dwarf Hotot rabbit, just like his brother, <a href="javascript:void(0)" onclick="changeBranchStatus(); hidePopup('paganiniInfo', 'paganini'); showPopup('hersheyInfo');">Hershey</a>. 
+        <p>Paganini (shown right) is a Dwarf Hotot rabbit, just like his brother, <a href="javascript:void(0)" onclick="changeBranchStatus(); hidePopup('paganiniInfo', 'paganini'); showPopup('hersheyInfo');">Hershey</a> (shown left). 
         He seems to be getting along fine with his brother, but things may change in the next few years or months. The K Road Rabbits team will keep you posted on their attitudes towards each other.</p>
     </div>
 
@@ -477,6 +482,18 @@
         for showmanship. However, he seems to have gotten over that and enjoys most of his time at our rabbitry.</p>
     </div>
 
+    <div class="info_panel" id="pettyInfo">
+        <p style="padding-top: 10px; padding-left: 10px; padding-bottom: 10px;"><a href="javascript:void(0)" onclick="hidePopup('pettyInfo', 'petty');"><== Back</a></p>
+        <h2>Meet Petty!</h2>
+        <img src="Images/petty.JPG" id="pettyImage" alt="Petty on Stage" /><br />
+        <p>Petty is part of the Dwarf Hotot breed of rabbits. One interesting characteristic concerning Petty is that she is the mother of <a href="javascript:void(0)" onclick="changeBranchStatus(); hidePopup('pettyInfo', 'petty'); showPopup('paganiniInfo');">Paganini</a> and <a href="javascript:void(0)" onclick="changeBranchStatus(); hidePopup('pettyInfo', 'petty'); showPopup('hersheyInfo');">Hershey</a>. 
+        They both look like her, so she has bragging rights.</p>
+        <p>Now, a few of you may be wondering, <i>Why does this rabbit bear the name of Petty?</i> The answer to this question is quite straightfoward: she is one of the pets at the Rider's rabbitry. She was disqualified for rabbit showmanship 
+        since she has a spot on her ear.</p>
+        <p>This brings up a fun fact concerning showmanship disqualifications for rabbits. Acoording to Eve Rider, the CEO of K Road Rabbits, "Each rabbit has its own disqualifications. . . . Polish ears can't be longer than three inches." Because of this, one 
+        rabbit breed may have different terms for disqualifications than some other breed.</p>
+    </div>
+
     <div class="info_panel" id="loremIpsum">
         <p>
             Luctus cursus ligula nascetur mauris penatibus aliquam justo condimentum fusce ornare curae;! Felis odio quis rhoncus nascetur scelerisque habitasse sapien vivamus leo. Sem interdum nec libero dui dolor est cras. Porttitor, torquent vitae fringilla rutrum sapien quisque semper sapien lorem ipsum euismod. Eu ligula, tincidunt integer quis dignissim fusce imperdiet. Lectus malesuada vestibulum posuere lectus. Ligula arcu metus cubilia.
@@ -484,7 +501,6 @@
     </div>
 
     <script>onclick
-        //$("i").innerHTML = "This page is still in development!";
         var canvas, canvasContext;
 
         var rabbitPic = document.createElement('img');
@@ -505,7 +521,6 @@
         var formerImageHTML = select(".images").innerHTML;
 
         var X1 = 600;
-        //var X2 = X1 + 510 - 60 + 50 + 8 + 1; // for rabbitPic
         var X2 = 600 + 510 - 60 + 50 + 8 + 1 + 68 + 35; // for rabbitPic
         var Y1 = 30;
         var X3 = 600 - 450 + 295 - 30 + 50 + 1 + 68; // for pic3
@@ -642,7 +657,6 @@
         }
 
         window.onload = function () {
-            //  $("i").innerHTML = "We don't have anything to sell quite yet. We're working on it!"
             canvas = $("cv");
             canvasContext = canvas.getContext('2d');
             colorRect(0, 0, canvas.width, canvas.height, 'grey');
@@ -662,14 +676,12 @@
 
             pic3.onload = function () {
                 pic3Loaded = true;
-                //console.log("rabbit_holding.jpg has been loaded successfully");
             }
             pic3.src = 'rabbit_holding.jpg';
 
 
             pic4.onload = function () {
                 pic4Loaded = true;
-                //console.log("eveBabyRabbitPhoto.jpg has been loaded successfully");
             }
             pic4.src = 'eveBabyRabbitPhoto.jpg';
 
@@ -883,6 +895,11 @@
                                     <figure><a href="javascript:void(0)" onclick="showPopup('lukeInfo');" style="color: black;"><img src="Images/luke.JPG" id="luke" alt="Luke on Stage" /><figcaption>Meet Luke!</figcaption></a></figure>
                                 </td>
                             </tr>
+                            <tr>
+                                <td>
+                                    <figure><a href="javascript:void(0)" onclick="showPopup('pettyInfo');" style="color: black;"><img src="Images/petty.JPG" id="petty" alt="Petty on Stage" /><figcaption>Meet Petty!</figcaption></a></figure>
+                                </td>
+                            </tr>
                         </tbody>
                     </table>`;
                 smallerView = true;
@@ -961,6 +978,11 @@
                             <tr>
                                 <td>
                                     <figure><a href="javascript:void(0)" onclick="showPopup('lukeInfo');" style="color: black;"><img src="Images/luke.JPG" id="luke" alt="Luke on Stage" /><figcaption>Meet Luke!</figcaption></a></figure>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <figure><a href="javascript:void(0)" onclick="showPopup('pettyInfo');" style="color: black;"><img src="Images/petty.JPG" id="petty" alt="Petty on Stage" /><figcaption>Meet Petty!</figcaption></a></figure>
                                 </td>
                             </tr>
                         </tbody>
