@@ -1,5 +1,4 @@
-﻿
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -84,10 +83,8 @@
 
         #centerRow {
             text-align: center;
-            /*position: center;*/
         }
 
-        /*@media only screen and (max-device-width: 6.20in) { /*edited for mobile devices, in this case the LG G7*/
         html, body {
             overflow-x: hidden; /*should prevent user from scrolling back and forth (aka side to side)*/
         }
@@ -225,19 +222,14 @@
         <br />
         <br />
         <a href="facebookNotice.html" target="_blank">
-            <!--download><!--target="_blank">
-        <!--This section of code is for our Facebook page-->
-            <!--use download attribute for special effects-->
             <img src="https://facebookbrand.com/wp-content/uploads/2019/04/f_logo_RGB-Hex-Blue_512.png?w=512&h=512" width="19" alt="Navigate to our Facebook page.">
         </a>
         <a href="youtubeNotice.html" target="_blank">
-            <!--This section of code is for our Youtube page-->
             <img src="https://pngimg.com/uploads/youtube/youtube_PNG102355.png" width="20" alt="Navigate to our Youtube channel"><!--All the code for this page was written by hand-->
         </a>
     </footer>
 
     <script>
-        //console.log("Hello World!");
         var canvas, canvasContext;
 
         var rabbitPic = document.createElement('img');
@@ -258,7 +250,6 @@
         var textarea = $("message");
 
         var X1 = 600;
-        //var X2 = X1 + 510 - 60 + 50 + 8 + 1; // for rabbitPic
         var X2 = 600 + 510 - 60 + 50 + 8 + 1 + 68 + 35; // for rabbitPic
         var Y1 = 30;
         var X3 = 600 - 450 + 295 - 30 + 50 + 1 + 68; // for pic3
@@ -274,34 +265,14 @@
 
         var dimensionOfWindow = "1920x937";
 
-        //var photoTableHTML = $('photoTable').innerHTML;
-
         var browserWidth = 0;
-        function checkOS() {
-            if (navigator.userAgent.indexOf('Mac') != -1 ||
-                navigator.userAgent.indexOf('like Mac') != -1) {
-                $("changingParagraph").innerHTML = 'Or, you can just send your questions <a href="https://docs.google.com/forms/d/e/1FAIpQLSc9_eXn4W7ty1wch7K8dl8JhUCn0lBvN2LSLDgaK9TeENd0nw/viewform?usp=sf_link" target="_blank">here!</a>';
-                $("gform").style.display = "none"; // hides form
-                $("textHolder").innerHTML = '<p style="position: relative; bottom: 0; font-size: 12.0pt;">Experiencing bugs on this site? Contact our developer <a href="https://docs.google.com/forms/d/e/1FAIpQLSetAnRBubPN7S0uskkUOxHKgnz3IpGZR-vE_X7PGSsnAjeDqQ/viewform?usp=sf_link" target="_blank">here.</a></p>';
-            }
-        } // This is a temporary solution to a bug that I found on another site. There 
-          // will be more research done concerning this matter.
 
         textarea.oninput = function () {
             textarea.style.height = "";
             textarea.style.height = textarea.scrollHeight + "px";
         }
 
-        /*After code test is over, keep the 1109. That's necessary.*/
-
-        /*if the 50s above don't work, remove them*/
-        /*if the 68s don'g work, remove them*/
-
-        //alert("width: " + window.innerWidth + "\n height: " + window.innerHeight);
-        // This was used for testing to see what would be the best function that would resize images for this page
-
         positionHome(); // used to reposition the home button
-
 
         function $(id) {
             return document.getElementById(id);
