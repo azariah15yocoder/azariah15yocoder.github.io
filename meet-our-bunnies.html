@@ -580,6 +580,7 @@
             currentRabbit = id;
             popup.scrollIntoView(true);
             document.documentElement.scrollTop = document.body.scrollTop = 0;
+            popup.scrollTop = 0; // sets popup to beginning position
             popup.style.visibility = "visible";
             popup.style.webkitAnimation = "showPopup 1s";
             popup.style.animation = "showPopup 1s";
