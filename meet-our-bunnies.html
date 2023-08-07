@@ -438,14 +438,19 @@
                                     <figure><a href="javascript:void(0)" onclick="showPopup('peppermintPattyInfo');" style="color: black;"><img src="Images/peppermint-patty.JPG" id="peppermintPatty" alt="Peppermint-Patty On Stage" /><figcaption>Meet Peppermint-Patty!</figcaption></a></figure>
                                 </td>
                                 <td>
-                                    <figure><a href="javascript:void(0)" onclick="showPopup('buceeInfo');" style="color: black;"><img src="Images/buc-ee.JPG" id="bucee" alt="Buc-ee on Stage" /><figcaption>Meet Buc-ee!</figcaption></a></figure>
+                                    <figure><a href="javascript:void(0)" onclick="showPopup('blazeInfo');" style="color: black;"><img src="Images/blaze.JPG" id="blaze" alt="Blaze on Stage" /><figcaption>Meet Blaze!</figcaption></a></figure>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <figure><a href="javascript:void(0)" onclick="showPopup('broskeyJrInfo');" style="color: black;"><img src="Images/broskey.JPG" id="broskeyjr" alt="Broskey Jr. On Stage" /></a><figcaption>Meet Broskey Jr.!</figcaption></figure>
                                 </td>
                             </tr>
                         </tbody>
                     </table>
                 </div>
 
-                <input type="submit"
+                <!--<input type="submit"
                        name="dimensions"
                        id="dimensions"
                        onclick="printDimensions();"
@@ -460,7 +465,7 @@
                        name="getFontSize"
                        id="getFontSize"
                        onclick="alert('Font size for div tag: ' + $('indent_part').style.fontSize + '\nFont size for p tag: ' + $('temporaryId').style.fontSize);"
-                       value="Show Font Size For indent_part And <p> Tags">
+                       value="Show Font Size For indent_part And <p> Tags">-->
             </section>
         </article>
     </main>
@@ -599,13 +604,31 @@
         supposed to . . . [look] like a pencil. The head<br />. . . [would be] like the pointer of the pencil."</p>
     </div>
 
-    <div class="info_panel" id="buceeInfo">
+    <div class="info_panel" id="blazeInfo">
+        <p style="padding-top: 10px; padding-left: 10px; padding-bottom: 10px;"><a href="javascript:void(0)" onclick="hidePopup('blazeInfo', 'blaze');"><== Back</a></p>
+        <h2>Meet Blaze!</h2>
+        <img src="Images/blaze.JPG" id="blazeImage" alt="Blaze on Stage" />
+        <p>Blaze is a Senior Havannah Doe. She was a show rabbit, but she is about to start having offspring to carry on her showmanship. She needed to have a few more legs in order for her to win Grand Champion. Since the day that the data for this page 
+        was collected, she was still working on it. Who knows, things may be different the next time we interview her.</p>
+    </div>
+
+    <div class="info_panel" id="broskeyJrInfo">
+        <p style="padding-top: 10px; padding-left: 10px; padding-bottom: 10px;"><a href="javascript:void(0)" onclick="hidePopup('broskeyJrInfo', 'broskeyjr');"><== Back</a></p>
+        <h2>Meet Broskey Jr.!</h2>
+        <img src="Images/broskey.JPG" id="broskeyJrImage" alt="Broskey Jr. on Stage" />
+        <p>Broskey Jr. is a Black Havannah, named after another rabbit on our rabbitry. The original Broskey was too small to go to rabbit shows, so he was always disqualified. Because of this, Broskey Jr. took his place. Broskey has grown a little bit, so 
+        he would not be disqualified if he were to apply for rabbit shows again.</p>
+        <p><b>FUN FACT: </b> The reason why Black Havannahs are called Havannahs is quite interesting. The Black Havannahs originated from Europe, like most other rabbit breeds, but at the time they were more of a chocolate color. Some of those who saw these 
+        rabbits thought they looked like Cuban cigars, thus coining the term "Havannah" for the rabbit.</p>
+    </div>
+
+    <!--<div class="info_panel" id="buceeInfo">
         <p style="padding-top: 10px; padding-left: 10px; padding-bottom: 10px;"><a href="javascript:void(0)" onclick="hidePopup('buceeInfo', 'bucee');"><== Back</a></p>
         <h2>Meet Buc-ee!</h2>
         <img src="Images/buc-ee.JPG" id="buceeImage" alt="Buc-ee on Stage" />
         <p>Buc-ee is a relatively chill Broken Havannah rabbit. There are times when he loses his chillness, but that is another story. However, one of the more apparent facts about Buc-ee is the fact that he bears the name of Buc-ee's, one of the many 
         gas stations known for their large stores with almost anything you can think of.</p>
-    </div>
+    </div>-->
 
     <div class="info_panel" id="loremIpsum">
         <p>
@@ -1021,7 +1044,12 @@
                             </tr>
                             <tr>
                                 <td>
-                                    <figure><a href="javascript:void(0)" onclick="showPopup('buceeInfo');" style="color: black;"><img src="Images/buc-ee.JPG" id="bucee" alt="Bucee on Stage" /><figcaption>Meet Buc-ee!</figcaption></a></figure>
+                                    <figure><a href="javascript:void(0)" onclick="showPopup('blazeInfo');" style="color: black;"><img src="Images/blaze.JPG" id="blaze" alt="Blaze on Stage" /><figcaption>Meet Buc-ee!</figcaption></a></figure>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <figure><a href="javascript:void(0)" onclick="showPopup('broskeyJrInfo');" style="color: black;"><img src="Images/broskey.JPG" id="broskeyjr" alt="Broskey Jr. On Stage" /></a><figcaption>Meet Broskey Jr.!</figcaption></figure>
                                 </td>
                             </tr>
                         </tbody>
@@ -1116,7 +1144,12 @@
                             </tr>
                             <tr>
                                 <td>
-                                    <figure><a href="javascript:void(0)" onclick="showPopup('buceeInfo');" style="color: black;"><img src="Images/buc-ee.JPG" id="bucee" alt="Bucee on Stage" /><figcaption>Meet Buc-ee!</figcaption></a></figure>
+                                    <figure><a href="javascript:void(0)" onclick="showPopup('blazeInfo');" style="color: black;"><img src="Images/blaze.JPG" id="blaze" alt="Blaze on Stage" /><figcaption>Meet Buc-ee!</figcaption></a></figure>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <figure><a href="javascript:void(0)" onclick="showPopup('broskeyJrInfo');" style="color: black;"><img src="Images/broskey.JPG" id="broskeyjr" alt="Broskey Jr. On Stage" /></a><figcaption>Meet Broskey Jr.!</figcaption></figure>
                                 </td>
                             </tr>
                         </tbody>
