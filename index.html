@@ -86,6 +86,19 @@
                 padding-left: 110px;
             }
 
+            #facebookView {
+                width: 500px;
+                height: 400px;
+            }
+
+            .center_items {
+                text-align: center;
+            }
+
+            #logo {
+                width: 400px;
+            }
+
             html, body {
                 overflow-x: hidden; /*should prevent user from scrolling back and forth (aka side to side)*/
             }
@@ -106,9 +119,42 @@
                 }
             }
 
+            @media only screen and (max-width: 630px) {
+                #facebookView {
+                    width: 400px;
+                    height: calc(400px * (400px / 500px));
+                }
+            }
+
             @media only screen and (max-width: 524px) {
                 #textHolder {
                     padding-left: 0px;
+                }
+            }
+
+            @media only screen and (max-width: 487px) {
+                #facebookView {
+                    width: 300px;
+                    height: calc(300px * (400px / 500px));
+                }
+            }
+
+            @media only screen and (max-width: 424px) {
+                #logo {
+                    width: 300px;
+                }
+            }
+
+            @media only screen and (max-width: 402px) {
+                #facebookView {
+                    width: 200px;
+                    height: calc(200px * (400px / 500px));
+                }
+            }
+
+            @media only screen and (max-width: 316px) {
+                #logo {
+                    width: 200px;
                 }
             }
         </style>
@@ -136,8 +182,10 @@
                 <a href="meet-our-bunnies.html" title="Want to meet a few of our bunny friends? Click here!"><img src="Images/meet-our-bunnies.jpg" id="meetOurBunniesButton" alt="Navigate to our bunny showroom to meet our furry friends." /></a>
 
             </nav>
-            <p></p>
-            <h1 style="text-align: center;">K Road Rabbits</h1>
+            <br>
+            <div class="center_items">
+                <img src="Images/logo.jpg" id="logo" alt="Official K Road Rabbits Logo" />
+            </div>
         </header>
 
         <main>
@@ -149,9 +197,11 @@
                     <div class="indent" id="indent_part">
                         <!--in div tag as so not to affect the other photos-->
                         <p>
-                            <b>UPDATE:</b> We have started adding rabbits to our Meet Our Bunnies page! They are waiting to be met, 
-                            and we know that you do not want to miss these fuzzy friends of ours!
+                            <b>UPDATE:</b> We have started to use our Facebook page to start posting updates concerning our sales!
+                            If you want to follow us on Facebook, click <a href="https://www.facebook.com/krdrabbits" target="_blank">here</a>.
                         </p>
+                        <p>Here is a bit of a sneak peak into our Facebook platform:</p>
+                        <div class="center_items"><iframe src="https://www.facebook.com/plugins/page.php?href=https://www.facebook.com/krdrabbits&tabs=timeline&width=500&height=400&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" id="facebookView" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe></div>
                     </div>
 
                     <!--<input type="submit"
