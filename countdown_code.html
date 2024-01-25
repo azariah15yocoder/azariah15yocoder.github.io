@@ -1,0 +1,114 @@
+<div class="time_info">
+  <noscript>
+    <p>Hmm>Hmm, it looks as if JavaScript is not enabled in your browser. Enable JavaScript so that 
+    the entire website experience will be good.</p>
+  </noscript>
+<p>Sabbath will be here in the next</p>
+<p id="time_container">00 hours 00 minutes 00 seconds</p>
+  <p id="currentMinute" style="display: none;"></p>
+</div>
+
+<script>
+  var date, stringdate, days, hours, minutes, seconds;
+  var currentStamp;
+  var finalStamp = 153.5;
+  var timeLeft;
+  var timeRanOut = false;
+  var evenNumberMinute = false;  
+  var currentMinute = 0;  
+  var currentMinuteChanged = false;
+  
+  window.onload = function() {
+    date = new Date();
+    stringdate = date.toString();
+    days = date.getDay();
+    hours = date.getHours();
+    minutes=date.getMinutes();
+    seconds=date.getSeconds();
+    currentStamp=hours+(minutes*(1/60)) + (seconds * (1/3600)) + (days * 24);
+    timeLeft = finalStamp-currentStamp;
+
+    hours = adjustToTimeZone(hours);
+    setInterval(showTime, 1);
+  }
+
+  function adjustToTimeZone(number) {
+    results = number;
+    if(stringdate.indexOf('Eastern Standard Time') !== -1) {
+      results--;
+    } else if (stringdate.indexOf('Western Standard Time') !== -1) {
+      results++;
+    }
+    return results;
+  }
+
+ function showTime() {
+    var lockNumber = timeLeft.toString().split('.')[0];
+    lockNumber = +lockNumber; // converts string to integer
+
+    var minutesToDisplay = (timeLeft - lockNumber) * 60;
+    var lockNumberMinutes = minutesToDisplay.toString().split('.')[0];
+    lockNumberMinutes = +lockNumberMinutes;
+
+   if(currentMinute === 0) {
+     currentMinute = lockNumberMinutes;
+   }
+
+    evenNumberMinute = lockNumberMinutes % 2 === 0 ? true : false;
+
+    var secondsToDisplay = (minutesToDisplay - lockNumberMinutes) * 60;
+    secondsToDisplay = Math.round(secondsToDisplay);  
+    date = new Date();
+   stringdate = date.toString();
+    days = date.getDay();
+    hours = date.getHours();
+    minutes=date.getMinutes();
+    seconds=date.getSeconds();
+
+   hours = adjustToTimeZone(hours);
+
+	var hoursToDisplay = getZeros(lockNumber);
+	var minutesToDisplay = lockNumberMinutes; // we run  analysis on minutes before converting to 00 form
+	secondsToDisplay = getZeros(secondsToDisplay);
+
+   if(+secondsToDisplay === 0) {
+     if(minutesToDisplay<currentMinute){
+         minutesToDisplay++;
+     }
+   } else {
+     if(minutesToDisplay < currentMinute) {
+       currentMinute--; // should only change if less than actual minutes
+     }
+  }
+
+   minutesToDisplay = getZeros(minutesToDisplay);
+
+    currentStamp=hours+(minutes*(1/60))+(seconds*(1/3600))+(days*24);
+    timeLeft=finalStamp-currentStamp;
+
+   if(timeRanOut) {
+     hoursToDisplay = minutesToDisplay = secondsToDisplay = "00";
+   }
+
+    if (timeLeft < 0) {
+      timeRanOut = true;
+    }
+
+    document.getElementById('time_container').innerHTML = `<b style="color: purple;">${hoursToDisplay} hours</b> <b style="color: blue;">${minutesToDisplay} minutes</b> <b style="color: red;">${secondsToDisplay} seconds</b>`;
+document.getElementById('currentMinute').innerHTML = currentMinute;
+ }
+
+function getZeros(value) {
+	number = value;
+    if(value == 60) {
+      number = "00";
+    } else if(value < 10) {
+		number = "0" + number.toString();
+	} else {
+		number = number.toString();
+	}
+	return number;
+}
+
+
+</script>
