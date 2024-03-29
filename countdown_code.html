@@ -34,7 +34,7 @@
     <p>Hmm, it looks as if JavaScript is not enabled in your browser. Enable JavaScript so that 
     the entire website experience will be good.</p>
   </noscript>
-<p>We will be having Sabbath School in the next</p>
+<p id="currentCountdown">We will be having Sabbath School in the next</p>
 <p id="time_container"><b style="color: purple;">00 hours</b> <b style="color: blue;">00 minutes</b> <b style="color: red;">00 seconds</b></p>
   <p id="currentMinute" style="display: none;"></p>
 </div>
@@ -58,6 +58,17 @@
     seconds=date.getSeconds();
     currentStamp=hours+(minutes*(1/60)) + (seconds * (1/3600)) + (days * 24);
     timeLeft = finalStamp-currentStamp;
+
+    // Beneath is new code; check to see if this works
+
+    if(timeLeft < 0) {
+       finalStamp = 155;
+       timeLeft = finalStamp-currentStamp; // check this the next few days
+       $('currentCountdown').innerHTML = "We will be having our Church Service in the next"; // should change the kind of countdown we are dealing with
+    }
+
+    // If this does not work, remove it
+    // Else, proceed to add more functions to the countdown
 
     hours = adjustToTimeZone(hours);
     setInterval(showTime, 1);
