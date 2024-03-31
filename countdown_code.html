@@ -48,6 +48,7 @@
   var evenNumberMinute = false;  
   var currentMinute = 0;  
   var currentMinuteChanged = false;
+  var churchMinutes = false;
   
   window.onload = function() {
     date = new Date();
@@ -58,12 +59,15 @@
     seconds=date.getSeconds();
     currentStamp=hours+(minutes*(1/60)) + (seconds * (1/3600)) + (days * 24);
     timeLeft = finalStamp-currentStamp;
+    console.log('current timestamp according to default');
 
     // Beneath is new code; check to see if this works
 
     if(timeLeft < 0) {
-       finalStamp = 154.75; //155;
+       console.log('less than 0 first attempt');
+       finalStamp = 155;
        timeLeft = finalStamp-currentStamp; // check this the next few days
+       churchMinutes = true;
        $('currentCountdown').innerHTML = "We are currently having Sabbath School.<br><br>We will be having our Church Service in the next"; // should change the kind of countdown we are dealing with
     }
 
@@ -132,8 +136,15 @@
      hoursToDisplay = minutesToDisplay = secondsToDisplay = "00";
    }
 
-    if (timeLeft < 0) {
+    if (timeLeft < 0 && churchMinutes) {
       timeRanOut = true;
+      console.log('no more time');
+    } else if (timeLeft < 0) { // only works when churchMinutes == false
+      churchMinutes = true;
+      finalStamp = 155;
+      timeLeft = finalStamp - currentStamp;
+      $('currentCountdown').innerHTML = "We are currently having Sabbath School.<br><br>We will be having our Church Service in the next"; 
+      console.log('less than 0 second attempt');
     }
 
     document.getElementById('time_container').innerHTML = `<b style="color: purple;">${hoursToDisplay} hours</b> <b style="color: blue;">${minutesToDisplay} minutes</b> <b style="color: red;">${secondsToDisplay} seconds</b>`;
