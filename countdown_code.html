@@ -17,12 +17,20 @@
                 font-size: 16px;
             }
 
-            #time_container {
+            #time_container, #second_time_container {
                 font-size: 30px;
             }
 
+            #time_container, #currentCountdown {
+                display: inherit;
+            }
+
+            #second_time_container, #secondCountdown {
+                display: none;
+            }
+
             @media only screen and (max-width: 543px) {
-                #time_container {
+                #time_container #second_time_container {
                     font-size: 25px;
                 }
             }
@@ -37,6 +45,8 @@
 <p id="currentCountdown">We will be having Sabbath School in the next</p>
 <p id="time_container"><b style="color: purple;">00 hours</b> <b style="color: blue;">00 minutes</b> <b style="color: red;">00 seconds</b></p>
   <p id="currentMinute" style="display: none;"></p>
+<p id="secondCountdown">We will be having our Church Service in the next</p>
+<p id="second_time_container"><b style="color: purple;">00 hours</b> <b style="color: blue;">00 minutes</b> <b style="color: red;">00 seconds</b></p>
 </div>
 
 <script>
@@ -44,7 +54,9 @@
   var currentStamp;
   var finalStamp = 153.5;
   var timeLeft;
+  var timeBeforeChurch;
   var timeRanOut = false;
+  var secondTimeRanOut = false;
   var evenNumberMinute = false;  
   var currentMinute = 0;  
   var currentMinuteChanged = false;
@@ -59,24 +71,18 @@
     seconds=date.getSeconds();
     currentStamp=hours+(minutes*(1/60)) + (seconds * (1/3600)) + (days * 24);
     timeLeft = finalStamp-currentStamp;
+    timeBeforeChurch = 155 - currentStamp;
     console.log('current timestamp according to default');
-
-    // Beneath is new code; check to see if this works
-
-    if(timeLeft < 0) {
-       console.log('less than 0 first attempt');
-       finalStamp = 155;
-       timeLeft = finalStamp-currentStamp; // check this the next few days
-       churchMinutes = true;
-       $('currentCountdown').innerHTML = "We are currently having Sabbath School.<br><br>We will be having our Church Service in the next"; // should change the kind of countdown we are dealing with
-    }
-
-    // If this does not work, remove it
-    // Else, proceed to add more functions to the countdown
-
     hours = adjustToTimeZone(hours);
-    setInterval(showTime, 1);
+    if(timeLeft < 0) {
+       $('currentCountdown').style.display = document.getElementById('time_container').style.display = "none";
+       $('secondCountdown').style.display = document.getElementById('second_time_container').style.display = "inherit";
+    }
+    setInterval(function () { timeLeft = showTime(timeLeft, finalStamp, 'time_container');}, 1);
+    setInterval(function () { timeBeforeChurch = showTime(timeBeforeChurch, 155, 'second_time_container'); }, 1);
   }
+
+  function $(id) { return document.getElementById(id); }
 
   function adjustToTimeZone(number) {
     results = number;
@@ -88,11 +94,11 @@
     return results;
   }
 
- function showTime() {
-    var lockNumber = timeLeft.toString().split('.')[0];
+ function showTime(t, limit, id) {
+    var lockNumber = t.toString().split('.')[0];
     lockNumber = +lockNumber; // converts string to integer
 
-    var minutesToDisplay = (timeLeft - lockNumber) * 60;
+    var minutesToDisplay = (t - lockNumber) * 60;
     var lockNumberMinutes = minutesToDisplay.toString().split('.')[0];
     lockNumberMinutes = +lockNumberMinutes;
 
@@ -130,25 +136,21 @@
    minutesToDisplay = getZeros(minutesToDisplay);
 
     currentStamp=hours+(minutes*(1/60))+(seconds*(1/3600))+(days*24);
-    timeLeft=finalStamp-currentStamp;
+    t=limit-currentStamp;
 
-   if(timeRanOut) {
+   if(timeRanOut && id==="time_container" || secondTimeRanOut && id==="second_time_container") {
      hoursToDisplay = minutesToDisplay = secondsToDisplay = "00";
    }
 
-    if (timeLeft < 0 && churchMinutes) {
+    if (t < 0 && timeRanOut === false) {
       timeRanOut = true;
-      console.log('no more time');
-    } else if (timeLeft < 0) { // only works when churchMinutes == false
-      churchMinutes = true;
-      finalStamp = 155;
-      timeLeft = finalStamp - currentStamp;
-      $('currentCountdown').innerHTML = "We are currently having Sabbath School.<br><br>We will be having our Church Service in the next"; 
-      console.log('less than 0 second attempt');
+    } else if(t < 0 && timeRanOut && secondTimeRanOut === false) {
+      secondTimeRanOut = true;
     }
-
-    document.getElementById('time_container').innerHTML = `<b style="color: purple;">${hoursToDisplay} hours</b> <b style="color: blue;">${minutesToDisplay} minutes</b> <b style="color: red;">${secondsToDisplay} seconds</b>`;
+$(id).innerHTML = `<b style="color: purple;">${hoursToDisplay} hours</b> <b style="color: blue;">${minutesToDisplay} minutes</b> <b style="color: red;">${secondsToDisplay} seconds</b>`;
 document.getElementById('currentMinute').innerHTML = currentMinute;
+
+    return t;
  }
 
 function getZeros(value) {
