@@ -45,8 +45,6 @@
 <p id="currentCountdown">We will be having Sabbath School in the next</p>
 <p id="time_container"><b style="color: purple;">00 hours</b> <b style="color: blue;">00 minutes</b> <b style="color: red;">00 seconds</b></p>
   <p id="currentMinute" style="display: none;"></p>
-<p id="secondCountdown">We will be having our Church Service in the next</p>
-<p id="second_time_container"><b style="color: purple;">00 hours</b> <b style="color: blue;">00 minutes</b> <b style="color: red;">00 seconds</b></p>
 </div>
 
 <script>
@@ -55,12 +53,8 @@
   var finalStamp = 153.5;
   var timeLeft;
   var timeBeforeChurch;
-  var timeRanOut = false;
-  var secondTimeRanOut = false;
-  var evenNumberMinute = false;  
+  var timeRanOut = false;  
   var currentMinute = 0;  
-  var currentMinuteChanged = false;
-  var churchMinutes = false;
   
   window.onload = function() {
     date = new Date();
@@ -71,15 +65,8 @@
     seconds=date.getSeconds();
     currentStamp=hours+(minutes*(1/60)) + (seconds * (1/3600)) + (days * 24);
     timeLeft = finalStamp-currentStamp;
-    timeBeforeChurch = 155 - currentStamp;
-    console.log('current timestamp according to default');
     hours = adjustToTimeZone(hours);
-    if(timeLeft < 0) {
-       $('currentCountdown').style.display = document.getElementById('time_container').style.display = "none";
-       $('secondCountdown').style.display = document.getElementById('second_time_container').style.display = "inherit";
-    }
     setInterval(function () { timeLeft = showTime(timeLeft, finalStamp, 'time_container');}, 1);
-    setInterval(function () { timeBeforeChurch = showTime(timeBeforeChurch, 155, 'second_time_container'); }, 1);
   }
 
   function $(id) { return document.getElementById(id); }
@@ -105,8 +92,6 @@
    if(currentMinute === 0) {
      currentMinute = lockNumberMinutes;
    }
-
-    evenNumberMinute = lockNumberMinutes % 2 === 0 ? true : false;
 
     var secondsToDisplay = (minutesToDisplay - lockNumberMinutes) * 60;
     secondsToDisplay = Math.round(secondsToDisplay);  
@@ -138,7 +123,7 @@
     currentStamp=hours+(minutes*(1/60))+(seconds*(1/3600))+(days*24);
     t=limit-currentStamp;
 
-   if(timeRanOut && id==="time_container" || secondTimeRanOut && id==="second_time_container") {
+   if(timeRanOut) {
      hoursToDisplay = minutesToDisplay = secondsToDisplay = "00";
    }
 

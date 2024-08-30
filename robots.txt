@@ -1,2 +1,12 @@
+User-agent: facebookexternalhit
+Allow: /index.html
+Allow: /about-us.html
+Allow: /store.html
+Allow: /meet-our-bunnies.html
+Allow: /images/logo.jpg
+Allow: /images/neo.JPG
+Allow: /images/hershey.JPG
+Allow: /images/max3.JPG
+
 User-agent: *
 Disallow: /images/
